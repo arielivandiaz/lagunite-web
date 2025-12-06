@@ -1,0 +1,15 @@
+---
+interface Props {
+  class: string;
+  text: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class="row jc-sb ai-c min-h-10">
+  {Astro.props.text || ""} &nbsp;
+  <div class={`marg-lf ${className || ""}`}>
+    The cat sleeps after a long day of playing.
+  </div>
+</div>

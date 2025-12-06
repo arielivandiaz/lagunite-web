@@ -1,0 +1,46 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import TextDemo from "../../../components/docs/TextDemo.astro";
+
+const title = "Tipografía";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>Tipografía</h2>
+    <div class="separator-v-xl"></div>
+    <div class="col">
+      <div>
+        <h3>Font Families</h3>
+        <TextDemo text="--font-sans" class="font-sans" />
+        <TextDemo text="--font-mono" class="font-mono" />
+        <TextDemo text="--font-text" class="font-text" />
+        <TextDemo text="--font-headers" class="font-headers" />
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Font Sizes</h3>
+        <TextDemo text="--font-size-xs" class="font-xs" />
+        <TextDemo text="--font-size-s" class="font-s" />
+        <TextDemo text="--font-size-base" class="" />
+        <TextDemo text="--font-size-l" class="font-lg" />
+        <TextDemo text="--font-size-xl" class="font-xl" />
+        <TextDemo text="--font-size-xl" class="font-xl" />
+        <TextDemo text="--font-size-xxl" class="font-xxl" />
+        <TextDemo text="--font-size-3xl" class="font-3xl" />
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Font Weights</h3>
+        <TextDemo text="--font-weight-light" class="font-weight-0" />
+        <TextDemo text="--font-weight-normal" class="font-weight-1" />
+        <TextDemo text="--font-weight-medium" class="font-weight-2" />
+        <TextDemo text="--font-weight-bold" class="font-weight-3" />
+      </div>
+    </div>
+  </section>
+</Layout>

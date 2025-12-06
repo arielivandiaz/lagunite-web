@@ -1,0 +1,22 @@
+---
+interface Props {
+  class: string;
+  text: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class="row jc-sb lh-xl">
+  {Astro.props.text || ""} &nbsp;
+  <div class={`colorDemo marg-lf-s ${className || ""}`}></div>
+</div>
+
+<style>
+  .colorDemo {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+  }
+</style>
