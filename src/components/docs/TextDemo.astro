@@ -1,7 +1,8 @@
 ---
 interface Props {
-  class: string;
+  class?: string;
   text: string;
+    style?: string;
 }
 
 const { class: className } = Astro.props;
@@ -9,7 +10,7 @@ const { class: className } = Astro.props;
 
 <div class="row jc-sb ai-c min-h-10">
   {Astro.props.text || ""} &nbsp;
-  <div class={`marg-lf ${className || ""}`}>
+  <div class={`marg-lf ${className || ""}`} style={Astro.props.style || ""}>
     The cat sleeps after a long day of playing.
   </div>
 </div>

@@ -1,10 +1,58 @@
----
-
----
-
-<header>
+<header class="site-header">
   <a href="/">
     <img src="/img/lagunite.png" class="max-w-xl" />
   </a>
   <h3>Overview</h3>
+  <button
+    id="theme-toggle"
+    class="theme-toggle"
+    aria-pressed="false"
+    aria-label="Toggle night mode">🌙</button
+  >
 </header>
+
+<script>
+  // @ts-nocheck
+  (function () {
+    function applySavedTheme() {
+      try {
+        const saved = localStorage.getItem("theme");
+        if (saved === "night") document.body.classList.add("night");
+      } catch (e) {
+        /* ignore */
+      }
+    }
+
+    function updateButton(btn) {
+      if (!btn) return;
+      const isNight = document.body.classList.contains("night");
+      btn.setAttribute("aria-pressed", isNight);
+      btn.textContent = isNight ? "☀️" : "🌙";
+    }
+
+    function toggleTheme() {
+      const isNight = document.body.classList.toggle("night");
+      try {
+        localStorage.setItem("theme", isNight ? "night" : "day");
+      } catch (e) {}
+      updateButton(document.getElementById("theme-toggle"));
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      applySavedTheme();
+      const btn = document.getElementById("theme-toggle");
+      updateButton(btn);
+      if (btn) btn.addEventListener("click", toggleTheme);
+    });
+  })();
+</script>
+
+<style>
+  .theme-toggle {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 6px;
+  }
+</style>

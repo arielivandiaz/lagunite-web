@@ -1,15 +1,16 @@
 ---
 interface Props {
-  class: string;
+  class?: string;
   text: string;
+  style?: string;
 }
 
-const { class: className } = Astro.props;
+const { class: className, style } = Astro.props;
 ---
 
 <div class="row jc-sb lh-xl">
   {Astro.props.text || ""} &nbsp;
-  <div class={`colorDemo marg-lf-s ${className || ""}`}></div>
+  <div class={`colorDemo marg-lf-s ${className || ""}`} style={style}></div>
 </div>
 
 <style>

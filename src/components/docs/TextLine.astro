@@ -1,0 +1,19 @@
+---
+interface Props {
+  class?: string;
+  text1: string;
+  text2: string;
+  style?: string;
+}
+
+const { class: className, style, text1, text2 } = Astro.props;
+---
+
+<div class="row jc-sb marg-s">
+  {text1 || ""} &nbsp;
+  <div class={`marg-lf-s ${className || ""}`} style={` ${style || ""}`}>
+    {text2 || ""}
+  </div>
+</div>
+
+<style></style>

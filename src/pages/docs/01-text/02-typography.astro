@@ -1,0 +1,133 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import TextLine from "../../../components/docs/TextLine.astro";
+
+const title = "Typography";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+    <div class="separator-v-xl"></div>
+
+    <h3>Text Transform</h3>
+    <i>@ID:<b> #01-02-01</b></i>
+    <div class="separator-v-m"></div>
+    <div class="col">
+      <div>
+        <TextLine text1=".uppercase" class="uppercase" text2="uppercase text" />
+        <TextLine text1=".lowercase" class="lowercase" text2="LOWERCASE TEXT" />
+        <TextLine
+          text1=".capitalize"
+          class="capitalize"
+          text2="capitalize each word"
+        />
+      </div>
+    </div>
+
+    <div class="separator-v-l"></div>
+    <h3>Letter Spacing</h3>
+    <i>@ID:<b> #01-02-02</b></i>
+    <div class="separator-v-m"></div>
+    <div class="col">
+      <div>
+        <TextLine
+          text1=".letter-spacing-xs"
+          class="letter-spacing-xs"
+          text2="Extra tight (-0.1rem)"
+        />
+        <TextLine
+          text1=".letter-spacing-s"
+          class="letter-spacing-s"
+          text2="Tight (-0.05rem)"
+        />
+        <TextLine
+          text1=".letter-spacing"
+          class="letter-spacing"
+          text2="Normal (0.05rem)"
+        />
+        <TextLine
+          text1=".letter-spacing-l"
+          class="letter-spacing-l"
+          text2="Wide (0.1em)"
+        />
+        <TextLine
+          text1=".letter-spacing-xl"
+          class="letter-spacing-xl"
+          text2="Extra wide (0.2em)"
+        />
+        <TextLine
+          text1=".letter-spacing-xxl"
+          class="letter-spacing-xxl"
+          text2="Super wide (0.4rem)"
+        />
+      </div>
+    </div>
+    <div class="separator-v-l"></div>
+    <h3>Line Height</h3>
+    <i>@ID:<b> #01-02-03</b></i>
+    <div class="separator-v-m"></div>
+    <div class="col">
+      <div>
+        <TextLine
+          text1=".lh-xs"
+          class="lh-xs bg-1"
+          text2="Extra small line height (0.85) Second line to show spacing"
+        />
+        <TextLine
+          text1=".lh-s"
+          class="lh-s bg-1"
+          text2="Small line height (0.95) Second line to show spacing"
+        />
+        <TextLine
+          text1=".lh"
+          class="lh bg-1"
+          text2="Normal line height (1.5) Second line to show spacing"
+        />
+        <TextLine
+          text1=".lh-l"
+          class="lh-l bg-1"
+          text2="Large line height (1.7) Second line to show spacing"
+        />
+        <TextLine
+          text1=".lh-xl"
+          class="lh-xl bg-1"
+          text2="Extra large line height (2) Second line to show spacing"
+        />
+        <TextLine
+          text1=".lh-xxl"
+          class="lh-xxl bg-1"
+          text2="2X large line height (2.5) Second line to show spacing"
+        />
+      </div>
+    </div>
+
+    <div class="separator-v-l"></div>
+    <h3>Text Align</h3>
+    <i>@ID:<b> #01-02-04</b></i>
+    <div class="separator-v-m"></div>
+    <div class="col max-w-3xl center">
+      <div class="w-50 center bg-1 ta-c marg-t-s">
+        .ta-c - Center aligned text
+      </div>
+      <div class="w-50 center bg-1 ta-lf marg-t-s">
+        .ta-lf - Left aligned text
+      </div>
+      <div class="w-50 center bg-1 ta-rg marg-t-s">
+        .ta-rg - Right aligned text
+      </div>
+      <div class="w-50 max-w-4 center bg-1 ta-j marg-t-s">
+        .ta-j - Justified text. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+        qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div class="w-50 center bg-1 ta-ja marg-t-s">
+        .ta-ja - Justify all. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+    </div>
+  </section>
+</Layout>

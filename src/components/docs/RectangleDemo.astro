@@ -1,0 +1,28 @@
+---
+interface Props {
+  class?: string;
+  text: string;
+  style?: string;
+  width?: string; // e.g. "100px" or "50%"
+  height?: string; // e.g. "20px"
+}
+
+const { class: className, style, width = '100px', height = '20px' } = Astro.props;
+---
+
+<div class="row jc-sb marg-s">
+  {Astro.props.text || ""} &nbsp;
+  <div
+    class={`rectangleDemo marg-lf-s ${className || ""}`}
+    style={`--rect-width: ${width}; --rect-height: ${height}; ${style || ""}`}
+  ></div>
+</div>
+
+<style>
+  .rectangleDemo {
+    width: var(--rect-width, 100px);
+    height: var(--rect-height, 20px);
+    border: 2px solid #000;
+    border-radius: 5px;
+  }
+</style>

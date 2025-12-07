@@ -1,0 +1,81 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import TextDemo from "../../../components/docs/TextDemo.astro";
+import ColorDemo from "../../../components/docs/ColorDemo.astro";
+import RectangleDemo from "../../../components/docs/RectangleDemo.astro";
+
+const title = "Measures";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>Measures</h2>
+    <i>@ID:<b> #00-04-01</b></i>
+    <div class="separator-v-xl"></div>
+    <div class="col">
+      <div>
+        <RectangleDemo
+          text="--space-px"
+          class="bgg-1"
+          width="var(--space-px)"
+        />
+        <RectangleDemo text="--space-1" class="bgg-1" width="var(--space-1)" />
+        <RectangleDemo text="--space-2" class="bgg-1" width="var(--space-2)" />
+        <RectangleDemo text="--space-3" class="bgg-1" width="var(--space-3)" />
+        <RectangleDemo text="--space-4" class="bgg-1" width="var(--space-4)" />
+        <RectangleDemo text="--space-5" class="bgg-1" width="var(--space-5)" />
+        <RectangleDemo text="--space-6" class="bgg-1" width="var(--space-6)" />
+        <RectangleDemo text="--space-8" class="bgg-1" width="var(--space-8)" />
+        <RectangleDemo
+          text="--space-10"
+          class="bgg-1"
+          width="var(--space-10)"
+        />
+        <RectangleDemo
+          text="--space-12"
+          class="bgg-1"
+          width="var(--space-12)"
+        />
+        <RectangleDemo
+          text="--space-16"
+          class="bgg-1"
+          width="var(--space-16)"
+        />
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+    <div class="col">
+      <div>
+        <RectangleDemo
+          text=" --radius-s"
+          style="border-radius: var(--radius-s);"
+          class="bgg-1"
+          width="40px"
+          height="40px"
+        />
+        <RectangleDemo
+          text="--radius-md"
+          class="bgg-1"
+          style="border-radius: var(--radius-md);"
+          width="40px"
+          height="40px"
+        />
+        <RectangleDemo
+          text=" --radius-l"
+          style="border-radius: var(--radius-l);"
+          class="bgg-1"
+          width="40px"
+          height="40px"
+        />
+        <RectangleDemo
+          text=" --radius-full"
+          style="border-radius: var(--radius-full);"
+          class="bgg-1"
+          width="40px"
+          height="40px"
+        />
+      </div>
+    </div>
+  </section>
+</Layout>

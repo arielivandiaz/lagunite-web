@@ -1,0 +1,122 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import TextDemo from "../../../components/docs/TextDemo.astro";
+import ColorDemo from "../../../components/docs/ColorDemo.astro";
+import RectangleDemo from "../../../components/docs/RectangleDemo.astro";
+
+const title = "Theme";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>Theme</h2>
+    <i>@ID:<b> #00-03-01</b></i>
+    <div class="separator-v-xl"></div>
+    <h3>Color Assignments</h3>
+    <div class="col">
+      <div>
+        <ColorDemo text="--color-bg" class="bg" />
+        <ColorDemo text="---color-bg-alt" class="bg-alt" />
+      </div>
+    </div>
+    <div class="separator-v-xl"></div>b
+    <div class="col-row">
+      <div>
+        <ColorDemo text="--color-primary" class="bg-1" />
+        <ColorDemo text="---color-primary-light" class="bg-2" />
+        <ColorDemo text="---color-primary-dark" class="bg-3" />
+      </div>
+      <div class="dseparator-h-xl xseparator"></div>
+      <div>
+        <ColorDemo text="--color-secondary" class="bg-4" />
+        <ColorDemo text="--color-secondary-light" class="bg-5" />
+        <ColorDemo text="--color-secondary-dark" class="bg-6" />
+      </div>
+      <div class="dseparator-h-xl xseparator"></div>
+      <div>
+        <ColorDemo text="--color-tertiary" class="bg-7" />
+        <ColorDemo text="---color-tertiary-light" class="bg-8" />
+        <ColorDemo text="---color-tertiary-dark" class="bg-9" />
+      </div>
+    </div>
+    <div class="separator-v-xl"></div>
+    <div class="col">
+      <div>
+        <ColorDemo
+          text="--color-success"
+          style="background: var(--color-success)"
+        />
+        <ColorDemo text="---color-success-light" class="bg-success" />
+
+        <ColorDemo
+          text="--color-warning"
+          style="background: var(--color-warning)"
+        />
+        <ColorDemo text="---color-warning-light" class="bg-warning" />
+        <ColorDemo
+          text="--color-error"
+          style="background: var(--color-error)"
+        />
+        <ColorDemo text="---color-error-light" class="bg-error" />
+      </div>
+    </div>
+    <div class="separator-v-xl"></div>
+    <h3>Text</h3>
+    <div class="col">
+      <div>
+        <TextDemo
+          text="--color-text-base"
+          style="color: var(--color-text-base)"
+        />
+        <TextDemo
+          text="--color-text-alt"
+          style="color: var(--color-text-alt); background: #333;"
+        />
+      </div>
+    </div>
+    <div class="separator-v-xl"></div>
+    <h3>Gradients</h3>
+    <div class="col">
+      <div>
+        <RectangleDemo text="--bg-gradient-1" class="bgg-1" height="40px" />
+        <RectangleDemo text="--bg-gradient-2" class="bgg-2" height="40px" />
+        <RectangleDemo text="--bg-gradient-3" class="bgg-3" height="40px" />
+        <RectangleDemo text="--bg-gradient-4" class="bgg-4" height="40px" />
+        <RectangleDemo text="--bg-gradient-5" class="bgg-5" height="40px" />
+        <RectangleDemo text="--bg-gradient-6" class="bgg-6" height="40px" />
+        <RectangleDemo text="--bg-gradient-7" class="bgg-7" height="40px" />
+        <RectangleDemo text="--bg-gradient-8" class="bgg-8" height="40px" />
+      </div>
+    </div>
+    <div class="separator-v-xl"></div>
+    <h3>Borders</h3>
+    <div class="col">
+      <div class="">
+        <div class="row jc-sb lh-xl">
+          --border
+          <div
+            class="marg-lf"
+            style="border-radius: 5px; border: var(--border); width: 20px; height: 20px;"
+          >
+          </div>
+        </div>
+        <div class="row jc-sb ai-c min-h-10">
+          --border-light
+          <div
+            class="marg-lf"
+            style="border-radius: 5px; border: var(--border-light); width: 20px; height: 20px;"
+          >
+          </div>
+        </div>
+        <div class="row jc-sb ai-c min-h-10">
+          --border-dark
+          <div
+            class="marg-lf"
+            style="border-radius: 5px; border: var(--border-dark); width: 20px; height: 20px;"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
