@@ -1,0 +1,752 @@
+{
+  "folder": "03-layout",
+  "file": "01-flex.css",
+  "lastUpdated": "2025-12-14",
+  "hasResponsive": true,
+  "totalSelectors": 55,
+  "content": [
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".col",
+      "id": "#03-01-01",
+      "category": null,
+      "properties": [
+        "display",
+        "flex-wrap",
+        "justify-content",
+        "align-items"
+      ],
+      "cssRule": "display: flex\nflex-wrap: wrap\njustify-content: center\nalign-items: center",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".colr",
+      "id": "#03-01-01",
+      "category": null,
+      "properties": [
+        "display",
+        "flex-wrap",
+        "justify-content",
+        "align-items"
+      ],
+      "cssRule": "display: flex\nflex-wrap: wrap\njustify-content: center\nalign-items: center",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".row",
+      "id": "#03-01-01",
+      "category": null,
+      "properties": [
+        "display",
+        "flex-wrap",
+        "justify-content",
+        "align-items"
+      ],
+      "cssRule": "display: flex\nflex-wrap: wrap\njustify-content: center\nalign-items: center",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".rowr",
+      "id": "#03-01-01",
+      "category": null,
+      "properties": [
+        "display",
+        "flex-wrap",
+        "justify-content",
+        "align-items"
+      ],
+      "cssRule": "display: flex\nflex-wrap: wrap\njustify-content: center\nalign-items: center",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".row-col",
+      "id": "#03-01-01",
+      "category": null,
+      "properties": [
+        "display",
+        "flex-wrap",
+        "justify-content",
+        "align-items"
+      ],
+      "cssRule": "display: flex\nflex-wrap: wrap\njustify-content: center\nalign-items: center",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".row-colr",
+      "id": "#03-01-01",
+      "category": null,
+      "properties": [
+        "display",
+        "flex-wrap",
+        "justify-content",
+        "align-items"
+      ],
+      "cssRule": "display: flex\nflex-wrap: wrap\njustify-content: center\nalign-items: center",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".col-row",
+      "id": "#03-01-01",
+      "category": null,
+      "properties": [
+        "display",
+        "flex-wrap",
+        "justify-content",
+        "align-items"
+      ],
+      "cssRule": "display: flex\nflex-wrap: wrap\njustify-content: center\nalign-items: center",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".col-rowr",
+      "id": "#03-01-01",
+      "category": null,
+      "properties": [
+        "display",
+        "flex-wrap",
+        "justify-content",
+        "align-items"
+      ],
+      "cssRule": "display: flex\nflex-wrap: wrap\njustify-content: center\nalign-items: center",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".col",
+      "id": "#03-01-01",
+      "category": null,
+      "properties": [
+        "flex-direction"
+      ],
+      "cssRule": "flex-direction: column",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".colr",
+      "id": "#03-01-01",
+      "category": null,
+      "properties": [
+        "flex-direction"
+      ],
+      "cssRule": "flex-direction: column-reverse",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".row",
+      "id": "#03-01-01",
+      "category": null,
+      "properties": [
+        "flex-direction"
+      ],
+      "cssRule": "flex-direction: row",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".rowr",
+      "id": "#03-01-01",
+      "category": null,
+      "properties": [
+        "flex-direction"
+      ],
+      "cssRule": "flex-direction: row-reverse",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".row-col",
+      "id": "#03-01-03",
+      "category": null,
+      "properties": [
+        "flex-direction"
+      ],
+      "cssRule": "flex-direction: row",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".row-colr",
+      "id": "#03-01-03",
+      "category": null,
+      "properties": [
+        "flex-direction"
+      ],
+      "cssRule": "flex-direction: row",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".rowr-col",
+      "id": "#03-01-03",
+      "category": null,
+      "properties": [
+        "flex-direction"
+      ],
+      "cssRule": "flex-direction: row-reverse",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".rowr-colr",
+      "id": "#03-01-03",
+      "category": null,
+      "properties": [
+        "flex-direction"
+      ],
+      "cssRule": "flex-direction: row-reverse",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".col-row",
+      "id": "#03-01-03",
+      "category": null,
+      "properties": [
+        "flex-direction"
+      ],
+      "cssRule": "flex-direction: column",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".col-rowr",
+      "id": "#03-01-03",
+      "category": null,
+      "properties": [
+        "flex-direction"
+      ],
+      "cssRule": "flex-direction: column",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".colr-row",
+      "id": "#03-01-03",
+      "category": null,
+      "properties": [
+        "flex-direction"
+      ],
+      "cssRule": "flex-direction: column-reverse",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".colr-rowr",
+      "id": "#03-01-03",
+      "category": null,
+      "properties": [
+        "flex-direction"
+      ],
+      "cssRule": "flex-direction: column-reverse",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".f-nowrap",
+      "id": "#03-01-04",
+      "category": null,
+      "properties": [
+        "flex-wrap"
+      ],
+      "cssRule": "flex-wrap: nowrap",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".flex1",
+      "id": "#03-01-04",
+      "category": null,
+      "properties": [
+        "flex"
+      ],
+      "cssRule": "flex: 1",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".f-gap-xs > div",
+      "id": "#03-01-05",
+      "category": null,
+      "properties": [
+        "margin"
+      ],
+      "cssRule": "margin: 2px",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".f-gap- > div > div",
+      "id": "#03-01-05",
+      "category": null,
+      "properties": [
+        "margin"
+      ],
+      "cssRule": "margin: 2px",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".f-gap-s > div",
+      "id": "#03-01-05",
+      "category": null,
+      "properties": [
+        "margin"
+      ],
+      "cssRule": "margin: 5px",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".f-gap-s > div > div",
+      "id": "#03-01-05",
+      "category": null,
+      "properties": [
+        "margin"
+      ],
+      "cssRule": "margin: 5px",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".f-gap > div",
+      "id": "#03-01-05",
+      "category": null,
+      "properties": [
+        "margin"
+      ],
+      "cssRule": "margin: 10px",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".f-gap > div > div",
+      "id": "#03-01-05",
+      "category": null,
+      "properties": [
+        "margin"
+      ],
+      "cssRule": "margin: 10px",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".f-gap-l > div",
+      "id": "#03-01-05",
+      "category": null,
+      "properties": [
+        "margin"
+      ],
+      "cssRule": "margin: 20px",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".f-gap-l > div > div",
+      "id": "#03-01-05",
+      "category": null,
+      "properties": [
+        "margin"
+      ],
+      "cssRule": "margin: 20px",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".f-gap-xl > div",
+      "id": "#03-01-05",
+      "category": null,
+      "properties": [
+        "margin"
+      ],
+      "cssRule": "margin: 30px",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".f-gap-xl > div > div",
+      "id": "#03-01-05",
+      "category": null,
+      "properties": [
+        "margin"
+      ],
+      "cssRule": "margin: 30px",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".ai-c",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "align-items"
+      ],
+      "cssRule": "align-items: center !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".ai-fe",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "align-items"
+      ],
+      "cssRule": "align-items: flex-end !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".ai-fs",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "align-items"
+      ],
+      "cssRule": "align-items: flex-start !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".ai-s",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "align-items"
+      ],
+      "cssRule": "align-items: stretch !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".as-c",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "align-self"
+      ],
+      "cssRule": "align-self: center !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".as-fs",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "align-self"
+      ],
+      "cssRule": "align-self: flex-end !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".as-fe",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "align-self"
+      ],
+      "cssRule": "align-self: flex-start !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".as-s",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "align-self"
+      ],
+      "cssRule": "align-self: stretch !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".ac-c",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "align-content"
+      ],
+      "cssRule": "align-content: center !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".ac-fs",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "align-content"
+      ],
+      "cssRule": "align-content: flex-end !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".ac-fe",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "align-content"
+      ],
+      "cssRule": "align-content: flex-start !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".ac-s",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "align-content"
+      ],
+      "cssRule": "align-content: stretch !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".ac-sa",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "align-content"
+      ],
+      "cssRule": "align-content: space-around !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".ac-sb",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "align-content"
+      ],
+      "cssRule": "align-content: space-between !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".jc-c",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "justify-content"
+      ],
+      "cssRule": "justify-content: center !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".jc-fe",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "justify-content"
+      ],
+      "cssRule": "justify-content: flex-end !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".jc-fs",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "justify-content"
+      ],
+      "cssRule": "justify-content: flex-start !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".jc-sa",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "justify-content"
+      ],
+      "cssRule": "justify-content: space-around !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".jc-sb",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "justify-content"
+      ],
+      "cssRule": "justify-content: space-between !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".jc-se",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "justify-content"
+      ],
+      "cssRule": "justify-content: space-evenly !important",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".flex-center",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "display",
+        "align-items",
+        "justify-content"
+      ],
+      "cssRule": "display: flex\nalign-items: center\njustify-content: center",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".flex-center-h",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "display",
+        "justify-content"
+      ],
+      "cssRule": "display: flex\njustify-content: center",
+      "responsive": true,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".flex-center-v",
+      "id": "#03-01-XX",
+      "category": null,
+      "properties": [
+        "display",
+        "align-items"
+      ],
+      "cssRule": "display: flex\nalign-items: center",
+      "responsive": true,
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,1148 @@
+{
+  "folder": "04-decorators",
+  "file": "04-border.css",
+  "lastUpdated": "2025-12-14",
+  "hasResponsive": true,
+  "totalSelectors": 86,
+  "content": [
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-w-0",
+      "id": "#04-04-01",
+      "category": null,
+      "properties": [
+        "border-width"
+      ],
+      "cssRule": "border-width: 0",
+      "responsive": true,
+      "description": "** Border Widths (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-w-1",
+      "id": "#04-04-01",
+      "category": null,
+      "properties": [
+        "border-width"
+      ],
+      "cssRule": "border-width: var(--border-width-s)",
+      "responsive": true,
+      "description": "** Border Widths (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-w-2",
+      "id": "#04-04-01",
+      "category": null,
+      "properties": [
+        "border-width"
+      ],
+      "cssRule": "border-width: var(--border-width-md)",
+      "responsive": true,
+      "description": "** Border Widths (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-w-4",
+      "id": "#04-04-01",
+      "category": null,
+      "properties": [
+        "border-width"
+      ],
+      "cssRule": "border-width: calc(var(--border-width-md) * 2)",
+      "responsive": true,
+      "description": "** Border Widths (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-solid",
+      "id": "#04-04-02",
+      "category": null,
+      "properties": [
+        "border-style"
+      ],
+      "cssRule": "border-style: solid",
+      "responsive": true,
+      "description": "** Border Styles (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-dashed",
+      "id": "#04-04-02",
+      "category": null,
+      "properties": [
+        "border-style"
+      ],
+      "cssRule": "border-style: dashed",
+      "responsive": true,
+      "description": "** Border Styles (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-dotted",
+      "id": "#04-04-02",
+      "category": null,
+      "properties": [
+        "border-style"
+      ],
+      "cssRule": "border-style: dotted",
+      "responsive": true,
+      "description": "** Border Styles (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-double",
+      "id": "#04-04-02",
+      "category": null,
+      "properties": [
+        "border-style"
+      ],
+      "cssRule": "border-style: double",
+      "responsive": false,
+      "description": "** Border Styles (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-none",
+      "id": "#04-04-02",
+      "category": null,
+      "properties": [
+        "border-style"
+      ],
+      "cssRule": "border-style: none",
+      "responsive": true,
+      "description": "** Border Styles (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-inset",
+      "id": "#04-04-02",
+      "category": null,
+      "properties": [
+        "border-style"
+      ],
+      "cssRule": "border-style: inset",
+      "responsive": false,
+      "description": "** Border Styles (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-outset",
+      "id": "#04-04-02",
+      "category": null,
+      "properties": [
+        "border-style"
+      ],
+      "cssRule": "border-style: outset",
+      "responsive": false,
+      "description": "** Border Styles (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-color-primary",
+      "id": "#04-04-03",
+      "category": null,
+      "properties": [
+        "border-color"
+      ],
+      "cssRule": "border-color: var(--color-primary)",
+      "responsive": true,
+      "description": "** Border Colors (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-color-primary-light",
+      "id": "#04-04-03",
+      "category": null,
+      "properties": [
+        "border-color"
+      ],
+      "cssRule": "border-color: var(--color-primary-light)",
+      "responsive": false,
+      "description": "** Border Colors (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-color-primary-dark",
+      "id": "#04-04-03",
+      "category": null,
+      "properties": [
+        "border-color"
+      ],
+      "cssRule": "border-color: var(--color-primary-dark)",
+      "responsive": false,
+      "description": "** Border Colors (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-color-secondary",
+      "id": "#04-04-03",
+      "category": null,
+      "properties": [
+        "border-color"
+      ],
+      "cssRule": "border-color: var(--color-secondary)",
+      "responsive": false,
+      "description": "** Border Colors (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-color-success",
+      "id": "#04-04-03",
+      "category": null,
+      "properties": [
+        "border-color"
+      ],
+      "cssRule": "border-color: var(--color-success)",
+      "responsive": true,
+      "description": "** Border Colors (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-color-warning",
+      "id": "#04-04-03",
+      "category": null,
+      "properties": [
+        "border-color"
+      ],
+      "cssRule": "border-color: var(--color-warning)",
+      "responsive": false,
+      "description": "** Border Colors (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-color-error",
+      "id": "#04-04-03",
+      "category": null,
+      "properties": [
+        "border-color"
+      ],
+      "cssRule": "border-color: var(--color-error)",
+      "responsive": true,
+      "description": "** Border Colors (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-color-black",
+      "id": "#04-04-03",
+      "category": null,
+      "properties": [
+        "border-color"
+      ],
+      "cssRule": "border-color: var(--color-almost-black)",
+      "responsive": false,
+      "description": "** Border Colors (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-color-white",
+      "id": "#04-04-03",
+      "category": null,
+      "properties": [
+        "border-color"
+      ],
+      "cssRule": "border-color: var(--color-almost-white)",
+      "responsive": true,
+      "description": "** Border Colors (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-color-transparent",
+      "id": "#04-04-03",
+      "category": null,
+      "properties": [
+        "border-color"
+      ],
+      "cssRule": "border-color: transparent",
+      "responsive": true,
+      "description": "** Border Colors (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-t",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-top"
+      ],
+      "cssRule": "border-top: var(--border)",
+      "responsive": true,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-b",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-bottom"
+      ],
+      "cssRule": "border-bottom: var(--border)",
+      "responsive": true,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-lf",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-left"
+      ],
+      "cssRule": "border-left: var(--border)",
+      "responsive": true,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-rg",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-right"
+      ],
+      "cssRule": "border-right: var(--border)",
+      "responsive": true,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-t-w-0",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-top-width"
+      ],
+      "cssRule": "border-top-width: 0",
+      "responsive": true,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-t-w-1",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-top-width"
+      ],
+      "cssRule": "border-top-width: var(--border-width-s)",
+      "responsive": true,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-t-w-2",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-top-width"
+      ],
+      "cssRule": "border-top-width: var(--border-width-md)",
+      "responsive": false,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-t-w-4",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-top-width"
+      ],
+      "cssRule": "border-top-width: calc(var(--border-width-md) * 2)",
+      "responsive": false,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-b-w-0",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-bottom-width"
+      ],
+      "cssRule": "border-bottom-width: 0",
+      "responsive": true,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-b-w-1",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-bottom-width"
+      ],
+      "cssRule": "border-bottom-width: var(--border-width-s)",
+      "responsive": true,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-b-w-2",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-bottom-width"
+      ],
+      "cssRule": "border-bottom-width: var(--border-width-md)",
+      "responsive": false,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-b-w-4",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-bottom-width"
+      ],
+      "cssRule": "border-bottom-width: calc(var(--border-width-md) * 2)",
+      "responsive": false,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-lf-w-0",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-left-width"
+      ],
+      "cssRule": "border-left-width: 0",
+      "responsive": true,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-lf-w-1",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-left-width"
+      ],
+      "cssRule": "border-left-width: var(--border-width-s)",
+      "responsive": false,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-lf-w-2",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-left-width"
+      ],
+      "cssRule": "border-left-width: var(--border-width-md)",
+      "responsive": false,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-lf-w-4",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-left-width"
+      ],
+      "cssRule": "border-left-width: calc(var(--border-width-md) * 2)",
+      "responsive": false,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-rg-w-0",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-right-width"
+      ],
+      "cssRule": "border-right-width: 0",
+      "responsive": true,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-rg-w-1",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-right-width"
+      ],
+      "cssRule": "border-right-width: var(--border-width-s)",
+      "responsive": false,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-rg-w-2",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-right-width"
+      ],
+      "cssRule": "border-right-width: var(--border-width-md)",
+      "responsive": false,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-rg-w-4",
+      "id": "#04-04-04",
+      "category": null,
+      "properties": [
+        "border-right-width"
+      ],
+      "cssRule": "border-right-width: calc(var(--border-width-md) * 2)",
+      "responsive": false,
+      "description": "** Border Sides (Atomic) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-r-0",
+      "id": "#04-04-05",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 0",
+      "responsive": true,
+      "description": "** Border Radius **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-r-s",
+      "id": "#04-04-05",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: var(--radius-s)",
+      "responsive": true,
+      "description": "** Border Radius **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-r",
+      "id": "#04-04-05",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: var(--radius-md)",
+      "responsive": true,
+      "description": "** Border Radius **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-r-l",
+      "id": "#04-04-05",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: var(--radius-l)",
+      "responsive": true,
+      "description": "** Border Radius **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-r-xl",
+      "id": "#04-04-05",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: var(--radius-l)",
+      "responsive": true,
+      "description": "** Border Radius **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-r-s.scrollable::-webkit-scrollbar-track",
+      "id": "#04-04-05",
+      "category": null,
+      "properties": [
+        "margin"
+      ],
+      "cssRule": "margin: var(--space-3) 0",
+      "responsive": false,
+      "description": "** Border Radius **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-r.scrollable::-webkit-scrollbar-track",
+      "id": "#04-04-05",
+      "category": null,
+      "properties": [
+        "margin"
+      ],
+      "cssRule": "margin: var(--space-4) 0",
+      "responsive": false,
+      "description": "** Border Radius **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-r-l.scrollable::-webkit-scrollbar-track",
+      "id": "#04-04-05",
+      "category": null,
+      "properties": [
+        "margin"
+      ],
+      "cssRule": "margin: var(--space-5) 0",
+      "responsive": false,
+      "description": "** Border Radius **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-r-xl.scrollable::-webkit-scrollbar-track",
+      "id": "#04-04-05",
+      "category": null,
+      "properties": [
+        "margin"
+      ],
+      "cssRule": "margin: var(--space-6) 0",
+      "responsive": false,
+      "description": "** Border Radius **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-r-full",
+      "id": "#04-04-06",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: var(--radius-full)",
+      "responsive": true,
+      "description": "** Radio/Full Radius **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-r-circle",
+      "id": "#04-04-06",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 50%",
+      "responsive": true,
+      "description": "** Radio/Full Radius **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-circle-s",
+      "id": "#04-04-07",
+      "category": null,
+      "properties": [
+        "border",
+        "border-radius",
+        "display",
+        "align-items",
+        "justify-content"
+      ],
+      "cssRule": "border: var(--border-width-s) solid transparent\nborder-radius: 50%\ndisplay: inline-flex\nalign-items: center\njustify-content: center",
+      "responsive": true,
+      "description": "** Border Circle (Stacked) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-circle",
+      "id": "#04-04-07",
+      "category": null,
+      "properties": [
+        "border",
+        "border-radius",
+        "display",
+        "align-items",
+        "justify-content"
+      ],
+      "cssRule": "border: var(--border-width-s) solid transparent\nborder-radius: 50%\ndisplay: inline-flex\nalign-items: center\njustify-content: center",
+      "responsive": true,
+      "description": "** Border Circle (Stacked) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-circle-l",
+      "id": "#04-04-07",
+      "category": null,
+      "properties": [
+        "border",
+        "border-radius",
+        "display",
+        "align-items",
+        "justify-content"
+      ],
+      "cssRule": "border: var(--border-width-s) solid transparent\nborder-radius: 50%\ndisplay: inline-flex\nalign-items: center\njustify-content: center",
+      "responsive": true,
+      "description": "** Border Circle (Stacked) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-circle-xl",
+      "id": "#04-04-07",
+      "category": null,
+      "properties": [
+        "border",
+        "border-radius",
+        "display",
+        "align-items",
+        "justify-content"
+      ],
+      "cssRule": "border: var(--border-width-s) solid transparent\nborder-radius: 50%\ndisplay: inline-flex\nalign-items: center\njustify-content: center",
+      "responsive": true,
+      "description": "** Border Circle (Stacked) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-circle-s",
+      "id": "#04-04-07",
+      "category": null,
+      "properties": [
+        "box-shadow",
+        "color"
+      ],
+      "cssRule": "box-shadow: 0 0 0 1px var(--color-primary)\ncolor: var(--color-primary)",
+      "responsive": true,
+      "description": "** Border Circle (Stacked) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-circle",
+      "id": "#04-04-07",
+      "category": null,
+      "properties": [
+        "box-shadow",
+        "color"
+      ],
+      "cssRule": "box-shadow: 0 0 0 3px var(--color-primary)\ncolor: var(--color-primary)",
+      "responsive": true,
+      "description": "** Border Circle (Stacked) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-circle-l",
+      "id": "#04-04-07",
+      "category": null,
+      "properties": [
+        "box-shadow",
+        "color"
+      ],
+      "cssRule": "box-shadow: 0 0 0 5px var(--color-primary)\ncolor: var(--color-primary)",
+      "responsive": true,
+      "description": "** Border Circle (Stacked) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-circle-xl",
+      "id": "#04-04-07",
+      "category": null,
+      "properties": [
+        "box-shadow",
+        "color"
+      ],
+      "cssRule": "box-shadow: 0 0 0 10px var(--color-primary)\ncolor: var(--color-primary)",
+      "responsive": true,
+      "description": "** Border Circle (Stacked) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-circle.color-primary",
+      "id": "#04-04-07",
+      "category": null,
+      "properties": [
+        "color"
+      ],
+      "cssRule": "color: var(--color-primary)",
+      "responsive": false,
+      "description": "** Border Circle (Stacked) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-circle.color-success",
+      "id": "#04-04-07",
+      "category": null,
+      "properties": [
+        "color"
+      ],
+      "cssRule": "color: var(--color-success)",
+      "responsive": false,
+      "description": "** Border Circle (Stacked) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-circle.color-warning",
+      "id": "#04-04-07",
+      "category": null,
+      "properties": [
+        "color"
+      ],
+      "cssRule": "color: var(--color-warning)",
+      "responsive": false,
+      "description": "** Border Circle (Stacked) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-circle.color-error",
+      "id": "#04-04-07",
+      "category": null,
+      "properties": [
+        "color"
+      ],
+      "cssRule": "color: var(--color-error)",
+      "responsive": false,
+      "description": "** Border Circle (Stacked) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-circle.color-black",
+      "id": "#04-04-07",
+      "category": null,
+      "properties": [
+        "color"
+      ],
+      "cssRule": "color: var(--color-almost-black)",
+      "responsive": false,
+      "description": "** Border Circle (Stacked) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-circle.color-white",
+      "id": "#04-04-07",
+      "category": null,
+      "properties": [
+        "color"
+      ],
+      "cssRule": "color: var(--color-almost-white)",
+      "responsive": false,
+      "description": "** Border Circle (Stacked) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-t-1",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 25% 25% 0 0",
+      "responsive": true,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-t-2",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 50% 50% 0 0",
+      "responsive": true,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-t-3",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 75% 75% 0 0 / 50% 50% 0 0",
+      "responsive": true,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-t-4",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 100% 100% 0 0 / 10% 90% 0 0",
+      "responsive": false,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-b-1",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 0 0 25% 25%",
+      "responsive": true,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-b-2",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 0 0 50% 50%",
+      "responsive": true,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-b-3",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 0 0 75% 75% / 0 0 50% 50%",
+      "responsive": true,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-b-4",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 0 0 100% 100% / 0 0 10% 90%",
+      "responsive": false,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-lf-1",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 25% 0 0 25%",
+      "responsive": false,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-lf-2",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 50% 0 0 50%",
+      "responsive": false,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-lf-3",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 75% 0 0 75% / 50% 0 0 50%",
+      "responsive": false,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-lf-4",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 100% 0 0 100% / 10% 0 0 90%",
+      "responsive": false,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-rg-1",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 0 25% 25% 0",
+      "responsive": false,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-rg-2",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 0 50% 50% 0",
+      "responsive": false,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-rg-3",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 0 75% 75% 0 / 0 50% 50% 0",
+      "responsive": false,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-blob-rg-4",
+      "id": "#04-04-08",
+      "category": null,
+      "properties": [
+        "border-radius"
+      ],
+      "cssRule": "border-radius: 0 100% 100% 0 / 0 10% 90% 0",
+      "responsive": false,
+      "description": "** Border Blobs (Organic Shapes) **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border",
+      "id": "#04-04-09",
+      "category": null,
+      "properties": [
+        "border"
+      ],
+      "cssRule": "border: var(--border)",
+      "responsive": true,
+      "description": "** Border Shortcuts **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-light",
+      "id": "#04-04-09",
+      "category": null,
+      "properties": [
+        "border"
+      ],
+      "cssRule": "border: var(--border-light)",
+      "responsive": true,
+      "description": "** Border Shortcuts **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".border-dark",
+      "id": "#04-04-09",
+      "category": null,
+      "properties": [
+        "border"
+      ],
+      "cssRule": "border: var(--border-dark)",
+      "responsive": true,
+      "description": "** Border Shortcuts **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".bordered",
+      "id": "#04-04-09",
+      "category": null,
+      "properties": [
+        "border",
+        "border-radius"
+      ],
+      "cssRule": "border: var(--border)\nborder-radius: var(--radius-md)",
+      "responsive": false,
+      "description": "** Border Shortcuts **"
+    }
+  ]
+}

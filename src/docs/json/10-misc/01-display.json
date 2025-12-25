@@ -1,0 +1,165 @@
+{
+  "folder": "10-misc",
+  "file": "01-display.css",
+  "lastUpdated": "2025-12-14",
+  "hasResponsive": true,
+  "totalSelectors": 12,
+  "content": [
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".d-block",
+      "id": "#10-01-XX",
+      "category": null,
+      "properties": [
+        "display"
+      ],
+      "cssRule": "display: block",
+      "responsive": true,
+      "description": "** Display Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".d-inline",
+      "id": "#10-01-XX",
+      "category": null,
+      "properties": [
+        "display"
+      ],
+      "cssRule": "display: inline",
+      "responsive": true,
+      "description": "** Display Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".d-inline-block",
+      "id": "#10-01-XX",
+      "category": null,
+      "properties": [
+        "display"
+      ],
+      "cssRule": "display: inline-block",
+      "responsive": true,
+      "description": "** Display Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".d-flex",
+      "id": "#10-01-XX",
+      "category": null,
+      "properties": [
+        "display"
+      ],
+      "cssRule": "display: flex",
+      "responsive": true,
+      "description": "** Display Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".d-grid",
+      "id": "#10-01-XX",
+      "category": null,
+      "properties": [
+        "display"
+      ],
+      "cssRule": "display: grid",
+      "responsive": true,
+      "description": "** Display Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".d-none",
+      "id": "#10-01-XX",
+      "category": null,
+      "properties": [
+        "display"
+      ],
+      "cssRule": "display: none",
+      "responsive": true,
+      "description": "** Display Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".visibility-visible",
+      "id": "#10-01-XX",
+      "category": null,
+      "properties": [
+        "visibility"
+      ],
+      "cssRule": "visibility: visible",
+      "responsive": false,
+      "description": "** Display Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".visibility-invisible",
+      "id": "#10-01-XX",
+      "category": null,
+      "properties": [
+        "visibility"
+      ],
+      "cssRule": "visibility: hidden",
+      "responsive": false,
+      "description": "** Display Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".visibility-collapse",
+      "id": "#10-01-XX",
+      "category": null,
+      "properties": [
+        "visibility"
+      ],
+      "cssRule": "visibility: collapse",
+      "responsive": false,
+      "description": "** Display Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".visible",
+      "id": "#10-01-XX",
+      "category": null,
+      "properties": [
+        "visibility"
+      ],
+      "cssRule": "visibility: visible",
+      "responsive": false,
+      "description": "** Display Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".invisible",
+      "id": "#10-01-XX",
+      "category": null,
+      "properties": [
+        "visibility"
+      ],
+      "cssRule": "visibility: hidden",
+      "responsive": false,
+      "description": "** Display Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".collapse",
+      "id": "#10-01-XX",
+      "category": null,
+      "properties": [
+        "visibility"
+      ],
+      "cssRule": "visibility: collapse",
+      "responsive": false,
+      "description": "** Display Utilities **"
+    }
+  ]
+}

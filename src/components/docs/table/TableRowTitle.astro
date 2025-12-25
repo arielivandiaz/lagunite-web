@@ -1,0 +1,30 @@
+---
+import IdTooltip from "./IdTooltip.astro";
+
+interface Component {
+  title: string;
+  selector: string;
+}
+
+interface Props {
+  id: string;
+  title: string;
+  description: string;
+}
+
+const { id, title, description } = Astro.props;
+---
+
+<IdTooltip id={id} />
+
+<span class="id-tooltip" data-id={id}>#{id}</span>
+
+<tr class="bg-white">
+  <td class="padd-s"><IdTooltip id={id} /></td>
+  <td class="padd-s">{title})</td>
+  <td class="padd-s">
+    {description}
+  </td>
+</tr>
+
+

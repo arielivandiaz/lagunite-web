@@ -1,0 +1,230 @@
+{
+  "folder": "04-decorators",
+  "file": "06-transitions.css",
+  "lastUpdated": "2025-12-14",
+  "hasResponsive": true,
+  "totalSelectors": 17,
+  "content": [
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".transition-all",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-property"
+      ],
+      "cssRule": "transition-property: all",
+      "responsive": true,
+      "description": "** Transition Properties **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".transition-colors",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-property"
+      ],
+      "cssRule": "transition-property: color, background-color, border-color, text-decoration-color, fill, stroke",
+      "responsive": true,
+      "description": "** Transition Properties **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".transition-opacity",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-property"
+      ],
+      "cssRule": "transition-property: opacity",
+      "responsive": true,
+      "description": "** Transition Properties **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".transition-transform",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-property"
+      ],
+      "cssRule": "transition-property: transform",
+      "responsive": true,
+      "description": "** Transition Properties **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".duration-75",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-duration"
+      ],
+      "cssRule": "transition-duration: 75ms",
+      "responsive": true,
+      "description": "** Transition Durations **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".duration-100",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-duration"
+      ],
+      "cssRule": "transition-duration: 100ms",
+      "responsive": true,
+      "description": "** Transition Durations **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".duration-150",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-duration"
+      ],
+      "cssRule": "transition-duration: 150ms",
+      "responsive": true,
+      "description": "** Transition Durations **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".duration-200",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-duration"
+      ],
+      "cssRule": "transition-duration: 200ms",
+      "responsive": true,
+      "description": "** Transition Durations **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".duration-300",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-duration"
+      ],
+      "cssRule": "transition-duration: 300ms",
+      "responsive": true,
+      "description": "** Transition Durations **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".duration-500",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-duration"
+      ],
+      "cssRule": "transition-duration: 500ms",
+      "responsive": true,
+      "description": "** Transition Durations **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".ease-linear",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-timing-function"
+      ],
+      "cssRule": "transition-timing-function: linear",
+      "responsive": true,
+      "description": "** Transition Timing Functions **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".ease-in",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-timing-function"
+      ],
+      "cssRule": "transition-timing-function: cubic-bezier(0.4, 0, 1, 1)",
+      "responsive": true,
+      "description": "** Transition Timing Functions **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".ease-out",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-timing-function"
+      ],
+      "cssRule": "transition-timing-function: cubic-bezier(0, 0, 0.2, 1)",
+      "responsive": true,
+      "description": "** Transition Timing Functions **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".ease-in-out",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-timing-function"
+      ],
+      "cssRule": "transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)",
+      "responsive": true,
+      "description": "** Transition Timing Functions **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".delay-75",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-delay"
+      ],
+      "cssRule": "transition-delay: 75ms",
+      "responsive": true,
+      "description": "** Transition Delays **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".delay-100",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-delay"
+      ],
+      "cssRule": "transition-delay: 100ms",
+      "responsive": true,
+      "description": "** Transition Delays **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".delay-150",
+      "id": "#04-06-XX",
+      "category": null,
+      "properties": [
+        "transition-delay"
+      ],
+      "cssRule": "transition-delay: 150ms",
+      "responsive": true,
+      "description": "** Transition Delays **"
+    }
+  ]
+}

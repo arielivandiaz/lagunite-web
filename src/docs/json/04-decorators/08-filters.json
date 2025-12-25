@@ -1,0 +1,256 @@
+{
+  "folder": "04-decorators",
+  "file": "08-filters.css",
+  "lastUpdated": "2025-12-14",
+  "hasResponsive": true,
+  "totalSelectors": 19,
+  "content": [
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".blur-none",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: blur(0)",
+      "responsive": true,
+      "description": "** Blur Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".blur-s",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: blur(4px)",
+      "responsive": true,
+      "description": "** Blur Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".blur",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: blur(8px)",
+      "responsive": true,
+      "description": "** Blur Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".blur-l",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: blur(16px)",
+      "responsive": true,
+      "description": "** Blur Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".blur-xl",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: blur(32px)",
+      "responsive": true,
+      "description": "** Blur Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".brightness-0",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: brightness(0)",
+      "responsive": true,
+      "description": "** Brightness Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".brightness-50",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: brightness(0.5)",
+      "responsive": true,
+      "description": "** Brightness Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".brightness-100",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: brightness(1)",
+      "responsive": true,
+      "description": "** Brightness Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".brightness-150",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: brightness(1.5)",
+      "responsive": true,
+      "description": "** Brightness Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".contrast-0",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: contrast(0)",
+      "responsive": true,
+      "description": "** Contrast Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".contrast-50",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: contrast(0.5)",
+      "responsive": true,
+      "description": "** Contrast Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".contrast-100",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: contrast(1)",
+      "responsive": true,
+      "description": "** Contrast Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".contrast-150",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: contrast(1.5)",
+      "responsive": true,
+      "description": "** Contrast Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".grayscale-0",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: grayscale(0)",
+      "responsive": true,
+      "description": "** Grayscale Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".grayscale",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: grayscale(1)",
+      "responsive": true,
+      "description": "** Grayscale Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".grayscale-100",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: grayscale(1)",
+      "responsive": true,
+      "description": "** Grayscale Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".saturate-0",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: saturate(0)",
+      "responsive": true,
+      "description": "** Saturate Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".saturate-100",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: saturate(1)",
+      "responsive": true,
+      "description": "** Saturate Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".saturate-150",
+      "id": "#04-08-XX",
+      "category": null,
+      "properties": [
+        "filter"
+      ],
+      "cssRule": "filter: saturate(1.5)",
+      "responsive": true,
+      "description": "** Saturate Utilities **"
+    }
+  ]
+}

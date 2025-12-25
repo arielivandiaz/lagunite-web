@@ -1,0 +1,384 @@
+{
+  "folder": "04-decorators",
+  "file": "07-animations.css",
+  "lastUpdated": "2025-12-14",
+  "hasResponsive": true,
+  "totalSelectors": 27,
+  "content": [
+    {
+      "type": "selector",
+      "selectorType": "complex",
+      "selector": "0%",
+      "id": null,
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: rotate(0deg)",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "complex",
+      "selector": "100%",
+      "id": null,
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: rotate(360deg)",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "complex",
+      "selector": "0%",
+      "id": null,
+      "category": null,
+      "properties": [
+        "transform",
+        "opacity"
+      ],
+      "cssRule": "transform: scale(1)\nopacity: 1",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "complex",
+      "selector": "100%",
+      "id": null,
+      "category": null,
+      "properties": [
+        "transform",
+        "opacity"
+      ],
+      "cssRule": "transform: scale(1)\nopacity: 1",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "complex",
+      "selector": "50%",
+      "id": null,
+      "category": null,
+      "properties": [
+        "transform",
+        "opacity"
+      ],
+      "cssRule": "transform: scale(1.05)\nopacity: 0.7",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "complex",
+      "selector": "0%",
+      "id": null,
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: translateY(0)",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "complex",
+      "selector": "100%",
+      "id": null,
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: translateY(0)",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "complex",
+      "selector": "50%",
+      "id": null,
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: translateY(-25%)",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "from",
+      "id": null,
+      "category": null,
+      "properties": [
+        "opacity"
+      ],
+      "cssRule": "opacity: 0",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "to",
+      "id": null,
+      "category": null,
+      "properties": [
+        "opacity"
+      ],
+      "cssRule": "opacity: 1",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "from",
+      "id": null,
+      "category": null,
+      "properties": [
+        "opacity"
+      ],
+      "cssRule": "opacity: 1",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "to",
+      "id": null,
+      "category": null,
+      "properties": [
+        "opacity"
+      ],
+      "cssRule": "opacity: 0",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "from",
+      "id": null,
+      "category": null,
+      "properties": [
+        "transform",
+        "opacity"
+      ],
+      "cssRule": "transform: translateY(2rem)\nopacity: 0",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "to",
+      "id": null,
+      "category": null,
+      "properties": [
+        "transform",
+        "opacity"
+      ],
+      "cssRule": "transform: translateY(0)\nopacity: 1",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "from",
+      "id": null,
+      "category": null,
+      "properties": [
+        "transform",
+        "opacity"
+      ],
+      "cssRule": "transform: translateY(0)\nopacity: 1",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "to",
+      "id": null,
+      "category": null,
+      "properties": [
+        "transform",
+        "opacity"
+      ],
+      "cssRule": "transform: translateY(2rem)\nopacity: 0",
+      "responsive": false,
+      "description": ""
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".animate-spin",
+      "id": null,
+      "category": null,
+      "properties": [
+        "animation-name",
+        "animation-duration",
+        "animation-iteration-count",
+        "animation-timing-function"
+      ],
+      "cssRule": "animation-name: spin\nanimation-duration: 1s\nanimation-iteration-count: infinite\nanimation-timing-function: linear",
+      "responsive": true,
+      "description": "** Animation Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".animate-pulse",
+      "id": null,
+      "category": null,
+      "properties": [
+        "animation-name",
+        "animation-duration",
+        "animation-iteration-count",
+        "animation-timing-function"
+      ],
+      "cssRule": "animation-name: pulse\nanimation-duration: 1.5s\nanimation-iteration-count: infinite\nanimation-timing-function: cubic-bezier(0.4, 0, 0.6, 1)",
+      "responsive": true,
+      "description": "** Animation Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".animate-bounce",
+      "id": null,
+      "category": null,
+      "properties": [
+        "animation-name",
+        "animation-duration",
+        "animation-iteration-count",
+        "animation-timing-function"
+      ],
+      "cssRule": "animation-name: bounce\nanimation-duration: 1s\nanimation-iteration-count: infinite\nanimation-timing-function: ease-in-out",
+      "responsive": true,
+      "description": "** Animation Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".animate-fade-in",
+      "id": null,
+      "category": null,
+      "properties": [
+        "animation-name",
+        "animation-duration",
+        "animation-timing-function"
+      ],
+      "cssRule": "animation-name: fade-in\nanimation-duration: 0.5s\nanimation-timing-function: ease-out",
+      "responsive": true,
+      "description": "** Animation Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".animate-fade-out",
+      "id": null,
+      "category": null,
+      "properties": [
+        "animation-name",
+        "animation-duration",
+        "animation-timing-function"
+      ],
+      "cssRule": "animation-name: fade-out\nanimation-duration: 0.5s\nanimation-timing-function: ease-in",
+      "responsive": true,
+      "description": "** Animation Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".animate-slide-in",
+      "id": null,
+      "category": null,
+      "properties": [
+        "animation-name",
+        "animation-duration",
+        "animation-timing-function"
+      ],
+      "cssRule": "animation-name: slide-in\nanimation-duration: 0.5s\nanimation-timing-function: ease-out",
+      "responsive": true,
+      "description": "** Animation Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".animate-slide-out",
+      "id": null,
+      "category": null,
+      "properties": [
+        "animation-name",
+        "animation-duration",
+        "animation-timing-function"
+      ],
+      "cssRule": "animation-name: slide-out\nanimation-duration: 0.5s\nanimation-timing-function: ease-in",
+      "responsive": true,
+      "description": "** Animation Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".animate-duration-1s",
+      "id": null,
+      "category": null,
+      "properties": [
+        "animation-duration"
+      ],
+      "cssRule": "animation-duration: 1s",
+      "responsive": true,
+      "description": "** Animation Duration Helpers **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".animate-duration-2s",
+      "id": null,
+      "category": null,
+      "properties": [
+        "animation-duration"
+      ],
+      "cssRule": "animation-duration: 2s",
+      "responsive": true,
+      "description": "** Animation Duration Helpers **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".animate-once",
+      "id": null,
+      "category": null,
+      "properties": [
+        "animation-iteration-count"
+      ],
+      "cssRule": "animation-iteration-count: 1",
+      "responsive": true,
+      "description": "** Animation Iteration Helpers **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".animate-infinite",
+      "id": null,
+      "category": null,
+      "properties": [
+        "animation-iteration-count"
+      ],
+      "cssRule": "animation-iteration-count: infinite",
+      "responsive": true,
+      "description": "** Animation Iteration Helpers **"
+    }
+  ]
+}

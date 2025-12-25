@@ -1,0 +1,242 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import RectangleDemo from "../../../components/docs/RectangleDemo.astro";
+
+const title = "Background Colors";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+
+    <div class="col">
+      <div>
+        <h3>Main Background Colors</h3>
+        <i>@ID:<b> #02-02-01</b></i>
+        <div class="separator-v-s"></div>
+        <RectangleDemo text=".bg" class="bg" height="60px" />
+        <RectangleDemo text=".bg-alt" class="bg-alt" height="60px" />
+      </div>
+      <div class="separator-v-l"></div>
+      <div>
+        <h3>Color Variants (primary / secondary / tertiary)</h3>
+        <i>@ID:<b> #02-02-01</b></i>
+        <div class="separator-v-s"></div>
+        <RectangleDemo text=".bg-1" class="bg-1" height="60px" />
+        <RectangleDemo text=".bg-2" class="bg-2" height="60px" />
+        <RectangleDemo text=".bg-3" class="bg-3" height="60px" />
+        <RectangleDemo text=".bg-4" class="bg-4" height="60px" />
+        <RectangleDemo text=".bg-5" class="bg-5" height="60px" />
+        <RectangleDemo text=".bg-6" class="bg-6" height="60px" />
+        <RectangleDemo text=".bg-7" class="bg-7" height="60px" />
+        <RectangleDemo text=".bg-8" class="bg-8" height="60px" />
+        <RectangleDemo text=".bg-9" class="bg-9" height="60px" />
+      </div>
+
+      <div class="separator-v-l"></div>
+      <div class="min-w-96 bg-1 ">
+        <h3>Black / White</h3>
+        <i>@ID:<b> #02-02-03</b></i>
+        <div class="separator-v-s"></div>
+        <RectangleDemo text=".bg-black" class="bg-black" height="60px" />
+        <RectangleDemo text=".bg-ablack" class="bg-ablack" height="60px" />
+        <RectangleDemo text=".bg-white" class="bg-white" height="60px" />
+        <RectangleDemo text=".bg-awhite" class="bg-awhite" height="60px" />
+      </div>
+
+      <div class="separator-v-l"></div>
+      <div>
+        <h3>Semantic Backgrounds</h3>
+        <i>@ID:<b> #02-02-05</b></i>
+        <div class="separator-v-s"></div>
+        <RectangleDemo text=".bg-success" class="bg-success" height="60px" />
+        <RectangleDemo text=".bg-warning" class="bg-warning" height="60px" />
+        <RectangleDemo text=".bg-error" class="bg-error" height="60px" />
+      </div>
+
+      <div class="separator-v-l"></div>
+      <div>
+        <h3>Gradients</h3>
+        <i>@ID:<b> #02-02-06</b></i>
+        <div class="separator-v-s"></div>
+        <RectangleDemo text=".bgg-1" class="bgg-1" height="60px" />
+        <RectangleDemo text=".bgg-2" class="bgg-2" height="60px" />
+        <RectangleDemo text=".bgg-3" class="bgg-3" height="60px" />
+        <RectangleDemo text=".bgg-4" class="bgg-4" height="60px" />
+        <RectangleDemo text=".bgg-5" class="bgg-5" height="60px" />
+        <RectangleDemo text=".bgg-6" class="bgg-6" height="60px" />
+        <RectangleDemo text=".bgg-7" class="bgg-7" height="60px" />
+        <RectangleDemo text=".bgg-8" class="bgg-8" height="60px" />
+      </div>
+
+      <div class="separator-v-l"></div>
+      <div>
+        <h3>Gray Scale</h3>
+        <div class="separator-v-s"></div>
+        <RectangleDemo text=".bg-gray-50" class="bg-gray-50" height="40px" />
+        <RectangleDemo text=".bg-gray-100" class="bg-gray-100" height="40px" />
+        <RectangleDemo text=".bg-gray-200" class="bg-gray-200" height="40px" />
+        <RectangleDemo text=".bg-gray-300" class="bg-gray-300" height="40px" />
+        <RectangleDemo text=".bg-gray-400" class="bg-gray-400" height="40px" />
+        <RectangleDemo text=".bg-gray-500" class="bg-gray-500" height="40px" />
+        <RectangleDemo text=".bg-gray-600" class="bg-gray-600" height="40px" />
+        <RectangleDemo text=".bg-gray-700" class="bg-gray-700" height="40px" />
+        <RectangleDemo text=".bg-gray-800" class="bg-gray-800" height="40px" />
+        <RectangleDemo text=".bg-gray-900" class="bg-gray-900" height="40px" />
+        <RectangleDemo text=".bg-gray-950" class="bg-gray-950" height="40px" />
+      </div>
+
+      <div class="separator-v-l"></div>
+      <div>
+        <h3>Blue Scale</h3>
+        <div class="separator-v-s"></div>
+        <RectangleDemo text=".bg-blue-50" class="bg-blue-50" height="40px" />
+        <RectangleDemo text=".bg-blue-100" class="bg-blue-100" height="40px" />
+        <RectangleDemo text=".bg-blue-200" class="bg-blue-200" height="40px" />
+        <RectangleDemo text=".bg-blue-300" class="bg-blue-300" height="40px" />
+        <RectangleDemo text=".bg-blue-400" class="bg-blue-400" height="40px" />
+        <RectangleDemo text=".bg-blue-500" class="bg-blue-500" height="40px" />
+        <RectangleDemo text=".bg-blue-600" class="bg-blue-600" height="40px" />
+        <RectangleDemo text=".bg-blue-700" class="bg-blue-700" height="40px" />
+        <RectangleDemo text=".bg-blue-800" class="bg-blue-800" height="40px" />
+        <RectangleDemo text=".bg-blue-900" class="bg-blue-900" height="40px" />
+        <RectangleDemo text=".bg-blue-950" class="bg-blue-950" height="40px" />
+      </div>
+
+      <div class="separator-v-l"></div>
+      <div>
+        <h3>Green Scale</h3>
+        <div class="separator-v-s"></div>
+        <RectangleDemo text=".bg-green-50" class="bg-green-50" height="40px" />
+        <RectangleDemo
+          text=".bg-green-100"
+          class="bg-green-100"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-green-200"
+          class="bg-green-200"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-green-300"
+          class="bg-green-300"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-green-400"
+          class="bg-green-400"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-green-500"
+          class="bg-green-500"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-green-600"
+          class="bg-green-600"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-green-700"
+          class="bg-green-700"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-green-800"
+          class="bg-green-800"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-green-900"
+          class="bg-green-900"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-green-950"
+          class="bg-green-950"
+          height="40px"
+        />
+      </div>
+
+      <div class="separator-v-l"></div>
+      <div>
+        <h3>Yellow Scale</h3>
+        <div class="separator-v-s"></div>
+        <RectangleDemo
+          text=".bg-yellow-50"
+          class="bg-yellow-50"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-yellow-100"
+          class="bg-yellow-100"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-yellow-200"
+          class="bg-yellow-200"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-yellow-300"
+          class="bg-yellow-300"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-yellow-400"
+          class="bg-yellow-400"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-yellow-500"
+          class="bg-yellow-500"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-yellow-600"
+          class="bg-yellow-600"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-yellow-700"
+          class="bg-yellow-700"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-yellow-800"
+          class="bg-yellow-800"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-yellow-900"
+          class="bg-yellow-900"
+          height="40px"
+        />
+        <RectangleDemo
+          text=".bg-yellow-950"
+          class="bg-yellow-950"
+          height="40px"
+        />
+      </div>
+
+      <div class="separator-v-l"></div>
+      <div>
+        <h3>Red Scale</h3>
+        <div class="separator-v-s"></div>
+        <RectangleDemo text=".bg-red-50" class="bg-red-50" height="40px" />
+        <RectangleDemo text=".bg-red-100" class="bg-red-100" height="40px" />
+        <RectangleDemo text=".bg-red-200" class="bg-red-200" height="40px" />
+        <RectangleDemo text=".bg-red-300" class="bg-red-300" height="40px" />
+        <RectangleDemo text=".bg-red-400" class="bg-red-400" height="40px" />
+        <RectangleDemo text=".bg-red-500" class="bg-red-500" height="40px" />
+        <RectangleDemo text=".bg-red-600" class="bg-red-600" height="40px" />
+        <RectangleDemo text=".bg-red-700" class="bg-red-700" height="40px" />
+        <RectangleDemo text=".bg-red-800" class="bg-red-800" height="40px" />
+        <RectangleDemo text=".bg-red-900" class="bg-red-900" height="40px" />
+        <RectangleDemo text=".bg-red-950" class="bg-red-950" height="40px" />
+      </div>
+    </div>
+  </section>
+</Layout>

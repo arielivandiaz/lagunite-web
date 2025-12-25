@@ -1,0 +1,231 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+const title = "Primitive Figures";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+
+    <div class="col">
+      <div>
+        <h3>Horizontal Line Sizes</h3>
+        <i>@ID:<b> #05-05-01</b></i>
+        <div class="separator-v-s"></div>
+
+        <div class="">
+          <div class="marg-s marg-t">
+            <code>hr</code>
+          </div>
+          <hr class="" />
+
+          <div class="marg-s marg-t">
+            <code>hr.size-s</code>
+          </div>
+          <hr class="size-s" />
+
+          <div class="marg-s marg-t">
+            <code>hr.size-l</code>
+          </div>
+          <hr class="size-l" />
+          <div class="marg-s marg-t">
+            <code>hr.size-xl</code>
+          </div>
+          <hr class="size-xl" />
+          <div class="marg-s marg-t">
+            <code>hr.size-xxl</code>
+          </div>
+          <hr class="size-xxl" />
+        </div>
+        <div class="separator-v-l"></div>
+        <h3>Vertical Line</h3>
+        <i>@ID:<b> #05-05-02</b></i>
+        <div class="separator-v-s"></div>
+
+        <div class="">
+          <div class="row">
+            <div class="col">
+              <code>.line-v</code>
+              <div class="marg-t-s minhf5 line-v"></div>
+            </div>
+
+            <div class="col">
+              <code>.line-v.size-s</code>
+              <div class="marg-t-s minhf5 line-v size-s"></div>
+            </div>
+
+            <div class="col">
+              <code>.line-v.size-l</code>
+              <div class="marg-t-s minhf5 line-v size-l"></div>
+            </div>
+
+            <div class="col">
+              <code>.line-v.size-xl</code>
+              <div class="marg-t-s minhf5 line-v size-xl"></div>
+            </div>
+
+            <div class="col">
+              <code>.line-v.size-xxl</code>
+              <div class="marg-t-s minhf5 line-v size-xxl"></div>
+            </div>
+          </div>
+        </div>
+        <div class="separator-v-l"></div>
+        <h3>Figures</h3>
+        <i>@ID:<b> #05-05-03</b></i>
+        <div class="separator-v-s"></div>
+        <table class="table">
+          <tr>
+            <th>
+              <code>class / size</code>
+            </th>
+
+            <th>
+              <code>.square</code>
+            </th>
+            <th>
+              <code>.rounded</code>
+            </th>
+            <th>
+              <code>.circle</code>
+            </th>
+            <th>
+              <code>.triangle</code>
+            </th>
+            <th>
+              <code>.tear</code>
+            </th>
+          </tr>
+
+          <tr>
+            <th>
+              <code>.size-s</code>
+            </th>
+            <td>
+              <div class="square size-s">L</div>
+            </td>
+            <td>
+              <div class="rounded size-s">L</div>
+            </td>
+            <td>
+              <div class="circle size-s">L</div>
+            </td>
+            <td>
+              <div class="triangle size-s"></div>
+            </td>
+            <td>
+              <div class="tear size-s">L</div>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <code></code>
+            </th>
+            <td>
+              <div class="square">L</div>
+            </td>
+            <td>
+              <div class="rounded">L</div>
+            </td>
+            <td>
+              <div class="circle">L</div>
+            </td>
+            <td class="">
+              <div class="triangle"></div>
+            </td>
+            <td>
+              <div class="tear">L</div>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <code>.size-l</code>
+            </th>
+            <td>
+              <div class="square size-l">L</div>
+            </td>
+            <td>
+              <div class="rounded size-l">L</div>
+            </td>
+            <td>
+              <div class="circle size-l">L</div>
+            </td>
+            <td>
+              <div class="triangle size-l"></div>
+            </td>
+            <td>
+              <div class="tear size-l">L</div>
+            </td>
+          </tr>
+        </table>
+
+        <div class="separator-v-l"></div>
+        <h3>Point</h3>
+        <i>@ID:<b> #05-05-04</b></i>
+        <div class="separator-v-s"></div>
+        <ul class="wfc center">
+          <li class="row jc-sb">
+            <code>.point.size-s</code>
+            <div class="marg-lf point size-s"></div>
+          </li>
+          <li class="row jc-sb">
+            <code>.point</code>
+            <div class="marg-lf point"></div>
+          </li>
+          <li class="row jc-sb">
+            <code>.point.size-l</code>
+            <div class="marg-lf point size-l"></div>
+          </li>
+        </ul>
+
+        <div class="separator-v-l"></div>
+        <h3>Blob Figures</h3>
+        <i>@ID:<b> #05-05-02</b></i>
+        <div class="separator-v-s"></div>
+
+        <div class="">
+          <div class="row">
+            <div class="col">
+              <code>.blob-1</code>
+              <div class="blob-1 bg-1 minhf2 minwf2 marg"></div>
+            </div>
+            <div class="col">
+              <code>.blob-2</code>
+              <div class="blob-2 bg-1 minhf2 minwf2 marg"></div>
+            </div>
+            <div class="col">
+              <code>.blob-3</code>
+              <div class="blob-3 bg-1 minhf2 minwf2 marg"></div>
+            </div>
+            <div class="col">
+              <code>.blob-4</code>
+              <div class="blob-4 bg-1 minhf2 minwf2 marg"></div>
+            </div>
+            <div class="col">
+              <code>.blob-5</code>
+              <div class="blob-5 bg-1 minhf2 minwf2 marg"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="separator-v-l"></div>
+        <h3>Overlapping Blobs Example</h3>
+        <div class="separator-v-s"></div>
+
+        <div class="rel wfc center minhf4">
+          <div class="blob-1 bg-1 w8 h8 flat-bc z-1"></div>
+          <div class="blob-3 bg-2 w7 h6 float-tr z-2"></div>
+          <div class="blob-5 bg-5 w7 h7 float-bc z-3"></div>
+        </div>
+
+        <pre class="ta-lf bg-5 padd wfc center marg-t">
+&lt;div class="rel wfc center minhf4"&gt;
+  &lt;div class="blob-1 bg-1 w8 h8 flat-bc z-1"&gt;&lt;/div&gt;
+  &lt;div class="blob-3 bg-2 w7 h6 float-tr z-2"&gt;&lt;/div&gt;
+  &lt;div class="blob-5 bg-5 w7 h7 float-bc z-3"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+      </div>
+    </div>
+  </section>
+</Layout>

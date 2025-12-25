@@ -1,0 +1,162 @@
+<div class="input-group">
+  <input
+    type="text"
+    id="username"
+    class="input-field"
+    placeholder=" "
+    required
+  />
+  <label for="username" class="input-label">Nombre de usuario</label>
+</div>
+
+<input 
+  type="text" 
+  class="modern-input" 
+  placeholder="Escribe tu correo..." 
+  aria-label="Correo electrónico"
+/>
+
+<style>
+  /* Variables para fácil personalización */
+  :root {
+    --primary: #6366f1; /* Indigo moderno */
+    --text-main: #1f2937;
+    --text-muted: #9ca3af;
+    --bg-input: #ffffff;
+    --border-color: #e5e7eb;
+    --radius: 12px;
+    --transition: 0.2s ease;
+  }
+
+  /* Contenedor relativo para posicionar el label */
+  .input-group {
+    position: relative;
+    width: 100%;
+    max-width: 350px; /* Opcional: ancho máximo */
+    font-family:
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
+
+  /* El Input en sí */
+  .input-field {
+    width: 100%;
+    padding: 16px 16px; /* Espacio interno generoso */
+    font-size: 16px;
+    color: var(--text-main);
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    outline: none;
+    transition:
+      border-color var(--transition),
+      box-shadow var(--transition);
+
+    /* Importante para evitar estilos nativos feos */
+    appearance: none;
+  }
+
+  /* Estado Focus (Cuando el usuario hace clic) */
+  .input-field:focus {
+    border-color: var(--primary);
+    /* Sombra suave tipo "glow" en lugar de outline nativo */
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  }
+
+  /* El Label (Etiqueta) */
+  .input-label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 16px;
+    pointer-events: none; /* Permite hacer clic "a través" del label */
+    transition: var(--transition);
+    background-color: var(
+      --bg-input
+    ); /* Fondo para tapar el borde si es necesario */
+    padding: 0 4px;
+  }
+
+  /* LA MAGIA: Mover el label cuando hay focus o texto */
+  .input-field:focus ~ .input-label,
+  .input-field:not(:placeholder-shown) ~ .input-label {
+    top: 0;
+    left: 12px;
+    font-size: 12px;
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  /* Validación opcional: Color rojo si es inválido */
+  .input-field:invalid:not(:placeholder-shown) {
+    border-color: #ef4444;
+  }
+  .input-field:invalid:not(:placeholder-shown) ~ .input-label {
+    color: #ef4444;
+  }
+
+
+  /* Variables */
+:root {
+  --input-bg: #ffffff;
+  --input-border: #e2e8f0;    /* Gris muy claro */
+  --input-text: #0f172a;      /* Casi negro */
+  --input-placeholder: #94a3b8; /* Gris medio */
+  --focus-ring: #6366f1;      /* Color de acento */
+  --radius: 8px;              /* Bordes ligeramente redondeados */
+}
+
+.modern-input {
+  /* Estructura */
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  padding: 12px 16px; /* Altura cómoda */
+  
+  /* Tipografía */
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px; /* Tamaño "chic" moderno (si usas móvil sube a 16px para evitar zoom) */
+  line-height: 1.5;
+  color: var(--input-text);
+  
+  /* Estilo Base */
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius);
+  
+  /* Transiciones suaves */
+  transition: all 0.2s ease-in-out;
+  
+  /* Eliminar estilos nativos */
+  appearance: none; 
+  outline: none;
+}
+
+/* Estilo del Placeholder */
+.modern-input::placeholder {
+  color: var(--input-placeholder);
+  opacity: 1; /* Firefox baja la opacidad por defecto */
+}
+
+/* Estado Focus (La clave del diseño moderno) */
+.modern-input:focus {
+  border-color: var(--focus-ring);
+  /* Crea un anillo doble: una capa blanca y luego el color, dando sensación de flotar */
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--focus-ring);
+}
+
+/* Estado Hover (Opcional, mejora UX) */
+.modern-input:hover:not(:focus) {
+  border-color: #cbd5e1; /* Un poco más oscuro al pasar el mouse */
+}
+
+/* Estado Deshabilitado */
+.modern-input:disabled {
+  background-color: #f1f5f9;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+</style>

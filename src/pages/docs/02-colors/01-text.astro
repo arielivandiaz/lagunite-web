@@ -1,0 +1,157 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import TextDemo from "../../../components/docs/TextDemo.astro";
+
+const title = "Text Colors";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+
+    <div class="col">
+      <div>
+        <h3>Main Text Colors</h3>
+        <i>@ID:<b> #02-01-01</b></i>
+        <div class="separator-v-s"></div>
+        <TextDemo text=".color-text" class="color-text" />
+        <TextDemo text=".color-text-alt" class="color-text-alt" />
+      </div>
+      <div class="separator-v-l"></div>
+      <div>
+        <h3>Primary Text Colors</h3>
+        <i>@ID:<b> #02-01-02</b></i>
+        <div class="separator-v-s"></div>
+        <TextDemo text=".color-primary" class="color-primary" />
+        <TextDemo text=".color-primary-light" class="color-primary-light" />
+        <TextDemo text=".color-primary-dark" class="color-primary-dark" />
+      </div>
+      <div class="separator-v-l"></div>
+    </div>
+
+    <div class="separator-v-l"></div>
+    <div>
+      <h3>Secondary Text Colors</h3>
+      <i>@ID:<b> #02-01-03</b></i>
+      <div class="separator-v-s"></div>
+      <TextDemo text=".color-secondary" class="color-secondary" />
+      <TextDemo text=".color-secondary-light" class="color-secondary-light" />
+      <TextDemo text=".color-secondary-dark" class="color-secondary-dark" />
+    </div>
+
+    <div class="separator-v-l"></div>
+    <div>
+      <h3>Tertiary Text Colors</h3>
+      <i>@ID:<b> #02-01-04</b></i>
+      <div class="separator-v-s"></div>
+      <TextDemo text=".color-tertiary" class="color-tertiary" />
+      <TextDemo text=".color-tertiary-light" class="color-tertiary-light" />
+      <TextDemo text=".color-tertiary-dark" class="color-tertiary-dark" />
+    </div>
+
+    <div class="separator-v-l"></div>
+    <div>
+      <h3>Neutral / Almost</h3>
+      <i>@ID:<b> #02-01-05</b></i>
+      <div class="separator-v-s"></div>
+      <TextDemo text=".color-almost-black" class="color-almost-black" />
+      <TextDemo text=".color-almost-white" class="color-almost-white" />
+    </div>
+
+    <div class="separator-v-l"></div>
+    <div>
+      <h3>Semantic Colors</h3>
+      <i>@ID:<b> #02-01-06</b></i>
+      <div class="separator-v-s"></div>
+      <TextDemo text=".color-success" class="color-success" />
+      <TextDemo text=".color-warning" class="color-warning" />
+      <TextDemo text=".color-error" class="color-error" />
+    </div>
+
+    <div class="separator-v-l"></div>
+    <div>
+      <h3>Gray Scale</h3>
+      <i>@ID:<b> #02-01-50</b></i>
+      <div class="separator-v-s"></div>
+      <TextDemo text=".color-gray-50" class="color-gray-50" />
+      <TextDemo text=".color-gray-100" class="color-gray-100" />
+      <TextDemo text=".color-gray-200" class="color-gray-200" />
+      <TextDemo text=".color-gray-300" class="color-gray-300" />
+      <TextDemo text=".color-gray-400" class="color-gray-400" />
+      <TextDemo text=".color-gray-500" class="color-gray-500" />
+      <TextDemo text=".color-gray-600" class="color-gray-600" />
+      <TextDemo text=".color-gray-700" class="color-gray-700" />
+      <TextDemo text=".color-gray-800" class="color-gray-800" />
+      <TextDemo text=".color-gray-900" class="color-gray-900" />
+      <TextDemo text=".color-gray-950" class="color-gray-950" />
+    </div>
+
+    <div class="separator-v-l"></div>
+    <div>
+      <h3>Blue Scale</h3>
+      <div class="separator-v-s"></div>
+      <TextDemo text=".color-blue-50" class="color-blue-50" />
+      <TextDemo text=".color-blue-100" class="color-blue-100" />
+      <TextDemo text=".color-blue-200" class="color-blue-200" />
+      <TextDemo text=".color-blue-300" class="color-blue-300" />
+      <TextDemo text=".color-blue-400" class="color-blue-400" />
+      <TextDemo text=".color-blue-500" class="color-blue-500" />
+      <TextDemo text=".color-blue-600" class="color-blue-600" />
+      <TextDemo text=".color-blue-700" class="color-blue-700" />
+      <TextDemo text=".color-blue-800" class="color-blue-800" />
+      <TextDemo text=".color-blue-900" class="color-blue-900" />
+      <TextDemo text=".color-blue-950" class="color-blue-950" />
+    </div>
+
+    <div class="separator-v-l"></div>
+    <div>
+      <h3>Green Scale</h3>
+      <div class="separator-v-s"></div>
+      <TextDemo text=".color-green-50" class="color-green-50" />
+      <TextDemo text=".color-green-100" class="color-green-100" />
+      <TextDemo text=".color-green-200" class="color-green-200" />
+      <TextDemo text=".color-green-300" class="color-green-300" />
+      <TextDemo text=".color-green-400" class="color-green-400" />
+      <TextDemo text=".color-green-500" class="color-green-500" />
+      <TextDemo text=".color-green-600" class="color-green-600" />
+      <TextDemo text=".color-green-700" class="color-green-700" />
+      <TextDemo text=".color-green-800" class="color-green-800" />
+      <TextDemo text=".color-green-900" class="color-green-900" />
+      <TextDemo text=".color-green-950" class="color-green-950" />
+    </div>
+
+    <div class="separator-v-l"></div>
+    <div>
+      <h3>Yellow Scale</h3>
+      <div class="separator-v-s"></div>
+      <TextDemo text=".color-yellow-50" class="color-yellow-50" />
+      <TextDemo text=".color-yellow-100" class="color-yellow-100" />
+      <TextDemo text=".color-yellow-200" class="color-yellow-200" />
+      <TextDemo text=".color-yellow-300" class="color-yellow-300" />
+      <TextDemo text=".color-yellow-400" class="color-yellow-400" />
+      <TextDemo text=".color-yellow-500" class="color-yellow-500" />
+      <TextDemo text=".color-yellow-600" class="color-yellow-600" />
+      <TextDemo text=".color-yellow-700" class="color-yellow-700" />
+      <TextDemo text=".color-yellow-800" class="color-yellow-800" />
+      <TextDemo text=".color-yellow-900" class="color-yellow-900" />
+      <TextDemo text=".color-yellow-950" class="color-yellow-950" />
+    </div>
+
+    <div class="separator-v-l"></div>
+    <div>
+      <h3>Red Scale</h3>
+      <div class="separator-v-s"></div>
+      <TextDemo text=".color-red-50" class="color-red-50" />
+      <TextDemo text=".color-red-100" class="color-red-100" />
+      <TextDemo text=".color-red-200" class="color-red-200" />
+      <TextDemo text=".color-red-300" class="color-red-300" />
+      <TextDemo text=".color-red-400" class="color-red-400" />
+      <TextDemo text=".color-red-500" class="color-red-500" />
+      <TextDemo text=".color-red-600" class="color-red-600" />
+      <TextDemo text=".color-red-700" class="color-red-700" />
+      <TextDemo text=".color-red-800" class="color-red-800" />
+      <TextDemo text=".color-red-900" class="color-red-900" />
+      <TextDemo text=".color-red-950" class="color-red-950" />
+    </div>
+  </section>
+</Layout>

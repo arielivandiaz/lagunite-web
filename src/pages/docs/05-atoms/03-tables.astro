@@ -1,0 +1,579 @@
+---
+import TableDemo from "../../../components/docs/TableDemo.astro";
+import Layout from "../../../layouts/Layout.astro";
+
+const title = "Tables";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+
+    <div class="col">
+      <div class="separator-v-l"></div><!-- SEP -->
+      <h4>"colored"</h4>
+      <table class="table colored">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>John Doe</th>
+            <td>213</td>
+            <td>34</td>
+            <td>125</td>
+            <td>64</td>
+            <td>235</td>
+          </tr>
+          <tr>
+            <th>Crystal Smith </th>
+            <td>56</td>
+            <td>89</td>
+            <td>90</td>
+            <td>75</td>
+            <td>101</td>
+          </tr>
+          <tr>
+            <th>Carl Fenix</th>
+            <td>45</td>
+            <td>87</td>
+            <td>34</td>
+            <td>68</td>
+            <td>35</td>
+          </tr>
+          <tr>
+            <th>Megan Davis</th>
+            <td>202</td>
+            <td>198</td>
+            <td>174</td>
+            <td>215</td>
+            <td>164</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th> </th>
+            <td>516</td>
+            <td>408</td>
+            <td>423</td>
+            <td>422</td>
+            <td>535</td>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="separator-v-l"></div><!-- SEP -->
+      <h4>"hoverable-table"</h4>
+      <table class="table hoverable-table">
+        <tr>
+          <th></th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+        <tr>
+          <th>John Doe</th>
+          <td>213</td>
+          <td>34</td>
+          <td>125</td>
+          <td>64</td>
+          <td>235</td>
+        </tr>
+        <tr>
+          <th>Crystal Smith </th>
+          <td>56</td>
+          <td>89</td>
+          <td>90</td>
+          <td>75</td>
+          <td>101</td>
+        </tr>
+        <tr>
+          <th>Carl Fenix</th>
+          <td>45</td>
+          <td>87</td>
+          <td>34</td>
+          <td>68</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <th>Megan Davis</th>
+          <td>202</td>
+          <td>198</td>
+          <td>174</td>
+          <td>215</td>
+          <td>164</td>
+        </tr>
+      </table>
+      <div class="separator-v-l"></div><!-- SEP -->
+      <h4>"bordered-table"</h4>
+      <table class="table bordered-table">
+        <tr>
+          <th></th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+        <tr>
+          <th>John Doe</th>
+          <td>213</td>
+          <td>34</td>
+          <td>125</td>
+          <td>64</td>
+          <td>235</td>
+        </tr>
+        <tr>
+          <th>Crystal Smith </th>
+          <td>56</td>
+          <td>89</td>
+          <td>90</td>
+          <td>75</td>
+          <td>101</td>
+        </tr>
+        <tr>
+          <th>Carl Fenix</th>
+          <td>45</td>
+          <td>87</td>
+          <td>34</td>
+          <td>68</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <th>Megan Davis</th>
+          <td>202</td>
+          <td>198</td>
+          <td>174</td>
+          <td>215</td>
+          <td>164</td>
+        </tr>
+      </table>
+      <div>
+        <h3>Basic Table</h3>
+        <i>@ID:<b> #05-03-01</b></i>
+        <div class="separator-v-s"></div>
+        <TableDemo class="table" />
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Table Sizing</h3>
+        <i>@ID:<b> #05-03-02</b></i>
+        <div class="separator-v-s"></div>
+
+        <h4>Compact <code>.table.size-s</code></h4>
+        <TableDemo class="table size-s" />
+
+        <div class="separator-v-s"></div>
+        <h4>Comfortable <code>.table.size-l</code></h4>
+        <TableDemo class="table size-l" />
+        <div class="separator-v-s"></div>
+        <h4>Spacious <code>.table.size-xl</code></h4>
+        <TableDemo class="table size-xl" />
+      </div>
+    </div>
+
+    <div class="separator-v-l"></div>
+
+    <div>
+      <h3>Color Variants</h3>
+      <i>@ID:<b> #05-03-03</b></i>
+      <div class="separator-v-s"></div>
+
+      <h4>Primary <code>.table.main</code></h4>
+
+      <TableDemo class="table main" />
+
+      <div class="separator-v-s"></div>
+      <h4>Primary <code>.table.primary</code></h4>
+      <TableDemo class="table primary" />
+
+      <div class="separator-v-s"></div>
+      <h4>Primary <code>.table.primary.alt</code></h4>
+      <TableDemo class="table primary alt" />
+
+      <div class="separator-v-s"></div>
+      <h4>Primary <code>.table.secondary</code></h4>
+      <TableDemo class="table secondary" />
+
+      <div class="separator-v-s"></div>
+      <h4>Primary <code>.table.secondary.alt</code></h4>
+      <TableDemo class="table secondary alt" />
+
+      <div class="separator-v-s"></div>
+      <h4>Primary <code>.table.tertiary</code></h4>
+      <TableDemo class="table tertiary" />
+
+      <div class="separator-v-s"></div>
+      <h4>Primary <code>.table.tertiary.alt</code></h4>
+      <TableDemo class="table tertiary alt" />
+
+      <div class="separator-v-s"></div>
+      <h4>Primary <code>.table.success</code></h4>
+      <TableDemo class="table success" />
+
+      <div class="separator-v-s"></div>
+      <h4>Primary <code>.table.warning</code></h4>
+      <TableDemo class="table warning" />
+
+      <div class="separator-v-s"></div>
+      <h4>Primary <code>.table.error</code></h4>
+      <TableDemo class="table error" />
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Striped (Zebra)</h3>
+        <i>@ID:<b> #05-03-04</b></i>
+        <div class="separator-v-s"></div>
+
+        <h4>Default Striped <code>.table.striped</code></h4>
+        <TableDemo class="table striped" />
+
+        <div class="separator-v-s"></div>
+        <h4>Striped Primary <code>.table.striped.primary</code></h4>
+        <TableDemo class="table striped primary" />
+
+        <div class="separator-v-s"></div>
+        <h4>Striped Secondary <code>.table.striped.secondary</code></h4>
+        <TableDemo class="table striped secondary" />
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Bordered</h3>
+        <i>@ID:<b> #05-03-05</b></i>
+        <div class="separator-v-s"></div>
+
+        <h4>Basic Bordered <code>.table.bordered</code></h4>
+        <table class="table bordered">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alice</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td>Bob</td>
+              <td>30</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="separator-v-s"></div>
+        <h4>Bordered Primary <code>.table.bordered.primary</code></h4>
+        <table class="table bordered primary">
+          <thead>
+            <tr>
+              <th>Key</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alpha</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>hover</h3>
+        <i>@ID:<b> #05-03-06</b></i>
+        <div class="separator-v-s"></div>
+
+        <h4>Row Hover <code>.table.hover</code></h4>
+        <table class="table hover">
+          <thead>
+            <tr>
+              <th>City</th>
+              <th>Country</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tokyo</td>
+              <td>Japan</td>
+            </tr>
+            <tr>
+              <td>Paris</td>
+              <td>France</td>
+            </tr>
+            <tr>
+              <td>London</td>
+              <td>UK</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="separator-v-s"></div>
+        <h4>Cell Hover <code>.table.hover-cell</code></h4>
+        <table class="table hover-cell">
+          <thead>
+            <tr>
+              <th>A</th>
+              <th>B</th>
+              <th>C</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Card Style</h3>
+        <i>@ID:<b> #05-03-07</b></i>
+        <div class="separator-v-s"></div>
+
+        <table class="table card">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Authentication</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td>Analytics</td>
+              <td>Beta</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="separator-v-s"></div>
+        <h4>Card Secondary <code>.table.card.secondary</code></h4>
+        <table class="table card secondary">
+          <thead>
+            <tr>
+              <th>Module</th>
+              <th>Version</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>React</td>
+              <td>18.2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Alignment Utilities</h3>
+        <i>@ID:<b> #05-03-08</b></i>
+        <div class="separator-v-s"></div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="text-left">Left</th>
+              <th class="text-center">Center</th>
+              <th class="text-right">Right</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left">Left aligned</td>
+              <td class="text-center">Center aligned</td>
+              <td class="text-right">Right aligned</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Responsive</h3>
+        <i>@ID:<b> #05-03-09</b></i>
+        <div class="separator-v-s"></div>
+
+        <div class="table-responsive">
+          <table class="table bordered">
+            <thead>
+              <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+                <th>Col 4</th>
+                <th>Col 5</th>
+                <th>Col 6</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+                <td>Data 4</td>
+                <td>Data 5</td>
+                <td>Data 6</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Row States</h3>
+        <i>@ID:<b> #05-03-11</b></i>
+        <div class="separator-v-s"></div>
+
+        <table class="table bordered">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Normal Row</td>
+              <td>Default</td>
+            </tr>
+            <tr class="selected">
+              <td>Selected Row</td>
+              <td><code>.selected</code></td>
+            </tr>
+            <tr class="disabled">
+              <td>Disabled Row</td>
+              <td><code>.disabled</code></td>
+            </tr>
+            <tr class="highlighted">
+              <td>Highlighted Row</td>
+              <td><code>.highlighted</code></td>
+            </tr>
+            <tr class="success-row">
+              <td>Success Row</td>
+              <td><code>.success-row</code></td>
+            </tr>
+            <tr class="warning-row">
+              <td>Warning Row</td>
+              <td><code>.warning-row</code></td>
+            </tr>
+            <tr class="error-row">
+              <td>Error Row</td>
+              <td><code>.error-row</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Sortable Headers</h3>
+        <i>@ID:<b> #05-03-12</b></i>
+        <div class="separator-v-s"></div>
+
+        <table class="table bordered">
+          <thead>
+            <tr>
+              <th class="sortable">Name</th>
+              <th class="sortable sort-asc">Age</th>
+              <th class="sortable sort-desc">Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alice</td>
+              <td>25</td>
+              <td>95</td>
+            </tr>
+            <tr>
+              <td>Bob</td>
+              <td>30</td>
+              <td>87</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Combined Examples</h3>
+        <i>@ID:<b> #05-03</b></i>
+        <div class="separator-v-s"></div>
+
+        <h4>Striped + Bordered + hover</h4>
+        <table class="table striped bordered hover primary">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Stock</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Laptop</td>
+              <td>$999</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>Mouse</td>
+              <td>$25</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Keyboard</td>
+              <td>$75</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>Monitor</td>
+              <td>$299</td>
+              <td>20</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">Total Items:</td>
+              <td>115</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+</Layout>

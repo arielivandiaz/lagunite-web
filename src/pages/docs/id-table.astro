@@ -1,0 +1,60 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TableRowTitle from "../../components/docs/table/TableRowTitle.astro";
+import TableByFile from "../../components/docs/table/TableByFile.astro";
+import doc0310JsonData from "../../docs/json/03-layout/10-size.json";
+import doc0001JsonData from "../../docs/json/00-config/01-pallete.json";
+
+const title = "ID Table";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+    <div class="separator-v-m"></div>
+
+    <p class="font-m color-text-secondary marg-b-m">Identifiers Table:</p>
+
+    <div class="overflow-x-auto">
+      <table class="w-100 border-r-m">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="padd-s text-left">ID</th>
+            <th class="padd-s text-left">Title</th>
+            <th class="padd-s text-left">Selectors</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-white">
+            <td class="padd-s">#01-01-02</td>
+            <td class="padd-s">Font Transform (bold / italic)</td>
+            <td class="padd-s"
+              ><span class="bold">bold</span>, <span class="italic">italic</span
+              ></td
+            >
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="padd-s">#01-01-03</td>
+            <td class="padd-s">Font Family</td>
+            <td class="padd-s"
+              ><code>.font-text</code>, <code>.font-headers</code></td
+            >
+          </tr>
+          <tr class="bg-white">
+            <td class="padd-s">#01-02-01</td>
+            <td class="padd-s">Text Transform</td>
+            <td class="padd-s"
+              ><code>.uppercase</code>, <code>.capitalize</code></td
+            >
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Config</h2>
+      <TableByFile data={doc0001JsonData} />
+
+      <h2>Layout</h2>
+      <TableByFile data={doc0310JsonData} />
+    </div>
+  </section>
+</Layout>

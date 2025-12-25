@@ -1,0 +1,102 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import RectangleDemo from "../../../components/docs/RectangleDemo.astro";
+
+const title = "Sizes";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+
+    <div class="col">
+      <div>
+        <h3>Main Background Colors</h3>
+        <i>@ID:<b> #02-02-01</b></i>
+        <div class="separator-v-s"></div>
+        <RectangleDemo text=".bg" class="bg" height="60px" />
+      </div>
+
+      <div class="separator-v-l"></div>
+      <div>
+        <h3>Intrinsic Sizing — Width</h3>
+        <i>@ID:<b> Intrinsic sizing examples</b></i>
+        <div class="separator-v-s"></div>
+        <div class="col g-gap-m">
+          <div class="bg-1 padd-s marg-s">
+            <div class="w-auto border padd-s">
+              .w-auto — width depends on parent/flow
+            </div>
+          </div>
+
+          <div class="bg-1 padd-s marg-s">
+            <div class="w-min border padd-s">
+              .w-min — min-content (fits content)
+            </div>
+          </div>
+
+          <div class="bg-1 padd-s marg-s" style="width:220px">
+            <div class="w-max border padd-s">
+              .w-max — max-content (long word will expand)
+            </div>
+          </div>
+
+          <div class="bg-1 padd-s marg-s">
+            <div class="w-fit border padd-s">
+              .w-fit — fit-content (shrink to content)
+            </div>
+          </div>
+        </div>
+
+        <div class="separator-v-l"></div>
+        <h3>Intrinsic Sizing — Height</h3>
+        <div class="separator-v-s"></div>
+        <div class="row g-gap-m">
+          <div class="bg-1 padd-s">
+            <div class="h-auto border padd-s">
+              .h-auto — height auto (content driven)
+            </div>
+          </div>
+
+          <div class="bg-1 padd-s">
+            <div class="h-min border padd-s">.h-min — min-content height</div>
+          </div>
+
+          <div class="bg-1 padd-s" style="height:140px">
+            <div class="h-max border padd-s">
+              .h-max — max-content height (will fill if content larger)
+            </div>
+          </div>
+
+          <div class="bg-1 padd-s">
+            <div class="h-fit border padd-s">.h-fit — fit-content height</div>
+          </div>
+        </div>
+      </div>
+      <div class="separator-v-l"></div>
+      <div>
+        <h3>Main Background Colors</h3>
+        <i>@ID:<b> #02-02-01</b></i>
+        <div class="separator-v-s"></div>
+        <div class="ta-lf">
+          <div>.w1 : <i> width: var(--space-12) - 48px </i></div>
+          <div class="bg-1 h1 w1 border marg-b-xs bordered"></div>
+          <div class="bg-1 h1 w2 border marg-b-xs bordered"></div>
+          <div class="bg-1 h1 w3 border marg-b-xs bordered"></div>
+          <div class="bg-1 h1 w4 border marg-b-xs bordered"></div>
+          <div class="bg-1 h1 w5 border marg-b-xs bordered"></div>
+          <div class="bg-1 h1 w6 border marg-b-xs bordered"></div>
+          <div class="bg-1 h1 w7 border marg-b-xs bordered"></div>
+          <div class="bg-1 h1 w8 border marg-b-xs bordered"></div>
+          <div class="bg-1 h1 w9 border marg-b-xs bordered"></div>
+          <div class="bg-1 h1 w10 border marg-b-xs bordered"></div>
+          <div class="bg-1 h1 w11 border marg-b-xs bordered"></div>
+          <div class="bg-1 h1 w12 border marg-b-xs bordered"></div>
+          <div class="bg-1 h1 w13 border marg-b-xs bordered"></div>
+          <div class="bg-1 h1 w14 border marg-b-xs bordered"></div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

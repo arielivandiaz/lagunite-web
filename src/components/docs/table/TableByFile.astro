@@ -1,0 +1,41 @@
+---
+import IdTooltip from './IdTooltip.astro';
+interface Props {
+  data: {
+    content: Array<{
+      id: string;
+      description?: string;
+      selector: string;
+      cssRule: string;
+    }>;
+  };
+}
+const { data } = Astro.props;
+---
+
+<table class="table primary hover w-100">
+  <thead class="">
+    <tr>
+      <th class="padd-s text-left">ID</th>
+      <th class="padd-s text-left">Title</th>
+      <th class="padd-s text-left">Selectors</th>
+      <th class="padd-s text-left">Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+      data.content.map((item) => (
+        <tr class="">
+          <td class="padd-s"><IdTooltip id={item.id} /></td>
+          <td class="padd-s">{item.description || item.selector}</td>
+          <td class="padd-s">
+            <code>{item.selector}</code>
+          </td>
+          <td class="padd-s">
+            <code>{item.cssRule}</code>
+          </td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>

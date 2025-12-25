@@ -1,0 +1,243 @@
+{
+  "folder": "04-decorators",
+  "file": "05-transforms.css",
+  "lastUpdated": "2025-12-14",
+  "hasResponsive": true,
+  "totalSelectors": 18,
+  "content": [
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".scale-0",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: scale(0)",
+      "responsive": true,
+      "description": "** Scale Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".scale-50",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: scale(0.5)",
+      "responsive": true,
+      "description": "** Scale Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".scale-75",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: scale(0.75)",
+      "responsive": true,
+      "description": "** Scale Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".scale-100",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: scale(1)",
+      "responsive": true,
+      "description": "** Scale Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".scale-125",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: scale(1.25)",
+      "responsive": true,
+      "description": "** Scale Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".scale-150",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: scale(1.5)",
+      "responsive": true,
+      "description": "** Scale Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".rotate-0",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: rotate(0deg)",
+      "responsive": true,
+      "description": "** Rotate Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".rotate-45",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: rotate(45deg)",
+      "responsive": true,
+      "description": "** Rotate Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".rotate-90",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: rotate(90deg)",
+      "responsive": true,
+      "description": "** Rotate Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".rotate-180",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: rotate(180deg)",
+      "responsive": true,
+      "description": "** Rotate Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".rotate-270",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: rotate(270deg)",
+      "responsive": true,
+      "description": "** Rotate Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".translate-x-0",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: translateX(0)",
+      "responsive": true,
+      "description": "** Translate Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".translate-x-full",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: translateX(100%)",
+      "responsive": true,
+      "description": "** Translate Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".translate-y-0",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: translateY(0)",
+      "responsive": true,
+      "description": "** Translate Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".translate-y-full",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform"
+      ],
+      "cssRule": "transform: translateY(100%)",
+      "responsive": true,
+      "description": "** Translate Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".origin-center",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform-origin"
+      ],
+      "cssRule": "transform-origin: center",
+      "responsive": true,
+      "description": "** Transform origin **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".origin-top",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform-origin"
+      ],
+      "cssRule": "transform-origin: top",
+      "responsive": true,
+      "description": "** Transform origin **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".origin-bottom",
+      "id": "#04-05-XX",
+      "category": null,
+      "properties": [
+        "transform-origin"
+      ],
+      "cssRule": "transform-origin: bottom",
+      "responsive": true,
+      "description": "** Transform origin **"
+    }
+  ]
+}

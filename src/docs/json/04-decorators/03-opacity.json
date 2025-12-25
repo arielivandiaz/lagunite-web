@@ -1,0 +1,87 @@
+{
+  "folder": "04-decorators",
+  "file": "03-opacity.css",
+  "lastUpdated": "2025-12-14",
+  "hasResponsive": true,
+  "totalSelectors": 6,
+  "content": [
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".opacity-0",
+      "id": "#04-03-XX",
+      "category": null,
+      "properties": [
+        "opacity"
+      ],
+      "cssRule": "opacity: 0",
+      "responsive": true,
+      "description": "** Opacity Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".opacity-25",
+      "id": "#04-03-XX",
+      "category": null,
+      "properties": [
+        "opacity"
+      ],
+      "cssRule": "opacity: 0.25",
+      "responsive": true,
+      "description": "** Opacity Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".opacity-50",
+      "id": "#04-03-XX",
+      "category": null,
+      "properties": [
+        "opacity"
+      ],
+      "cssRule": "opacity: 0.5",
+      "responsive": true,
+      "description": "** Opacity Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".opacity-75",
+      "id": "#04-03-XX",
+      "category": null,
+      "properties": [
+        "opacity"
+      ],
+      "cssRule": "opacity: 0.75",
+      "responsive": true,
+      "description": "** Opacity Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".opacity-100",
+      "id": "#04-03-XX",
+      "category": null,
+      "properties": [
+        "opacity"
+      ],
+      "cssRule": "opacity: 1",
+      "responsive": true,
+      "description": "** Opacity Utilities **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".hover-opacity-75:hover",
+      "id": "#04-03-XX",
+      "category": null,
+      "properties": [
+        "opacity"
+      ],
+      "cssRule": "opacity: 0.75",
+      "responsive": true,
+      "description": "** Opacity Utilities **"
+    }
+  ]
+}

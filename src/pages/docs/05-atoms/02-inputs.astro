@@ -1,0 +1,430 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const title = "Form Inputs";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+
+    <div class="col">
+      <div>
+        <h3>Input Base Styles</h3>
+        <i>@ID:<b> #05-02-01</b></i>
+        <div class="separator-v-s"></div>
+
+        <div class="input-container">
+          <span>Text Input</span>
+          <input type="text" placeholder="Enter text..." />
+        </div>
+
+        <div class="input-container">
+          <span>Email Input</span>
+          <input type="email" placeholder="email@example.com" />
+        </div>
+
+        <div class="input-container">
+          <span>Password Input</span>
+          <input type="password" placeholder="Password" />
+        </div>
+
+        <div class="input-container">
+          <span>Number Input</span>
+          <input type="number" placeholder="0" />
+        </div>
+
+        <div class="input-container">
+          <span>Search Input</span>
+          <input type="search" placeholder="Search..." />
+        </div>
+
+        <div class="input-container">
+          <span>Tel Input</span>
+          <input type="tel" placeholder="+1 (555) 000-0000" />
+        </div>
+
+        <div class="input-container">
+          <span>URL Input</span>
+          <input type="url" placeholder="https://example.com" />
+        </div>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Input States</h3>
+        <i>@ID:<b> #05-02-02</b></i>
+        <div class="separator-v-s"></div>
+
+        <div class="input-container">
+          <span>Default State</span>
+          <input type="text" value="Normal input" />
+        </div>
+
+        <div class="input-container">
+          <span>Hover/Focus State</span>
+          <input type="text" value="Hover or focus me" />
+        </div>
+
+        <div class="input-container">
+          <span>Disabled State</span>
+          <input type="text" value="Disabled input" disabled />
+        </div>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Input Line Variant</h3>
+        <i>@ID:<b> #05-02-03</b></i>
+        <div class="separator-v-s"></div>
+
+        <div class="inputLine">
+          <span>Name</span>
+          <span class="icon">👤</span>
+          <input type="text" placeholder="Enter your name" />
+        </div>
+
+        <div class="inputLine">
+          <span>Email</span>
+          <span class="icon">✉️</span>
+          <input type="email" placeholder="Enter your email" />
+        </div>
+
+        <div class="inputLine alt">
+          <span>Alternative Style</span>
+          <span class="icon">⚙️</span>
+          <input type="text" placeholder="No glow on hover/focus" />
+        </div>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Color Input</h3>
+        <i>@ID:<b> #05-02-04</b></i>
+        <div class="separator-v-s"></div>
+
+        <div class="input-container">
+          <span>Color Picker</span>
+          <input type="color" value="#3b82f6" />
+        </div>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Textarea Styles</h3>
+        <i>@ID:<b> #05-02-05</b></i>
+        <div class="separator-v-s"></div>
+
+        <div class="input-container">
+          <span>Default Textarea</span>
+          <textarea placeholder="Enter multiple lines..."></textarea>
+        </div>
+
+        <div class="input-container">
+          <span>No Resize <code>.textarea-no-resize</code></span>
+          <textarea class="textarea-no-resize" placeholder="Cannot be resized"
+          ></textarea>
+        </div>
+
+        <div class="input-container">
+          <span>Horizontal <code>.textarea-resize-horizontal</code></span>
+          <textarea
+            class="textarea-resize-horizontal"
+            placeholder="Resize horizontally"></textarea>
+        </div>
+
+        <div class="input-container">
+          <span>Both <code>.textarea-resize-both</code></span>
+          <textarea
+            class="textarea-resize-both"
+            placeholder="Resize in any direction"></textarea>
+        </div>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Select Styles</h3>
+        <i>@ID:<b> #05-02-06</b></i>
+        <div class="separator-v-s"></div>
+
+        <div class="select-container">
+          <select>
+            <option class="noselect" disabled selected>Choose option</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+        </div>
+
+        <div class="select-container alt">
+          <select>
+            <option class="noselect" disabled selected>Alternative style</option
+            >
+            <option>Option A</option>
+            <option>Option B</option>
+            <option>Option C</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Checkbox Styles</h3>
+        <i>@ID:<b> #05-02-07</b></i>
+        <div class="separator-v-s"></div>
+
+        <label class="checkbox">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          Default Checkbox
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" checked />
+          <span class="checkmark"></span>
+          Checked Checkbox
+        </label>
+
+        <div class="separator-v-s"></div>
+
+        <label class="checkbox checkbox-s">
+          <input type="checkbox" checked />
+          <span class="checkmark"></span>
+          Small Checkbox <code>.checkbox-s</code>
+        </label>
+
+        <label class="checkbox checkbox-l">
+          <input type="checkbox" checked />
+          <span class="checkmark"></span>
+          Large Checkbox <code>.checkbox-l</code>
+        </label>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Toggle Button (Switch)</h3>
+        <i>@ID:<b> #05-02-08</b></i>
+        <div class="separator-v-s"></div>
+
+        <div class="input-container">
+          <span>Default Toggle</span>
+          <input type="checkbox" class="toggle" id="toggle1" />
+          <label for="toggle1" class="toggle-btn"></label>
+        </div>
+
+        <div class="input-container">
+          <span>Checked Toggle</span>
+          <input type="checkbox" class="toggle" id="toggle2" checked />
+          <label for="toggle2" class="toggle-btn"></label>
+        </div>
+
+        <div class="input-container">
+          <span>Small Toggle <code>.size-s</code></span>
+          <input type="checkbox" class="toggle" id="toggle3" checked />
+          <label for="toggle3" class="toggle-btn size-s"></label>
+        </div>
+
+        <div class="input-container">
+          <span>Big Toggle <code>.size-l</code></span>
+          <input type="checkbox" class="toggle" id="toggle4" checked />
+          <label for="toggle4" class="toggle-btn size-l"></label>
+        </div>
+
+        <div class="separator-v-s"></div>
+        <h4>Switch Class Alternative</h4>
+
+        <label class="switch">
+          <input type="checkbox" />
+          <span>Switch Off</span>
+        </label>
+
+        <label class="switch">
+          <input type="checkbox" checked />
+          <span>Switch On</span>
+        </label>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Radio Group</h3>
+        <i>@ID:<b> #05-02-09</b></i>
+        <div class="separator-v-s"></div>
+
+        <div class="radio-group">
+          <input type="radio" name="group1" id="opt1" />
+          <label for="opt1">Option 1</label>
+          <input type="radio" name="group1" id="opt2" checked />
+          <label for="opt2">Option 2</label>
+          <input type="radio" name="group1" id="opt3" />
+          <label for="opt3">Option 3</label>
+        </div>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Radio Buttons</h3>
+        <i>@ID:<b> #05-02-10</b></i>
+        <div class="separator-v-s"></div>
+
+        <div class="radio-btns">
+          <input type="radio" name="btns1" id="btn1" />
+          <label for="btn1">Small</label>
+          <input type="radio" name="btns1" id="btn2" checked />
+          <label for="btn2">Medium</label>
+          <input type="radio" name="btns1" id="btn3" />
+          <label for="btn3">Large</label>
+        </div>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Radio Divs</h3>
+        <i>@ID:<b> #05-02-11</b></i>
+        <div class="separator-v-s"></div>
+
+        <div class="radio-divs">
+          <input type="radio" name="divs1" id="div1" />
+          <label for="div1">
+            <div
+              style="width: 60px; height: 60px; background: var(--bg-primary); border-radius: 8px;"
+            >
+            </div>
+            Option A
+          </label>
+          <input type="radio" name="divs1" id="div2" checked />
+          <label for="div2">
+            <div
+              style="width: 60px; height: 60px; background: var(--bg-primary); border-radius: 8px;"
+            >
+            </div>
+            Option B
+          </label>
+          <input type="radio" name="divs1" id="div3" />
+          <label for="div3">
+            <div
+              style="width: 60px; height: 60px; background: var(--bg-primary); border-radius: 8px;"
+            >
+            </div>
+            Option C
+          </label>
+        </div>
+
+        <div class="radio-divs">
+          <input type="radio" name="divs2" id="div2_1" />
+          <label for="div2_1">
+            Option A
+            <div
+              style="width: 60px; height: 60px; background: var(--bg-primary); border-radius: 8px;"
+            >
+            </div>
+          </label>
+          <input type="radio" name="divs2" id="div2_2" checked />
+          <label for="div2_2">
+            Option B
+            <div
+              style="width: 60px; height: 60px; background: var(--bg-primary); border-radius: 8px;"
+            >
+            </div>
+          </label>
+          <input type="radio" name="divs2" id="div2_3" />
+          <label for="div2_3">
+            Option C
+            <div
+              style="width: 60px; height: 60px; background: var(--bg-primary); border-radius: 8px;"
+            >
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>Range Slider</h3>
+        <i>@ID:<b> #05-02-12</b></i>
+        <div class="separator-v-s"></div>
+
+        <div class="input-container">
+          <span>Default Range</span>
+          <input type="range" class="range" min="0" max="100" value="50" />
+        </div>
+
+        <div class="input-container">
+          <span>Range with Value</span>
+          <div class="range-container">
+            <input
+              type="range"
+              class="range"
+              min="0"
+              max="100"
+              value="75"
+              id="rangeValue"
+            />
+            <input type="number" value="75" min="0" max="100" />
+          </div>
+        </div>
+      </div>
+
+      <div class="separator-v-l"></div>
+
+      <div>
+        <h3>File Input Button</h3>
+        <i>@ID:<b> #05-02-13</b></i>
+        <div class="separator-v-s"></div>
+
+        <label class="file-btn">
+          <input type="file" />
+          Choose File
+          <span id="fileName">No file selected</span>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Range slider sync with number input
+    const rangeInput = document.getElementById(
+      "rangeValue",
+    ) as HTMLInputElement;
+    const numberInput = rangeInput?.nextElementSibling as HTMLInputElement;
+
+    if (rangeInput && numberInput) {
+      rangeInput.addEventListener("input", (e) => {
+        const target = e.target as HTMLInputElement;
+        numberInput.value = target.value;
+      });
+
+      numberInput.addEventListener("input", (e) => {
+        const target = e.target as HTMLInputElement;
+        rangeInput.value = target.value;
+      });
+    }
+
+    // File input display name
+    const fileInput = document.querySelector(
+      '.file-btn input[type="file"]',
+    ) as HTMLInputElement;
+    const fileNameSpan = document.getElementById("fileName");
+
+    if (fileInput && fileNameSpan) {
+      fileInput.addEventListener("change", (e) => {
+        const target = e.target as HTMLInputElement;
+        if (target.files && target.files.length > 0) {
+          fileNameSpan.textContent = target.files[0].name;
+        } else {
+          fileNameSpan.textContent = "No file selected";
+        }
+      });
+    }
+  </script>
+</Layout>

@@ -1,0 +1,22 @@
+---
+interface Props {
+  buttonClass: string;
+  extraClass?: string;
+  text: string;
+  style?: string;
+  buttonText?: string;
+}
+
+const { buttonClass, extraClass, text, style, buttonText } = Astro.props;
+---
+
+<div class="row jc-sb ">
+  {text || ""} &nbsp;
+  <code>{buttonClass || ""}</code>
+  <div
+    class={`marg-lf-s ${buttonClass.replace(/\./g, " ") || ""} ${extraClass || ""}`}
+    style={style}
+  >
+    {buttonText || "Button"}
+  </div>
+</div>

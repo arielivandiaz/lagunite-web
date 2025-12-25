@@ -1,0 +1,521 @@
+{
+  "folder": "01-text",
+  "file": "01-fonts.css",
+  "lastUpdated": "2025-12-14",
+  "hasResponsive": false,
+  "totalSelectors": 37,
+  "content": [
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "h1",
+      "id": "#01-01-01",
+      "category": null,
+      "properties": [
+        "font-family",
+        "font-weight",
+        "line-height",
+        "overflow-wrap",
+        "word-wrap",
+        "white-space"
+      ],
+      "cssRule": "font-family: var(--font-headers)\nfont-weight: var(--font-weight-bold)\n/* Added default bold for headers */\nline-height: var(--line-height-tight)\noverflow-wrap: break-word\nword-wrap: break-word\nwhite-space: normal",
+      "responsive": false,
+      "description": "** Heading **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "h2",
+      "id": "#01-01-01",
+      "category": null,
+      "properties": [
+        "font-family",
+        "font-weight",
+        "line-height",
+        "overflow-wrap",
+        "word-wrap",
+        "white-space"
+      ],
+      "cssRule": "font-family: var(--font-headers)\nfont-weight: var(--font-weight-bold)\n/* Added default bold for headers */\nline-height: var(--line-height-tight)\noverflow-wrap: break-word\nword-wrap: break-word\nwhite-space: normal",
+      "responsive": false,
+      "description": "** Heading **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "h3",
+      "id": "#01-01-01",
+      "category": null,
+      "properties": [
+        "font-family",
+        "font-weight",
+        "line-height",
+        "overflow-wrap",
+        "word-wrap",
+        "white-space"
+      ],
+      "cssRule": "font-family: var(--font-headers)\nfont-weight: var(--font-weight-bold)\n/* Added default bold for headers */\nline-height: var(--line-height-tight)\noverflow-wrap: break-word\nword-wrap: break-word\nwhite-space: normal",
+      "responsive": false,
+      "description": "** Heading **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "h4",
+      "id": "#01-01-01",
+      "category": null,
+      "properties": [
+        "font-family",
+        "font-weight",
+        "line-height",
+        "overflow-wrap",
+        "word-wrap",
+        "white-space"
+      ],
+      "cssRule": "font-family: var(--font-headers)\nfont-weight: var(--font-weight-bold)\n/* Added default bold for headers */\nline-height: var(--line-height-tight)\noverflow-wrap: break-word\nword-wrap: break-word\nwhite-space: normal",
+      "responsive": false,
+      "description": "** Heading **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "h5",
+      "id": "#01-01-01",
+      "category": null,
+      "properties": [
+        "font-family",
+        "font-weight",
+        "line-height",
+        "overflow-wrap",
+        "word-wrap",
+        "white-space"
+      ],
+      "cssRule": "font-family: var(--font-headers)\nfont-weight: var(--font-weight-bold)\n/* Added default bold for headers */\nline-height: var(--line-height-tight)\noverflow-wrap: break-word\nword-wrap: break-word\nwhite-space: normal",
+      "responsive": false,
+      "description": "** Heading **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "h6",
+      "id": "#01-01-01",
+      "category": null,
+      "properties": [
+        "font-family",
+        "font-weight",
+        "line-height",
+        "overflow-wrap",
+        "word-wrap",
+        "white-space"
+      ],
+      "cssRule": "font-family: var(--font-headers)\nfont-weight: var(--font-weight-bold)\n/* Added default bold for headers */\nline-height: var(--line-height-tight)\noverflow-wrap: break-word\nword-wrap: break-word\nwhite-space: normal",
+      "responsive": false,
+      "description": "** Heading **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "h1",
+      "id": "#01-01-01",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: clamp(2.5rem, 5vw, 5rem)",
+      "responsive": false,
+      "description": "** Heading **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "h2",
+      "id": "#01-01-01",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: clamp(2rem, 4vw, 3rem)",
+      "responsive": false,
+      "description": "** Heading **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "h3",
+      "id": "#01-01-01",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: clamp(1.5rem, 3vw, 2rem)",
+      "responsive": false,
+      "description": "** Heading **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "h4",
+      "id": "#01-01-01",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: clamp(1.2rem, 2.5vw, 1.5rem)",
+      "responsive": false,
+      "description": "** Heading **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "h5",
+      "id": "#01-01-01",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: clamp(1rem, 2vw, 1.2rem)",
+      "responsive": false,
+      "description": "** Heading **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "element",
+      "selector": "h6",
+      "id": "#01-01-01",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: var(--font-size-base)",
+      "responsive": false,
+      "description": "** Heading **"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".bold",
+      "id": "#01-01-02",
+      "category": null,
+      "properties": [
+        "font-weight"
+      ],
+      "cssRule": "font-weight: bold",
+      "responsive": false,
+      "description": "Font Transform"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".italic",
+      "id": "#01-01-02",
+      "category": null,
+      "properties": [
+        "font-style"
+      ],
+      "cssRule": "font-style: italic",
+      "responsive": false,
+      "description": "Font Transform"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-text",
+      "id": "#01-01-03",
+      "category": null,
+      "properties": [
+        "font-family"
+      ],
+      "cssRule": "font-family: var(--font-text)",
+      "responsive": false,
+      "description": "Font Family"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-headers",
+      "id": "#01-01-03",
+      "category": null,
+      "properties": [
+        "font-family"
+      ],
+      "cssRule": "font-family: var(--font-headers)",
+      "responsive": false,
+      "description": "Font Family"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-sans",
+      "id": "#01-01-03",
+      "category": null,
+      "properties": [
+        "font-family"
+      ],
+      "cssRule": "font-family: var(--font-sans)",
+      "responsive": false,
+      "description": "Font Family"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-mono",
+      "id": "#01-01-03",
+      "category": null,
+      "properties": [
+        "font-family"
+      ],
+      "cssRule": "font-family: var(--font-mono)",
+      "responsive": false,
+      "description": "Font Family"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-xs",
+      "id": "#01-01-04",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: var(--font-size-xs) !important",
+      "responsive": false,
+      "description": "Font Size"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-s",
+      "id": "#01-01-04",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: var(--font-size-s) !important",
+      "responsive": false,
+      "description": "Font Size"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-l",
+      "id": "#01-01-04",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: var(--font-size-l) !important",
+      "responsive": false,
+      "description": "Font Size"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-xl",
+      "id": "#01-01-04",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: var(--font-size-xl) !important",
+      "responsive": false,
+      "description": "Font Size"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-xxl",
+      "id": "#01-01-04",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: var(--font-size-xxl) !important",
+      "responsive": false,
+      "description": "Font Size"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-3xl",
+      "id": "#01-01-04",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: var(--font-size-3xl) !important",
+      "responsive": false,
+      "description": "Font Size"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-250",
+      "id": "#01-01-04",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: 250% !important",
+      "responsive": false,
+      "description": "Font Size"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-300",
+      "id": "#01-01-04",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: 300% !important",
+      "responsive": false,
+      "description": "Font Size"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-400",
+      "id": "#01-01-04",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: 400% !important",
+      "responsive": false,
+      "description": "Font Size"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-500",
+      "id": "#01-01-04",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: 500% !important",
+      "responsive": false,
+      "description": "Font Size"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-fluid-xs",
+      "id": "#01-01-010",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: clamp(0.5rem, 1vh, 0.75rem)",
+      "responsive": false,
+      "description": "Font Fluid *"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-fluid-s",
+      "id": "#01-01-010",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: clamp(0.75rem, 1.5vh, 1rem)",
+      "responsive": false,
+      "description": "Font Fluid *"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-fluid",
+      "id": "#01-01-010",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: clamp(1rem, 2vh, 1.5rem)",
+      "responsive": false,
+      "description": "Font Fluid *"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-fluid-l",
+      "id": "#01-01-010",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: clamp(1.25rem, 3vh, 1.5rem)",
+      "responsive": false,
+      "description": "Font Fluid *"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-fluid-xl",
+      "id": "#01-01-010",
+      "category": null,
+      "properties": [
+        "font-size"
+      ],
+      "cssRule": "font-size: clamp(1.5rem, 5vh, 2rem)",
+      "responsive": false,
+      "description": "Font Fluid *"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-weight-0",
+      "id": "#01-01-015",
+      "category": null,
+      "properties": [
+        "font-weight",
+        "font-weight"
+      ],
+      "cssRule": "font-weight: lighter\nfont-weight: var(--font-weight-light) !important",
+      "responsive": false,
+      "description": "Font Weight *"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-weight-1",
+      "id": "#01-01-015",
+      "category": null,
+      "properties": [
+        "font-weight"
+      ],
+      "cssRule": "font-weight: var(--font-weight-normal) !important",
+      "responsive": false,
+      "description": "Font Weight *"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-weight-2",
+      "id": "#01-01-015",
+      "category": null,
+      "properties": [
+        "font-weight"
+      ],
+      "cssRule": "font-weight: var(--font-weight-medium) !important",
+      "responsive": false,
+      "description": "Font Weight *"
+    },
+    {
+      "type": "selector",
+      "selectorType": "class",
+      "selector": ".font-weight-3",
+      "id": "#01-01-015",
+      "category": null,
+      "properties": [
+        "font-weight"
+      ],
+      "cssRule": "font-weight: var(--font-weight-bold) !important",
+      "responsive": false,
+      "description": "Font Weight *"
+    }
+  ]
+}

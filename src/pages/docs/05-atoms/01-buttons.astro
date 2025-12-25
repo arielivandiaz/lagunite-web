@@ -1,0 +1,256 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import RectangleDemo from "../../../components/docs/RectangleDemo.astro";
+import ButtonDemo from "../../../components/docs/ButtonDemo.astro";
+
+const title = "Buttons";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+
+    <div class="col">
+      <div>
+        <h3>Buttons Variants</h3>
+        <i>@ID:<b> #05-01-01</b></i>
+        <div class="separator-v-s"></div>
+        <ButtonDemo text="Common Button" buttonClass=".btn" />
+        <ButtonDemo text="Common Alternative Button" buttonClass=".btn.alt" />
+        <ButtonDemo text="Secondary Button" buttonClass=".btn.secondary" />
+        <ButtonDemo
+          text="Secondary Alternative Button"
+          buttonClass=".btn.secondary.alt"
+        />
+        <ButtonDemo text="Tertiary Button" buttonClass=".btn.tertiary" />
+        <ButtonDemo
+          text="Tertiary Alternative Button"
+          buttonClass=".btn.tertiary.alt"
+        />
+        <ButtonDemo text="Success Button" buttonClass=".btn.success" />
+        <ButtonDemo
+          text="Success Alternative Button"
+          buttonClass=".btn.success.alt"
+        />
+
+        <ButtonDemo text="Warning Button" buttonClass=".btn.warning" />
+        <ButtonDemo
+          text="Warning Alternative Button"
+          buttonClass=".btn.warning.alt"
+        />
+        <ButtonDemo text="Error Button" buttonClass=".btn.error" />
+        <ButtonDemo
+          text="Error Alternative Button"
+          buttonClass=".btn.error.alt"
+        />
+      </div>
+      <div class="separator-v-l"></div>
+      <div>
+        <h3>Buttons Icons</h3>
+        <i>@ID:<b> #05-01-02 </b></i>
+        <div class="separator-v-s"></div>
+        <ButtonDemo
+          text="Icon Button"
+          buttonClass=".btn.icon-s"
+          buttonText="+"
+        />
+        <ButtonDemo text="Icon Button" buttonClass=".btn.icon" buttonText="+" />
+        <ButtonDemo
+          text="Icon Button"
+          buttonClass=".btn.icon-l"
+          buttonText="+"
+        />
+        <div class="row jc-sb">
+          Button with Left Icon &nbsp;
+          <code>.btn - .icon-left </code>
+          <div class="btn icon-lf">
+            <span class="icon-lf">✓</span>
+            <span>Save</span>
+          </div>
+        </div>
+        <div class="row jc-sb">
+          Button with Right Icon &nbsp;
+          <code>.btn - .icon-right </code>
+          <div class="btn icon-rg">
+            <span>Next</span>
+            <span class="icon-rg">→</span>
+          </div>
+        </div>
+      </div>
+      <div class="separator-v-l"></div>
+      <div>
+        <h3>Buttons Sizes</h3>
+        <i>@ID:<b> #05-01-03</b></i>
+        <div class="separator-v-s"></div>
+        <ButtonDemo text="Fit Content Button" buttonClass=".btn.fit" />
+        <ButtonDemo text="Extra Small Button" buttonClass=".btn.size-xs " />
+        <ButtonDemo text="Small Button" buttonClass=".btn.size-s " />
+        <ButtonDemo text="Button (Default Size)" buttonClass=".btn" />
+        <ButtonDemo text="Large Button" buttonClass=".btn.size-l " />
+        <ButtonDemo text="Extra Large Button" buttonClass=".btn.size-xl " />
+
+        <div class="separator-v-s"></div>
+
+        <h3>Buttons Standard Sizes</h3>
+        <i>@ID:<b> #05-01-04</b></i>
+        <div class="separator-v-s"></div>
+        <ButtonDemo
+          text="Standard Extra Small Button"
+          buttonClass=".btn.std.size-xs"
+          buttonText="Ok"
+        />
+        <ButtonDemo
+          text="Standard Extra Small Button"
+          buttonClass=".btn.std.size-xs"
+          buttonText="Sample Text"
+        />
+        <ButtonDemo
+          text="Standard Extra Small Button"
+          buttonClass=".btn.std.size-xs"
+          buttonText="Lorem ipsum dolor"
+        />
+        <div class="separator-v-xs"></div>
+        <ButtonDemo
+          text="Standard Small Button"
+          buttonClass=".btn.std.size-s"
+          buttonText="Ok"
+        />
+        <ButtonDemo
+          text="Standard Small Button"
+          buttonClass=".btn.std.size-s "
+          buttonText="Sample Text"
+        />
+        <div class="separator-v-xs"></div>
+        <ButtonDemo
+          text="Standard Button"
+          buttonClass=".btn.std"
+          buttonText="Ok"
+        />
+        <ButtonDemo
+          text="Standard Button"
+          buttonClass=".btn.std"
+          buttonText="Sample Text"
+        />
+        <div class="separator-v-xs"></div>
+        <ButtonDemo
+          text="Standard Large Button"
+          buttonClass=".btn.std.size-l "
+          buttonText="Ok"
+        />
+        <ButtonDemo
+          text="Standard Large Button"
+          buttonClass=".btn.std.size-l "
+          buttonText="Sample Text"
+        />
+        <div class="separator-v-xs"></div>
+        <ButtonDemo
+          text="Standard Extra Large Button"
+          buttonClass=".btn.std.size-xl "
+          buttonText="Ok"
+        />
+        <ButtonDemo
+          text="Standard Extra Large Button"
+          buttonClass=".btn.std.size-xl "
+          buttonText="Sample Text"
+        />
+      </div>
+      <div class="separator-v-l"></div>
+      <div>
+        <h3>Buttons Ghost Variants</h3>
+        <i>@ID:<b> #05-01-05</b></i>
+        <div class="separator-v-s"></div>
+        <ButtonDemo text="Common Button" buttonClass=".btn.ghost" />
+        <ButtonDemo
+          text="Secondary Button"
+          buttonClass=".btn.secondary.ghost"
+        />
+        <ButtonDemo text="Tertiary Button" buttonClass=".btn.tertiary.ghost" />
+        <ButtonDemo text="Success Button" buttonClass=".btn.success.ghost" />
+        <ButtonDemo text="Warning Button" buttonClass=".btn.warning.ghost" />
+        <ButtonDemo text="Error Button" buttonClass=".btn.error.ghost" />
+        <div class="separator-v-xs"></div>
+        <ButtonDemo
+          text="Common Alternative Button"
+          buttonClass=".btn.alt.ghost"
+        />
+        <ButtonDemo
+          text="Secondary Alternative Button"
+          buttonClass=".btn.secondary.alt.ghost"
+        />
+        <ButtonDemo
+          text="Tertiary Alternative Button"
+          buttonClass=".btn.tertiary.alt.ghost"
+        />
+        <ButtonDemo
+          text="Success Alternative Button"
+          buttonClass=".btn.success.alt.ghost"
+        />
+        <ButtonDemo
+          text="Warning Alternative Button"
+          buttonClass=".btn.warning.alt.ghost"
+        />
+        <ButtonDemo
+          text="Error Alternative Button"
+          buttonClass=".btn.error.alt.ghost"
+        />
+      </div>
+      <div class="separator-v-l"></div>
+      <div>
+        <h3>Button States</h3>
+        <i>@ID:<b> #05-01-06</b></i>
+        <div class="separator-v-s"></div>
+
+        <ButtonDemo text="Hover State (hover over button)" buttonClass=".btn" />
+
+        <ButtonDemo text="Pressed State" buttonClass=".btn.pressed" />
+        <ButtonDemo text="Disabled State" buttonClass=".btn.disabled" />
+        <ButtonDemo text="Pulse State" buttonClass=".btn.pulse" />
+
+        <div class="separator-v-l"></div>
+
+        <div>
+          <h3>Buttons Groups</h3>
+          <i>@ID:<b> #05-01-11</b></i>
+          <div class="separator-v-s"></div>
+          <div class="row jc-sb marg-s">
+            Horizontal Grouped Buttons &nbsp;
+            <code>.btn-group .btn</code>
+            <div class="btn-group">
+              <button class="btn">Left</button>
+              <button class="btn">Center</button>
+              <button class="btn">Right</button>
+            </div>
+          </div>
+          <div class="row jc-sb marg-s">
+            Horizontal Grouped Buttons &nbsp;
+            <code>.btn-group .btn.alt</code>
+            <div class="btn-group">
+              <button class="btn alt">Left</button>
+              <button class="btn alt">Center</button>
+              <button class="btn alt">Right</button>
+            </div>
+          </div>
+          <div class="separator-v-s"></div>
+          <div class="row jc-sb marg-s">
+            Vertical Grouped Buttons &nbsp;
+            <code>.btn-group-vertical .btn</code>
+            <div class="btn-group-vertical">
+              <button class="btn">Top</button>
+              <button class="btn">Middle</button>
+              <button class="btn">Bottom</button>
+            </div>
+          </div>
+          <div class="row jc-sb marg-s">
+            Vertical Grouped Buttons &nbsp;
+            <code>.btn-group-vertical .btn.alt</code>
+            <div class="btn-group-vertical">
+              <button class="btn alt">Top</button>
+              <button class="btn alt">Middle</button>
+              <button class="btn alt">Bottom</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
