@@ -7,34 +7,171 @@ const title = "Nomenclature";
 <Layout title={title}>
   <section class="w-max center padd">
     <h2>{title}</h2>
-    <div>
-      <table>
-        <tbody>
-          <tr>
-            <td class="padd-s"><h1>#</h1> </td>
-            <td class="padd-s"> </td>
-            <td class="padd-s"> <h1><code>02</code></h1></td>
-            <td class="padd-s"> <h1>-</h1></td>
-            <td class="padd-s"> <h1><code>01</code></h1></td>
-            <td class="padd-s"> <h1>-</h1></td>
-            <td class="padd-s"> <h1><code>03</code></h1></td>
+    <p class="marg-b-l color-secondary">
+      How Lagunite builds class names: structure, responsive prefixes, abbreviations, and scales.
+      Use this as a reference when reading or writing utility classes.
+    </p>
+
+    <h3>1. Structure of a class</h3>
+    <p>Most utility classes follow:</p>
+    <pre class="padd-s border-r-m bg-alt marg-b-l"><code>[responsive prefix][family][-modifier][-scale]</code></pre>
+    <ul class="marg-b-l">
+      <li><strong>Responsive prefix</strong> (optional): <code>x</code> = mobile (max-width 639px), <code>d</code> = desktop (min-width 640px). Omitted = applies at all breakpoints.</li>
+      <li><strong>Family</strong>: the property or concept (e.g. <code>marg</code>, <code>padd</code>, <code>ai</code>, <code>shadow</code>).</li>
+      <li><strong>Modifier</strong> (optional): direction or variant (e.g. <code>h</code> horizontal, <code>v</code> vertical, <code>lf</code> left, <code>rg</code> right, <code>t</code> top, <code>b</code> bottom).</li>
+      <li><strong>Scale</strong> (optional): size step (<code>xs</code>, <code>s</code>, base, <code>l</code>, <code>xl</code>, sometimes <code>xxl</code>). The “base” step is often the class without a scale suffix (e.g. <code>.marg</code>, <code>.shadow</code>).</li>
+    </ul>
+
+    <h3>2. Responsive prefixes</h3>
+    <div class="overflow-x-auto marg-b-l">
+      <table class="w-100">
+        <thead>
+          <tr class="border-b border-color-gray-300">
+            <th class="ta-lf padd-s">Prefix</th>
+            <th class="ta-lf padd-s">Breakpoint</th>
+            <th class="ta-lf padd-s">Example</th>
           </tr>
-          <tr>
-            <td class="padd-s"> </td>
-            <td class="padd-s"> </td>
-            <td class="padd-s">Folder</br> e.g.: <code>02-colors</code></td>
-            <td class="padd-s"> </td>
-            <td class="padd-s">File</br> e.g.: <code>01-text</code></td>
-            <td class="padd-s"> </td>
-            
-            <td class="padd-s">Style ID</td>
-            
+        </thead>
+        <tbody>
+          <tr class="border-b border-color-gray-200">
+            <td class="padd-s"><code>(none)</code></td>
+            <td class="padd-s">All widths</td>
+            <td class="padd-s"><code>.marg-s</code>, <code>.d-flex</code></td>
+          </tr>
+          <tr class="border-b border-color-gray-200">
+            <td class="padd-s"><code>x</code></td>
+            <td class="padd-s">max-width: 639px (mobile)</td>
+            <td class="padd-s"><code>.xmarg-0</code>, <code>.xpadd-l</code></td>
+          </tr>
+          <tr class="border-b border-color-gray-200">
+            <td class="padd-s"><code>d</code></td>
+            <td class="padd-s">min-width: 640px (desktop)</td>
+            <td class="padd-s"><code>.dmarg-l</code>, <code>.dgrid-cols-2</code></td>
+          </tr>
+          <tr class="border-b border-color-gray-200">
+            <td class="padd-s"><code>xd</code> / <code>dd</code></td>
+            <td class="padd-s">Same as above (used in display only)</td>
+            <td class="padd-s"><code>.xd-block</code>, <code>.dd-flex</code></td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div>
-        
+    <p class="font-weight-3 marg-b-l">
+      Note: layout (marg, padd, flex, grid, etc.) uses <code>x</code> / <code>d</code>. Display utilities use <code>xd</code> / <code>dd</code> for the same breakpoints; this is a known inconsistency (see audit in ToDoAriel.md).
+    </p>
+
+    <h3>3. Size scale</h3>
+    <p>Spacing, shadows, opacity, and similar use a consistent scale. The “default” step often has no suffix.</p>
+    <div class="overflow-x-auto marg-b-l">
+      <table class="w-100">
+        <thead>
+          <tr class="border-b border-color-gray-300">
+            <th class="ta-lf padd-s">Suffix</th>
+            <th class="ta-lf padd-s">Meaning</th>
+            <th class="ta-lf padd-s">Margin / padding</th>
+            <th class="ta-lf padd-s">Shadow</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>xs</code></td><td class="padd-s">Extra small</td><td class="padd-s"><code>.marg-xs</code></td><td class="padd-s"><code>.shadow-s</code></td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>s</code></td><td class="padd-s">Small</td><td class="padd-s"><code>.marg-s</code></td><td class="padd-s">—</td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s">(none)</td><td class="padd-s">Base / medium</td><td class="padd-s"><code>.marg</code></td><td class="padd-s"><code>.shadow</code></td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>l</code></td><td class="padd-s">Large</td><td class="padd-s"><code>.marg-l</code></td><td class="padd-s"><code>.shadow-l</code></td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>xl</code></td><td class="padd-s">Extra large</td><td class="padd-s"><code>.marg-xl</code></td><td class="padd-s"><code>.shadow-xl</code></td></tr>
+        </tbody>
+      </table>
     </div>
+    <p class="marg-b-l">We avoid <code>m</code> for “medium” in spacing to prevent confusion with “margin”; the base class (e.g. <code>.marg</code>) is the default size.</p>
+
+    <h3>4. Abbreviations</h3>
+    <p>Allowed abbreviations used across the framework:</p>
+    <div class="overflow-x-auto marg-b-l">
+      <table class="w-100">
+        <thead>
+          <tr class="border-b border-color-gray-300">
+            <th class="ta-lf padd-s">Abbreviation</th>
+            <th class="ta-lf padd-s">Stands for</th>
+            <th class="ta-lf padd-s">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>marg</code></td><td class="padd-s">margin</td><td class="padd-s"><code>.marg-h-s</code>, <code>.marg-b-l</code></td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>padd</code></td><td class="padd-s">padding</td><td class="padd-s"><code>.padd-v</code>, <code>.padd-s</code></td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>h</code> / <code>v</code></td><td class="padd-s">horizontal / vertical</td><td class="padd-s"><code>.marg-h</code>, <code>.padd-v-xl</code></td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>lf</code> / <code>rg</code></td><td class="padd-s">left / right</td><td class="padd-s"><code>.marg-lf</code>, <code>.ta-lf</code>, <code>.ta-rg</code></td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>t</code> / <code>b</code></td><td class="padd-s">top / bottom</td><td class="padd-s"><code>.marg-t</code>, <code>.marg-b-l</code></td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>ai</code> / <code>jc</code></td><td class="padd-s">align-items / justify-content</td><td class="padd-s"><code>.ai-c</code>, <code>.jc-sb</code></td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>as</code> / <code>ac</code></td><td class="padd-s">align-self / align-content</td><td class="padd-s"><code>.as-fe</code>, <code>.ac-sb</code></td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>c</code> / <code>s</code></td><td class="padd-s">center / stretch</td><td class="padd-s"><code>.ai-c</code>, <code>.ai-s</code></td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>fs</code> / <code>fe</code></td><td class="padd-s">flex-start / flex-end</td><td class="padd-s"><code>.ai-fs</code>, <code>.ai-fe</code></td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>sb</code> / <code>sa</code> / <code>se</code></td><td class="padd-s">space-between / around / evenly</td><td class="padd-s"><code>.jc-sb</code>, <code>.jc-sa</code>, <code>.jc-se</code></td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>ta</code></td><td class="padd-s">text-align</td><td class="padd-s"><code>.ta-c</code>, <code>.ta-lf</code>, <code>.ta-j</code></td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>lh</code></td><td class="padd-s">line-height</td><td class="padd-s"><code>.lh-s</code>, <code>.lh-l</code></td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>bg</code></td><td class="padd-s">background</td><td class="padd-s"><code>.bg</code>, <code>.bg-primary</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>5. Decoding examples</h3>
+    <div class="d-flex col g-gap marg-b-l flex-wrap">
+      <div class="border-r-m padd-s bg-alt">
+        <code>.xgrid-cols-2</code><br/>
+        <span class="color-secondary">On mobile: grid with 2 columns.</span>
+      </div>
+      <div class="border-r-m padd-s bg-alt">
+        <code>.marg-h-s</code><br/>
+        <span class="color-secondary">Horizontal margin, small.</span>
+      </div>
+      <div class="border-r-m padd-s bg-alt">
+        <code>.container-m</code><br/>
+        <span class="color-secondary">Container, medium max-width.</span>
+      </div>
+      <div class="border-r-m padd-s bg-alt">
+        <code>.jc-c</code><br/>
+        <span class="color-secondary">Justify-content: center.</span>
+      </div>
+      <div class="border-r-m padd-s bg-alt">
+        <code>.ai-fe</code><br/>
+        <span class="color-secondary">Align-items: flex-end.</span>
+      </div>
+      <div class="border-r-m padd-s bg-alt">
+        <code>.dpadd-v-l</code><br/>
+        <span class="color-secondary">On desktop: vertical padding, large.</span>
+      </div>
+    </div>
+
+    <h3>6. File and style IDs</h3>
+    <p>CSS is organized in layers; each block can be tagged with an <code>@ID</code> for reference.</p>
+    <div class="padd-s border-r-m bg-alt marg-b-l">
+      <strong>Pattern:</strong> <code>#</code> + folder number + file number + block number<br/>
+      Example: <code>#03-06-08</code> = 03-layout, 06-containers, block 8 (e.g. container-hero).
+    </div>
+    <div class="overflow-x-auto marg-b-l">
+      <table class="w-100">
+        <thead>
+          <tr class="border-b border-color-gray-300">
+            <th class="ta-lf padd-s">Segment</th>
+            <th class="ta-lf padd-s">Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>00</code></td><td class="padd-s">config (palette, typography, theme, measures, base)</td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>01</code></td><td class="padd-s">text (fonts, typography)</td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>02</code></td><td class="padd-s">colors (text, background, border)</td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>03</code></td><td class="padd-s">layout (flex, grid, position, margin, padding, containers, etc.)</td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>04</code></td><td class="padd-s">decorators (effects, shadows, opacity, border, transforms, etc.)</td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>05</code></td><td class="padd-s">atoms (buttons, inputs, tables, lists, figures, badges, avatars)</td></tr>
+          <tr class="border-b border-color-gray-200"><td class="padd-s"><code>10</code></td><td class="padd-s">misc (display, cursor, pseudo)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>7. Known discrepancies (audit)</h3>
+    <p>These are documented for consistency decisions; see <code>ToDoAriel.md</code> for full audit.</p>
+    <ul class="marg-b-l">
+      <li><strong>Flex vs Grid alignment:</strong> Flex uses short names (<code>jc-c</code>, <code>jc-sb</code>); Grid uses full words (<code>jc-center</code>, <code>jc-between</code>). Same CSS property, different naming style.</li>
+      <li><strong>Display responsive prefix:</strong> Layout uses <code>x</code> / <code>d</code>; display uses <code>xd</code> / <code>dd</code> for the same breakpoints.</li>
+      <li><strong>Constrain tokens:</strong> <code>.constrain-s/m/l/xl</code> reference <code>--space-40</code>, <code>--space-48</code>, etc., which are not defined in <code>04-measures.css</code>; need to add tokens or switch to existing ones.</li>
+    </ul>
   </section>
 </Layout>

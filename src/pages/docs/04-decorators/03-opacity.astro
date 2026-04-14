@@ -1,0 +1,78 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const title = "Opacity";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+    <i>@ID:<b> #04-03-XX</b></i>
+    <div class="separator-v-xl"></div>
+
+    <h3>Opacity Levels</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-2 dgrid-cols-5 g-gap-s">
+      <div class="bg-1 border-r-l opacity-0" style="padding: 16px">
+        <div class="font-weight-3">.opacity-0</div>
+        <div class="font-xs color-text-alt">Invisible</div>
+      </div>
+      <div class="bg-1 border-r-l opacity-25" style="padding: 16px">
+        <div class="font-weight-3">.opacity-25</div>
+        <div class="font-xs color-text-alt">25%</div>
+      </div>
+      <div class="bg-1 border-r-l opacity-50" style="padding: 16px">
+        <div class="font-weight-3">.opacity-50</div>
+        <div class="font-xs color-text-alt">50%</div>
+      </div>
+      <div class="bg-1 border-r-l opacity-75" style="padding: 16px">
+        <div class="font-weight-3">.opacity-75</div>
+        <div class="font-xs color-text-alt">75%</div>
+      </div>
+      <div class="bg-1 border-r-l opacity-100" style="padding: 16px">
+        <div class="font-weight-3">.opacity-100</div>
+        <div class="font-xs color-text-alt">100%</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Hover Opacity</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="row g-gap-s">
+      <button class="btn hover-opacity-75">
+        .hover-opacity-75 (hover)
+      </button>
+      <div class="bg-4 border-r-l hover-opacity-75" style="padding: 16px; min-width: 180px">
+        <div class="font-xs">Contenedor con <code>.hover-opacity-75</code></div>
+        <div class="font-s">Pasa el mouse para ver el cambio.</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Responsive Variants (x / d)</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="col">
+      <div class="font-s">
+        Las variantes responsive siguen el patrón:
+        <code>.xopacity-*</code> (mobile) y <code>.dopacity-*</code> (desktop),
+        además de <code>.xhover-opacity-75</code> / <code>.dhover-opacity-75</code>.
+      </div>
+      <div class="separator-v-s"></div>
+      <div class="bg-gray-50 border-r-l" style="padding: 16px">
+        <div class="font-xs marg-b-xs">
+          En pantallas pequeñas debería aplicarse <code>.xopacity-50</code>, en desktop
+          <code>.dopacity-100</code>.
+        </div>
+        <div class="bg-2 border-r-l xopacity-50 dopacity-100" style="padding: 16px">
+          Bloque demostrando <code>xopacity-50</code> / <code>dopacity-100</code>.
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+

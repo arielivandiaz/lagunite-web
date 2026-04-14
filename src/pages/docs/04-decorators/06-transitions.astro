@@ -1,0 +1,102 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const title = "Transitions";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+    <i>@ID:<b> #04-06-XX</b></i>
+    <div class="separator-v-xl"></div>
+
+    <h3>Transition Properties</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="row g-gap-s ai-c">
+      <button class="btn transition-colors duration-200 ease-out">
+        .transition-colors
+      </button>
+      <button class="btn transition-transform duration-200 ease-out hoverable">
+        .transition-transform
+      </button>
+      <button class="btn transition-opacity duration-200 ease-out hover-opacity-75">
+        .transition-opacity
+      </button>
+      <button class="btn transition-all duration-200 ease-out hoverable-l">
+        .transition-all
+      </button>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Durations</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="row g-gap-s ai-c">
+      <button class="btn transition-all duration-75 ease-out hoverable">
+        .duration-75
+      </button>
+      <button class="btn transition-all duration-150 ease-out hoverable">
+        .duration-150
+      </button>
+      <button class="btn transition-all duration-300 ease-out hoverable">
+        .duration-300
+      </button>
+      <button class="btn transition-all duration-500 ease-out hoverable">
+        .duration-500
+      </button>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Timing Functions</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="row g-gap-s ai-c">
+      <button class="btn transition-all duration-300 ease-linear hoverable">
+        .ease-linear
+      </button>
+      <button class="btn transition-all duration-300 ease-in hoverable">
+        .ease-in
+      </button>
+      <button class="btn transition-all duration-300 ease-out hoverable">
+        .ease-out
+      </button>
+      <button class="btn transition-all duration-300 ease-in-out hoverable">
+        .ease-in-out
+      </button>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Delays</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="row g-gap-s ai-c">
+      <button class="btn transition-all duration-300 delay-75 hoverable">
+        .delay-75
+      </button>
+      <button class="btn transition-all duration-300 delay-100 hoverable">
+        .delay-100
+      </button>
+      <button class="btn transition-all duration-300 delay-150 hoverable">
+        .delay-150
+      </button>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Responsive Variants (x / d)</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="col">
+      <div class="font-s">
+        Las variantes responsive siguen el patrón:
+        <code>.xtransition-*</code>, <code>.xduration-*</code>, <code>.xease-*</code>,
+        <code>.xdelay-*</code> para mobile y equivalentes <code>.d*</code> para desktop.
+      </div>
+    </div>
+  </section>
+</Layout>
+

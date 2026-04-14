@@ -1,0 +1,171 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const title = "Border Colors";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+    <i>@ID:<b> #02-03-XX</b></i>
+    <div class="separator-v-xl"></div>
+
+    <h3>Semantic (primary, secondary, tertiary)</h3>
+    <i>@ID:<b> #02-03-01</b></i>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-3 dgrid-cols-9 g-gap-s">
+      <div class="bg-white border-w-2 border-solid border-color-primary" style="padding: 12px">
+        <div class="font-xs">.border-color-primary</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-primary-light" style="padding: 12px">
+        <div class="font-xs">.border-color-primary-light</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-primary-dark" style="padding: 12px">
+        <div class="font-xs">.border-color-primary-dark</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-secondary" style="padding: 12px">
+        <div class="font-xs">.border-color-secondary</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-secondary-light" style="padding: 12px">
+        <div class="font-xs">.border-color-secondary-light</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-secondary-dark" style="padding: 12px">
+        <div class="font-xs">.border-color-secondary-dark</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-tertiary" style="padding: 12px">
+        <div class="font-xs">.border-color-tertiary</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-tertiary-light" style="padding: 12px">
+        <div class="font-xs">.border-color-tertiary-light</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-tertiary-dark" style="padding: 12px">
+        <div class="font-xs">.border-color-tertiary-dark</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Black / White / Transparent</h3>
+    <i>@ID:<b> #02-03-02</b></i>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-2 dgrid-cols-5 g-gap-s">
+      <div class="bg-white border-w-2 border-solid border-color-black" style="padding: 12px">
+        <div class="font-xs">.border-color-black</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-ablack" style="padding: 12px">
+        <div class="font-xs">.border-color-ablack</div>
+      </div>
+      <div class="bg-gray-800 border-w-2 border-solid border-color-white" style="padding: 12px">
+        <div class="font-xs color-text-alt">.border-color-white</div>
+      </div>
+      <div class="bg-gray-800 border-w-2 border-solid border-color-awhite" style="padding: 12px">
+        <div class="font-xs color-text-alt">.border-color-awhite</div>
+      </div>
+      <div class="bg-gray-100 border-w-2 border-solid border-color-transparent" style="padding: 12px">
+        <div class="font-xs">.border-color-transparent</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Semantic (success, warning, error)</h3>
+    <i>@ID:<b> #02-03-03</b></i>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-2 dgrid-cols-6 g-gap-s">
+      <div class="bg-white border-w-2 border-solid border-color-success" style="padding: 12px">
+        <div class="font-xs">.border-color-success</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-success-light" style="padding: 12px">
+        <div class="font-xs">.border-color-success-light</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-warning" style="padding: 12px">
+        <div class="font-xs">.border-color-warning</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-warning-light" style="padding: 12px">
+        <div class="font-xs">.border-color-warning-light</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-error" style="padding: 12px">
+        <div class="font-xs">.border-color-error</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-error-light" style="padding: 12px">
+        <div class="font-xs">.border-color-error-light</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Combinatory (.bg-success.border, etc.)</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="row g-gap-s ai-c">
+      <div class="bg-success border border-r-l" style="padding: 12px 16px">
+        <span class="font-xs">.bg-success .border</span>
+      </div>
+      <div class="bg-warning border border-r-l" style="padding: 12px 16px">
+        <span class="font-xs">.bg-warning .border</span>
+      </div>
+      <div class="bg-error border border-r-l" style="padding: 12px 16px">
+        <span class="font-xs">.bg-error .border</span>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Gray scale</h3>
+    <i>@ID:<b> #02-03-50</b></i>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-4 dgrid-cols-6 g-gap-s">
+      <div class="bg-white border-w-2 border-solid border-color-gray-50" style="padding: 8px">
+        <div class="font-xs">.border-color-gray-50</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-gray-200" style="padding: 8px">
+        <div class="font-xs">.border-color-gray-200</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-gray-400" style="padding: 8px">
+        <div class="font-xs">.border-color-gray-400</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-gray-600" style="padding: 8px">
+        <div class="font-xs">.border-color-gray-600</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-gray-800" style="padding: 8px">
+        <div class="font-xs">.border-color-gray-800</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-gray-950" style="padding: 8px">
+        <div class="font-xs">.border-color-gray-950</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Blue / Green / Yellow / Red (sample)</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-2 dgrid-cols-4 g-gap-s">
+      <div class="bg-white border-w-2 border-solid border-color-blue-500" style="padding: 12px">
+        <div class="font-xs">.border-color-blue-500</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-green-500" style="padding: 12px">
+        <div class="font-xs">.border-color-green-500</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-yellow-500" style="padding: 12px">
+        <div class="font-xs">.border-color-yellow-500</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-red-500" style="padding: 12px">
+        <div class="font-xs">.border-color-red-500</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <div class="font-s">
+      Todas las escalas (gray, blue, green, yellow, red) tienen clases
+      <code>.border-color-gray-50</code> hasta <code>.border-color-red-950</code>,
+      igual que en <a href="/docs/02-colors/01-text">01-text</a> y
+      <a href="/docs/02-colors/02-background">02-background</a>.
+    </div>
+  </section>
+</Layout>

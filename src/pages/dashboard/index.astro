@@ -1,0 +1,44 @@
+---
+import DashboardLayout from "../../layouts/DashboardLayout.astro";
+---
+
+<DashboardLayout title="Operations Dashboard">
+  <section class="dashboard-page-head">
+    <h1>Operations Dashboard</h1>
+    <p>Track core metrics and monitor activity from a single control panel.</p>
+  </section>
+
+  <section class="dashboard-kpi-grid">
+    <article class="dashboard-kpi-card">
+      <p>Revenue</p>
+      <h2>$42,390</h2>
+      <span>+12.4% this month</span>
+    </article>
+    <article class="dashboard-kpi-card">
+      <p>Active users</p>
+      <h2>8,219</h2>
+      <span>+3.1% this week</span>
+    </article>
+    <article class="dashboard-kpi-card">
+      <p>Open incidents</p>
+      <h2>17</h2>
+      <span>-5 compared to yesterday</span>
+    </article>
+    <article class="dashboard-kpi-card">
+      <p>Conversion</p>
+      <h2>6.8%</h2>
+      <span>+0.4% this quarter</span>
+    </article>
+  </section>
+
+  <section class="dashboard-panels-grid">
+    <article class="dashboard-panel">
+      <h3>Weekly activity</h3>
+      <p>Integrate your charts or analytics widgets here.</p>
+    </article>
+    <article class="dashboard-panel">
+      <h3>Recent events</h3>
+      <p>Show latest notifications, logs, or transactions.</p>
+    </article>
+  </section>
+</DashboardLayout>

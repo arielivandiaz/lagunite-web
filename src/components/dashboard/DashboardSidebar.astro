@@ -1,0 +1,44 @@
+---
+export interface Props {
+  current?: string;
+}
+
+const { current = "" } = Astro.props;
+
+const sections = [
+  { href: "/dashboard", label: "Overview" },
+  { href: "/dashboard/analytics", label: "Analytics" },
+  { href: "/dashboard/orders", label: "Orders" },
+  { href: "/dashboard/customers", label: "Customers" },
+  { href: "/dashboard/settings", label: "Settings" },
+];
+
+function isActive(href: string): boolean {
+  return current === href || current.startsWith(href + "/");
+}
+---
+
+<aside id="dashboard-sidebar" class="dashboard-sidebar" aria-label="Dashboard sidebar">
+  <div class="dashboard-sidebar-header">
+    <p class="dashboard-sidebar-kicker">Workspace</p>
+    <h2>Operations</h2>
+  </div>
+
+  <nav aria-label="Dashboard sections">
+    <ul class="dashboard-sidebar-list">
+      {
+        sections.map((item) => (
+          <li>
+            <a href={item.href} class={`dashboard-sidebar-link ${isActive(item.href) ? "active" : ""}`}>
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+
+  <div class="dashboard-sidebar-footer">
+    <p class="font-xs">Lagunite Dashboard UI</p>
+  </div>
+</aside>

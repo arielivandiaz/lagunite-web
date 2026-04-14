@@ -1,0 +1,148 @@
+---
+import SidebarRail from "./sidebar/SidebarRail.astro";
+import SidebarBrandTop from "./sidebar/SidebarBrandTop.astro";
+import Sidebar from "./sidebar/Sidebar.astro";
+import SidebarAvatarBottom from "./sidebar/SidebarAvatarBottom.astro";
+import SidebarMobile from "./sidebar/SidebarMobile.astro";
+import FloatingNavbar from "./FloatingNavbar.astro";
+import HeaderBar from "./HeaderBar.astro";
+import DashboardContent from "./DashboardContent.astro";
+
+export interface Props {
+  title: string;
+  subtitle?: string;
+}
+
+const { title, subtitle = "Overview and quick actions" } = Astro.props as Props;
+
+const dashboardBrand = {
+  title,
+  subtitle,
+  href: "/dashboard-alt",
+};
+
+const sidebarNavItems = [
+  { label: "Overview", href: "/dashboard-alt", active: true, icon: "✦" },
+  { label: "Docs", href: "/docs", icon: "🗓" },
+  { label: "Spanish Home", href: "/es", icon: "…" },
+  { label: "404 Demo", href: "/404", icon: "▦" },
+] as const;
+
+const tableColumns = [
+  "ID",
+  "Code",
+  "Name",
+  "Role",
+  "Status",
+  "Updated",
+  "Owner",
+  "Department",
+  "Budget",
+  "Region",
+  "Priority",
+  "SLA",
+  "Notes",
+  "External ID",
+] as const;
+
+const roles = ["Editor", "Reader", "Admin", "Viewer"] as const;
+const statuses = ["Active", "Paused", "Archived", "In review"] as const;
+const names = ["Alpha", "Beta", "Gamma", "Delta", "Omega", "Sigma"] as const;
+
+const rows = Array.from({ length: 24 }, (_, i) => ({
+  id: String(i + 1),
+  code: `PRJ-${String(i + 1).padStart(4, "0")}`,
+  name: `Project ${names[i % names.length]} ${i + 1}`,
+  role: roles[i % roles.length],
+  status: statuses[i % statuses.length],
+  updated: `2025-03-${String((i % 28) + 1).padStart(2, "0")}`,
+  owner: `Team ${(i % 14) + 1}`,
+  department: ["Engineering", "Design", "Product", "Marketing", "Ops"][i % 5],
+  budget: `${40 + ((i * 11) % 180)}k`,
+  region: ["EU", "LATAM", "NA", "APAC", "MEA"][i % 5],
+  priority: ["P0", "P1", "P2", "P3"][i % 4],
+  sla: `${(i % 9) + 1}d`,
+  notes: "Long text to stretch columns and force horizontal scrolling in small viewports.",
+  externalId: `svc_${i}_${"0".repeat(24)}${String(i).padStart(6, "0")}`,
+}));
+---
+
+<section class="page-dashboard-alt">
+  <div class="dashboard-alt-shell">
+    <SidebarRail title="Navigation">
+      <SidebarBrandTop href="/dashboard-alt" icon="✦" label="Home" />
+      <Sidebar title="Navigation" items={[...sidebarNavItems]} />
+      <SidebarAvatarBottom
+        href="/dashboard-alt"
+        avatarSrc="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=96&h=96&fit=crop&crop=faces"
+        avatarAlt="Profile"
+      />
+    </SidebarRail>
+
+    <SidebarMobile title="Navigation" items={[...sidebarNavItems]} />
+
+    <FloatingNavbar
+      title="Quick actions"
+      brandLabel={dashboardBrand.title}
+      avatarSrc="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=168&h=168&fit=crop&crop=faces"
+      avatarAlt="Profile"
+      avatarName="Ariel"
+      profileHref="/dashboard-alt"
+      items={[
+        { label: "Alerts", href: "/dashboard-alt", icon: "🔔" },
+        { label: "Messages", href: "/dashboard-alt", icon: "✉" },
+        { label: "Profile", href: "/dashboard-alt", icon: "⚙", active: true },
+      ]}
+    />
+
+    <DashboardContent>
+      <div class="dashboard-main">
+        <HeaderBar {...dashboardBrand} />
+
+        <div class="dashboard-panel">
+          <h2 class="dashboard-panel__title">Quick links</h2>
+          <div class="dashboard-links">
+            <a class="dashboard-link" href="/docs">Documentation</a>
+            <a class="dashboard-link" href="/dashboard">Default dashboard</a>
+            <a class="dashboard-link" href="/404">404 example</a>
+          </div>
+        </div>
+
+        <div class="dashboard-panel">
+          <h2 class="dashboard-panel__title" id="dash-alt-table">Sample data</h2>
+          <div class="dashboard-table-wrap" role="region" aria-labelledby="dash-alt-table" tabindex="0">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  {tableColumns.map((col) => <th>{col}</th>)}
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  rows.map((row) => (
+                    <tr>
+                      <td>{row.id}</td>
+                      <td>{row.code}</td>
+                      <td>{row.name}</td>
+                      <td>{row.role}</td>
+                      <td>{row.status}</td>
+                      <td>{row.updated}</td>
+                      <td>{row.owner}</td>
+                      <td>{row.department}</td>
+                      <td>{row.budget}</td>
+                      <td>{row.region}</td>
+                      <td>{row.priority}</td>
+                      <td>{row.sla}</td>
+                      <td>{row.notes}</td>
+                      <td>{row.externalId}</td>
+                    </tr>
+                  ))
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </DashboardContent>
+  </div>
+</section>

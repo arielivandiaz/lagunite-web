@@ -1,0 +1,36 @@
+---
+import SidebarNavIcon from "./SidebarNavIcon.astro";
+
+export interface SidebarMobileItem {
+  label: string;
+  href: string;
+  active?: boolean;
+  icon?: string;
+}
+
+export interface Props {
+  title?: string;
+  items: SidebarMobileItem[];
+}
+
+const { title = "Navigation", items } = Astro.props as Props;
+---
+
+<aside class="sidebar-mobile" aria-label={title}>
+  <p class="sidebar-mobile__a11y-title sr-only">{title}</p>
+  <nav class="sidebar-mobile__nav" aria-label={title}>
+    {
+      items.map((item) => (
+        <a
+          class:list={["sidebar-mobile__link", item.active && "is-active"]}
+          href={item.href}
+          aria-current={item.active ? "page" : undefined}
+          aria-label={item.label}
+        >
+          <SidebarNavIcon variant="mobile" symbol={item.icon ?? "•"} />
+          <span class="sidebar-mobile__label">{item.label}</span>
+        </a>
+      ))
+    }
+  </nav>
+</aside>

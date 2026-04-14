@@ -1,0 +1,167 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const title = "Border";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+    <i>@ID:<b> #04-04-XX</b></i>
+    <div class="separator-v-xl"></div>
+
+    <h3>Border Width &amp; Style</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-2 dgrid-cols-4 g-gap-s">
+      <div class="bg-white border-solid border-w-1 border-color-primary" style="padding: 16px">
+        <div class="font-xs">.border-w-1 .border-solid</div>
+      </div>
+      <div class="bg-white border-solid border-w-2 border-color-primary" style="padding: 16px">
+        <div class="font-xs">.border-w-2 .border-solid</div>
+      </div>
+      <div class="bg-white border-dashed border-w-2 border-color-secondary" style="padding: 16px">
+        <div class="font-xs">.border-w-2 .border-dashed</div>
+      </div>
+      <div class="bg-white border-dotted border-w-2 border-color-secondary" style="padding: 16px">
+        <div class="font-xs">.border-w-2 .border-dotted</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Border Colors</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-3 dgrid-cols-6 g-gap-s">
+      <div class="bg-white border-w-2 border-solid border-color-primary" style="padding: 12px">
+        <div class="font-xs">.border-color-primary</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-success" style="padding: 12px">
+        <div class="font-xs">.border-color-success</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-warning" style="padding: 12px">
+        <div class="font-xs">.border-color-warning</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-error" style="padding: 12px">
+        <div class="font-xs">.border-color-error</div>
+      </div>
+      <div class="bg-white border-w-2 border-solid border-color-black" style="padding: 12px">
+        <div class="font-xs">.border-color-black</div>
+      </div>
+      <div class="bg-awhite border-w-2 border-solid border-color-white" style="padding: 12px">
+        <div class="font-xs">.border-color-white</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Border Sides (Atomic)</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-2 dgrid-cols-4 g-gap-s">
+      <div class="bg-white border-t border-color-primary" style="padding: 16px">
+        <div class="font-xs">.border-t</div>
+      </div>
+      <div class="bg-white border-b border-color-primary" style="padding: 16px">
+        <div class="font-xs">.border-b</div>
+      </div>
+      <div class="bg-white border-lf border-color-primary" style="padding: 16px">
+        <div class="font-xs">.border-lf</div>
+      </div>
+      <div class="bg-white border-rg border-color-primary" style="padding: 16px">
+        <div class="font-xs">.border-rg</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Border Radius</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-2 dgrid-cols-5 g-gap-s">
+      <div class="bg-1 border-r-0" style="padding: 16px">
+        <div class="font-xs">.border-r-0</div>
+      </div>
+      <div class="bg-1 border-r-s" style="padding: 16px">
+        <div class="font-xs">.border-r-s</div>
+      </div>
+      <div class="bg-1 border-r" style="padding: 16px">
+        <div class="font-xs">.border-r</div>
+      </div>
+      <div class="bg-1 border-r-l" style="padding: 16px">
+        <div class="font-xs">.border-r-l</div>
+      </div>
+      <div class="bg-1 border-r-xl" style="padding: 16px">
+        <div class="font-xs">.border-r-xl</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Full Radius &amp; Circle</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="row g-gap-s ai-c">
+      <div
+        class="bg-1 border-r-full"
+        style="padding: 8px 20px; display: inline-block"
+      >
+        <span class="font-xs">.border-r-full</span>
+      </div>
+      <div
+        class="bg-1 border-r-circle"
+        style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center"
+      >
+        <span class="font-xs">●</span>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Border Circle (Stacked)</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="row g-gap-s ai-c">
+      <div class="border-circle-s">S</div>
+      <div class="border-circle">M</div>
+      <div class="border-circle-l">L</div>
+      <div class="border-circle-xl">XL</div>
+      <div class="border-circle color-success">OK</div>
+      <div class="border-circle color-error">!</div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Border Blobs (Organic Shapes)</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-2 dgrid-cols-4 g-gap-s">
+      <div class="bg-2 border-blob-t-2" style="height: 80px"></div>
+      <div class="bg-3 border-blob-b-3" style="height: 80px"></div>
+      <div class="bg-4 border-blob-lf-3" style="height: 80px"></div>
+      <div class="bg-5 border-blob-rg-4" style="height: 80px"></div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Border Shortcuts</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-1 dgrid-cols-3 g-gap-s">
+      <div class="bg-white border" style="padding: 16px">
+        <div class="font-xs">.border</div>
+      </div>
+      <div class="bg-white border-light" style="padding: 16px">
+        <div class="font-xs">.border-light</div>
+      </div>
+      <div class="bg-white border-dark" style="padding: 16px">
+        <div class="font-xs">.border-dark</div>
+      </div>
+      <div class="bg-white bordered" style="padding: 16px">
+        <div class="font-xs">.bordered</div>
+      </div>
+    </div>
+  </section>
+</Layout>
+

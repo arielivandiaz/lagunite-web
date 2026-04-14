@@ -1,0 +1,108 @@
+---
+export let current = '';
+
+const items = [
+  { type: 'file', href: '/docs/id-table', title: title('id-table') },
+  { type: 'file', href: '/docs/nomenclature', title: title('nomenclature') },
+  {
+    type: 'folder',
+    title: '00-config',
+    children: [
+      { type: 'file', href: '/docs/00-config/01-pallete', title: title('01-pallete') },
+      { type: 'file', href: '/docs/00-config/02-typography', title: title('02-typography') },
+      { type: 'file', href: '/docs/00-config/03-theme', title: title('03-theme') },
+      { type: 'file', href: '/docs/00-config/04-measures', title: title('04-measures') }
+    ]
+  },
+  {
+    type: 'folder',
+    title: '01-text',
+    children: [
+      { type: 'file', href: '/docs/01-text/01-fonts', title: title('01-fonts') },
+      { type: 'file', href: '/docs/01-text/02-typography', title: title('02-typography') }
+    ]
+  },
+  {
+    type: 'folder',
+    title: '02-colors',
+    children: [
+      { type: 'file', href: '/docs/02-colors/01-text', title: title('01-text') },
+      { type: 'file', href: '/docs/02-colors/02-background', title: title('02-background') },
+      { type: 'file', href: '/docs/02-colors/03-border', title: title('03-border') }
+    ]
+  },
+  {
+    type: 'folder',
+    title: '03-layout',
+    children: [
+      { type: 'file', href: '/docs/03-layout/10-sizes-comparison', title: title('10-sizes-comparison') },
+      { type: 'file', href: '/docs/03-layout/10-sizes', title: title('10-sizes') }
+    ]
+  },
+  {
+    type: 'folder',
+    title: '04-decorators',
+    children: [
+      { type: 'file', href: '/docs/04-decorators/01-effects', title: title('01-effects') },
+      { type: 'file', href: '/docs/04-decorators/02-shadows', title: title('02-shadows') },
+      { type: 'file', href: '/docs/04-decorators/03-opacity', title: title('03-opacity') },
+      { type: 'file', href: '/docs/04-decorators/04-border', title: title('04-border') },
+      { type: 'file', href: '/docs/04-decorators/05-transforms', title: title('05-transforms') },
+      { type: 'file', href: '/docs/04-decorators/06-transitions', title: title('06-transitions') },
+      { type: 'file', href: '/docs/04-decorators/07-animations', title: title('07-animations') },
+      { type: 'file', href: '/docs/04-decorators/08-filters', title: title('08-filters') }
+    ]
+  },
+  {
+    type: 'folder',
+    title: '05-atoms',
+    children: [
+      { type: 'file', href: '/docs/05-atoms/01-buttons', title: title('01-buttons') },
+      { type: 'file', href: '/docs/05-atoms/02-inputs', title: title('02-inputs') },
+      { type: 'file', href: '/docs/05-atoms/03-tables', title: title('03-tables') },
+      { type: 'file', href: '/docs/05-atoms/04-lists', title: title('04-lists') },
+      { type: 'file', href: '/docs/05-atoms/05-figures', title: title('05-figures') }
+    ]
+  }
+];
+
+function title(name: string) {
+  let n = name.replace(/\.astro$/, '');
+  return n.split(' ').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+---
+
+<nav class="float pa-lf marg-lf">
+  <ul>
+    {items.map(item => (
+      item.type === 'file' ? (
+        <li>
+          <a class={item.href === current ? 'active' : ''} href={item.href}>{item.title}</a>
+        </li>
+      ) : (
+        <li>
+          <details open>
+            <summary>{item.title.replace('-','. ')}</summary>
+            <ul>
+              {(item.children || []).map(child => (
+                <li>
+                  <a class={child.href === current ? 'active' : ''} href={child.href}>{child.title}</a>
+                </li>
+              ))}
+            </ul>
+          </details>
+        </li>
+      )
+    ))}
+  </ul>
+
+  <style>
+    .docs-navigation ul { list-style: none; padding-left: 0; margin: 0; }
+    .docs-navigation li { margin: 0.25rem 0; }
+    .docs-navigation a { color: inherit; text-decoration: none; }
+    .docs-navigation a.active { font-weight: 700; }
+    .docs-navigation details > summary { cursor: pointer; font-weight: 600; }
+    .docs-navigation details ul { padding-left: 0.75rem; margin-top: 0.25rem; }
+  </style>
+
+</nav>

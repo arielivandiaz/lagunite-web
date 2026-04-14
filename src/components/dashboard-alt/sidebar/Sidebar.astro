@@ -1,0 +1,35 @@
+---
+import SidebarNavIcon from "./SidebarNavIcon.astro";
+
+export interface SidebarItem {
+  label: string;
+  href: string;
+  active?: boolean;
+  icon?: string;
+}
+
+export interface Props {
+  title?: string;
+  items: SidebarItem[];
+}
+
+const { title = "Dashboard", items } = Astro.props as Props;
+---
+
+<nav class="dashboard-sidebar__nav" aria-label={title}>
+  {
+    items.map((item) => (
+      <a
+        class:list={["dashboard-sidebar__link", item.active && "is-active"]}
+        href={item.href}
+        aria-current={item.active ? "page" : undefined}
+        aria-label={item.label}
+      >
+        <span class="dashboard-sidebar__link-surface">
+          <SidebarNavIcon variant="rail" symbol={item.icon ?? "•"} />
+          <span class="dashboard-sidebar__label">{item.label}</span>
+        </span>
+      </a>
+    ))
+  }
+</nav>

@@ -2,6 +2,7 @@
 interface Props {
   class?: string;
   text: string;
+  textContent?: string; // for demo purposes, to show text contrast with background
   style?: string;
   width?: string; // e.g. "100px" or "50%"
   height?: string; // e.g. "20px"
@@ -15,7 +16,9 @@ const { class: className, style, width = '100px', height = '20px' } = Astro.prop
   <div
     class={`rectangleDemo marg-lf-s ${className || ""}`}
     style={`--rect-width: ${width}; --rect-height: ${height}; ${style || ""}`}
-  ></div>
+  >
+    {Astro.props.textContent || ""}
+  </div>
 </div>
 
 <style>

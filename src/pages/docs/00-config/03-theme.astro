@@ -19,7 +19,7 @@ const title = "Theme";
         <ColorDemo text="---color-bg-alt" class="bg-alt" />
       </div>
     </div>
-    <div class="separator-v-xl"></div>b
+    <div class="separator-v-xl"></div>
     <div class="col-row">
       <div>
         <ColorDemo text="--color-primary" class="bg-1" />
@@ -129,10 +129,10 @@ const title = "Theme";
         ></div>
       </div>
       <div class="row jc-sb ai-c min-h-10">
-        --shadow-md
+        --shadow-m
         <div
           class="marg-lf"
-          style="width: 60px; height: 40px; border-radius: 6px; background: #fff; box-shadow: var(--shadow-md);"
+          style="width: 60px; height: 40px; border-radius: 6px; background: #fff; box-shadow: var(--shadow-m);"
         ></div>
       </div>
       <div class="row jc-sb ai-c min-h-10">
@@ -143,12 +143,72 @@ const title = "Theme";
         ></div>
       </div>
       <div class="row jc-sb ai-c min-h-10">
+        --shadow-xl
+        <div
+          class="marg-lf"
+          style="width: 60px; height: 40px; border-radius: 6px; background: #fff; box-shadow: var(--shadow-xl);"
+        ></div>
+      </div>
+      <div class="row jc-sb ai-c min-h-10">
         --shadow-inner
         <div
           class="marg-lf"
           style="width: 60px; height: 40px; border-radius: 6px; background: #fff; box-shadow: var(--shadow-inner);"
         ></div>
       </div>
+    </div>
+
+    <div class="separator-v-l"></div>
+
+    <h3>Shadow Utilities (Decorators)</h3>
+    <i>@ID:<b> #04-02-XX</b></i>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-2 dgrid-cols-5 g-gap-s">
+      <div class="bg-white border-r-l shadow-s" style="padding: 16px">
+        <div class="font-weight-3">.shadow-s</div>
+        <div class="font-s color-text">Subtle</div>
+      </div>
+      <div class="bg-white border-r-l shadow" style="padding: 16px">
+        <div class="font-weight-3">.shadow</div>
+        <div class="font-s color-text">Medium</div>
+      </div>
+      <div class="bg-white border-r-l shadow-l" style="padding: 16px">
+        <div class="font-weight-3">.shadow-l</div>
+        <div class="font-s color-text">Large</div>
+      </div>
+      <div class="bg-white border-r-l shadow-xl" style="padding: 16px">
+        <div class="font-weight-3">.shadow-xl</div>
+        <div class="font-s color-text">Extra Large</div>
+      </div>
+      <div
+        class="bg-white border-r-l shadow-inner"
+        style="padding: 16px; border: 1px solid var(--color-border)"
+      >
+        <div class="font-weight-3">.shadow-inner</div>
+        <div class="font-s color-text">Inset</div>
+      </div>
+    </div>
+
+    <div class="separator-v-l"></div>
+
+    <div class="grid grid-cols-1 dgrid-cols-2 g-gap-s">
+      <div class="bg-white border-r-l shadow-color-primary" style="padding: 16px">
+        <div class="font-weight-3">.shadow-color-primary</div>
+        <div class="font-s color-text">Glow con color primario</div>
+      </div>
+      <div class="bg-white border-r-l shadow-color-black" style="padding: 16px">
+        <div class="font-weight-3">.shadow-color-black</div>
+        <div class="font-s color-text">Sombra profunda neutral</div>
+      </div>
+    </div>
+
+    <div class="separator-v-l"></div>
+
+    <div class="bg-ablack border-r-l" style="padding: 16px">
+      <div class="text-shadow-s font-fluid-s">.text-shadow-s</div>
+      <div class="text-shadow font-fluid">.text-shadow</div>
+      <div class="text-shadow-l font-fluid-l">.text-shadow-l</div>
     </div>
   </section>
 </Layout>

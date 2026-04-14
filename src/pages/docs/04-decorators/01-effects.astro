@@ -1,0 +1,211 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const title = "Effects";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+    <i>@ID:<b> #04-01-XX</b></i>
+    <div class="separator-v-xl"></div>
+
+    <h3>Resize &amp; Appearance</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-1 dgrid-cols-2 g-gap-s">
+      <div>
+        <div class="font-weight-3 marg-b-xs">.resize / .resize-x / .resize-y</div>
+        <textarea
+          class="border-r-l padd-s w-100 resize"
+          rows="3"
+          placeholder="Arrástrame desde la esquina…"
+        ></textarea>
+      </div>
+      <div>
+        <div class="font-weight-3 marg-b-xs">.appearance-none</div>
+        <select class="border-r-l padd-s appearance-none w-100">
+          <option>Selección sin estilo nativo</option>
+          <option>Opción 1</option>
+          <option>Opción 2</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Object Fit &amp; Object Position</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-2 dgrid-cols-4 g-gap-s">
+      <figure class="border-r-l bg-gray-100" style="height: 120px; overflow: hidden">
+        <img
+          class="object-contain w-100 h-100"
+          src="https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
+          alt="Sample"
+        />
+        <figcaption class="font-xs padd-xs">.object-contain</figcaption>
+      </figure>
+      <figure class="border-r-l bg-gray-100" style="height: 120px; overflow: hidden">
+        <img
+          class="object-cover w-100 h-100"
+          src="https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
+          alt="Sample"
+        />
+        <figcaption class="font-xs padd-xs">.object-cover</figcaption>
+      </figure>
+      <figure class="border-r-l bg-gray-100" style="height: 120px; overflow: hidden">
+        <img
+          class="object-cover object-top w-100 h-100"
+          src="https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
+          alt="Sample"
+        />
+        <figcaption class="font-xs padd-xs">.object-cover .object-top</figcaption>
+      </figure>
+      <figure class="border-r-l bg-gray-100" style="height: 120px; overflow: hidden">
+        <img
+          class="object-cover object-bottom w-100 h-100"
+          src="https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
+          alt="Sample"
+        />
+        <figcaption class="font-xs padd-xs">.object-cover .object-bottom</figcaption>
+      </figure>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Blend Modes</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-2 dgrid-cols-4 g-gap-s">
+      <div class="padd-s">
+        <div class="font-xs marg-b-xs">.mix-blend-multiply</div>
+        <div class="bg-5" style="position: relative; height: 80px">
+          <div
+            class="mix-blend-multiply bg-1 border-r-l"
+            style="position: absolute; inset: 12px"
+          ></div>
+        </div>
+      </div>
+      <div class="padd-s">
+        <div class="font-xs marg-b-xs">.mix-blend-screen</div>
+        <div class="bg-4" style="position: relative; height: 80px">
+          <div
+            class="mix-blend-screen bg-1 border-r-l"
+            style="position: absolute; inset: 12px"
+          ></div>
+        </div>
+      </div>
+      <div class="padd-s">
+        <div class="font-xs marg-b-xs">.bg-blend-overlay</div>
+        <div
+          class="bg-blend-overlay border-r-l"
+          style="height: 80px; background-image: linear-gradient(90deg, #2476ff, #f97316), url('https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800'); background-size: cover;"
+        ></div>
+      </div>
+      <div class="padd-s">
+        <div class="font-xs marg-b-xs">.bg-blend-multiply</div>
+        <div
+          class="bg-blend-multiply border-r-l"
+          style="height: 80px; background-image: linear-gradient(90deg, #2476ff, #22c55e), url('https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800'); background-size: cover;"
+        ></div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Backdrop Blur</h3>
+    <div class="separator-v-s"></div>
+
+    <div
+      class="bgg-4 border-r-l"
+      style="padding: 24px; position: relative; overflow: hidden; min-height: 140px"
+    >
+      <div
+        class="border-r-l backdrop-blur-s bg-awhite"
+        style="padding: 12px 16px; max-width: 260px"
+      >
+        <div class="font-weight-3">.backdrop-blur-s</div>
+        <div class="font-xs">Panel con desenfoque suave.</div>
+      </div>
+      <div
+        class="border-r-l backdrop-blur-l bg-awhite"
+        style="padding: 12px 16px; max-width: 260px; position: absolute; right: 16px; bottom: 16px"
+      >
+        <div class="font-weight-3">.backdrop-blur-l</div>
+        <div class="font-xs">Desenfoque intenso tipo “glass”.</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Hoverable</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-2 dgrid-cols-4 g-gap-s">
+      <div class="bg-white border-r-l hoverable-s" style="padding: 16px; text-align: center">
+        <div class="font-xs">.hoverable-s</div>
+        <div class="font-s">Hover</div>
+      </div>
+      <div class="bg-white border-r-l hoverable" style="padding: 16px; text-align: center">
+        <div class="font-xs">.hoverable</div>
+        <div class="font-s">Hover</div>
+      </div>
+      <div class="bg-white border-r-l hoverable-l" style="padding: 16px; text-align: center">
+        <div class="font-xs">.hoverable-l</div>
+        <div class="font-s">Hover</div>
+      </div>
+      <div class="bg-white border-r-l hoverable-xl" style="padding: 16px; text-align: center">
+        <div class="font-xs">.hoverable-xl</div>
+        <div class="font-s">Hover</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Scroll &amp; Snap Utilities</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-1 dgrid-cols-2 g-gap-s">
+      <div>
+        <div class="font-xs marg-b-xs">.scroll-sooth (typo en CSS actual)</div>
+        <div
+          class="scroll-sooth border-r-l"
+          style="max-height: 80px; overflow-y: auto; padding: 8px"
+        >
+          <p class="font-xs">
+            Este contenedor usa <code>.scroll-sooth</code>. Cuando navegues anclas dentro de la
+            página, el desplazamiento será suave (según soporte del navegador).
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="font-xs marg-b-xs">.snap-x / .snap-start</div>
+        <div
+          class="snap-x snap-mandatory border-r-l"
+          style="display: flex; overflow-x: auto; gap: 8px; scroll-padding: 16px"
+        >
+          <div
+            class="snap-start bg-1 border-r-l"
+            style="min-width: 160px; min-height: 72px; padding: 8px"
+          >
+            Item 1
+          </div>
+          <div
+            class="snap-start bg-2 border-r-l"
+            style="min-width: 160px; min-height: 72px; padding: 8px"
+          >
+            Item 2
+          </div>
+          <div
+            class="snap-start bg-3 border-r-l"
+            style="min-width: 160px; min-height: 72px; padding: 8px"
+          >
+            Item 3
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+

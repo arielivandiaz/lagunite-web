@@ -1,0 +1,28 @@
+---
+export interface Props {
+  href?: string;
+  avatarSrc?: string;
+  avatarAlt?: string;
+}
+
+const { href = "/dashboard-alt", avatarSrc, avatarAlt = "Profile" } = Astro.props as Props;
+const initial = avatarAlt.trim().charAt(0).toUpperCase() || "?";
+---
+
+<a class="sidebar-avatar-bottom" href={href} aria-label={avatarAlt} title={avatarAlt}>
+  {
+    avatarSrc ? (
+      <img
+        class="sidebar-avatar-bottom__img"
+        src={avatarSrc}
+        alt=""
+        width="40"
+        height="40"
+        loading="lazy"
+        decoding="async"
+      />
+    ) : (
+      <span class="sidebar-avatar-bottom__fallback" aria-hidden="true">{initial}</span>
+    )
+  }
+</a>

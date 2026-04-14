@@ -1,9 +1,10 @@
 ---
-import "../../../lagunite/dist/lagunite.css";
+import "../../../dist/lagunite.css";
 import Navbar from "../components/Navbar.astro";
 import Sidebar from "../components/Sidebar.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import DocsNavigation from "../components/docs/DocsNavigation.astro";
 
 interface Props {
   title?: string;
@@ -25,7 +26,7 @@ const { title = "Astro" } = Astro.props;
     <!-- <Navbar /> -->
     <Header />
     <div class="layout-container">
-      <!-- <Sidebar /> -->
+       <DocsNavigation current={Astro.url.pathname} />
       <main class="h-100">
         <slot />
       </main>

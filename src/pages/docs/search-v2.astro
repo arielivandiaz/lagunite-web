@@ -1,0 +1,344 @@
+---
+import DocLayout from "../../layouts/DocLayout.astro";
+
+type StyleToken = {
+  selector?: string;
+  id?: string;
+  cssRule?: string;
+  properties?: string[];
+  description?: string;
+  selectorType?: string;
+  responsive?: boolean;
+};
+
+type DocFile = {
+  folder?: string;
+  file?: string;
+  content?: StyleToken[];
+};
+
+const docsModules = import.meta.glob("../../docs/json/**/*.json", { eager: true });
+const docsFiles = Object.values(docsModules)
+  .map((mod) => (mod as { default?: DocFile }).default ?? (mod as DocFile))
+  .filter((entry): entry is DocFile => Boolean(entry));
+
+const allTokens = docsFiles
+  .flatMap((doc) =>
+    (doc.content ?? []).map((token, index) => {
+      const folder = doc.folder ?? "-";
+      const file = doc.file ?? "-";
+      const id = token.id ?? "#NO-ID";
+      const selector = token.selector ?? "(no selector)";
+      const cssRule = token.cssRule ?? "";
+      const properties = token.properties ?? [];
+      const description = token.description ?? "";
+      const selectorType = token.selectorType ?? "unknown";
+      const responsive = token.responsive ?? false;
+      const label = `${id} - ${folder} - ${file} - ${selector}`;
+      const searchKey = `${id} ${folder} ${file} ${selector} ${description} ${cssRule}`.toLowerCase();
+      const fileKey = `${folder}/${file}`;
+
+      return {
+        key: `${folder}-${file}-${index}`,
+        id,
+        folder,
+        file,
+        fileKey,
+        selector,
+        cssRule,
+        properties,
+        description,
+        selectorType,
+        responsive,
+        label,
+        searchKey,
+      };
+    })
+  )
+  .filter((token) => token.selector && token.selector !== "(no selector)")
+  .sort((a, b) => {
+    if (a.id !== b.id) return a.id.localeCompare(b.id);
+    if (a.folder !== b.folder) return a.folder.localeCompare(b.folder);
+    if (a.file !== b.file) return a.file.localeCompare(b.file);
+    return a.selector.localeCompare(b.selector);
+  });
+
+const availableFiles = Array.from(new Set(allTokens.map((token) => token.fileKey))).sort((a, b) =>
+  a.localeCompare(b)
+);
+
+const totalCount = allTokens.length;
+---
+
+<DocLayout title="Search 2.0">
+  <section class="container-fluid padd-v">
+    <h1>Search 2.0 · Style Tokens</h1>
+    <p class="marg-t-s">
+      Full compiled list from JSON docs. Format: <strong>ID - folder - file - selector</strong>.
+      Click a row to expand full token definition.
+    </p>
+
+    <div class="marg-v row ai-c" style="gap: 12px; flex-wrap: wrap;">
+      <input
+        id="style-search"
+        class="input"
+        type="text"
+        placeholder="Search by ID, folder, file, selector or css rule..."
+        aria-label="Search style token"
+        style="max-width: 520px;"
+      />
+
+      <details class="file-filter-panel">
+        <summary class="font-s">Filter files</summary>
+
+        <div class="file-filter-actions row ai-c" style="gap: 8px; flex-wrap: wrap;">
+          <button id="files-all" type="button" class="file-filter-btn">Select all</button>
+          <button id="files-none" type="button" class="file-filter-btn">Clear all</button>
+          <span id="file-filter-count" class="font-xs">
+            {availableFiles.length} selected
+          </span>
+        </div>
+
+        <div class="file-filter-list">
+          {
+            availableFiles.map((fileKey) => (
+              <label class="file-filter-item">
+                <input type="checkbox" name="file-filter" value={fileKey} checked />
+                <span>{fileKey}</span>
+              </label>
+            ))
+          }
+        </div>
+      </details>
+
+      <span id="visible-count" class="font-s">Showing {totalCount} / {totalCount}</span>
+    </div>
+
+    <div id="styles-list">
+      {
+        allTokens.map((token) => (
+          <details
+            class="style-token border-r-l bg-white padd-s"
+            data-search={token.searchKey}
+            data-file={token.fileKey}
+          >
+            <summary class="style-token-summary">
+              <span class="font-s token-label">{token.label}</span>
+            </summary>
+
+            <div class="separator-v-s"></div>
+
+            <div class="col" style="align-items: flex-start; gap: 8px;">
+              <div class="font-xs color-gray-600">
+                <strong>Selector type:</strong> {token.selectorType}
+                &nbsp;|&nbsp;
+                <strong>Responsive:</strong> {token.responsive ? "yes" : "no"}
+              </div>
+
+              {token.description && (
+                <div class="font-s"><strong>Description:</strong> {token.description}</div>
+              )}
+
+              {token.properties.length > 0 && (
+                <div class="font-s">
+                  <strong>Properties:</strong> {token.properties.join(", ")}
+                </div>
+              )}
+
+              <div class="wp100">
+                <strong class="font-s">CSS rule</strong>
+                <pre class="token-rule"><code>{token.cssRule}</code></pre>
+              </div>
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </section>
+</DocLayout>
+
+<script>
+  (() => {
+    const input = document.getElementById("style-search");
+    const list = document.getElementById("styles-list");
+    const visibleCount = document.getElementById("visible-count");
+    const filesAllBtn = document.getElementById("files-all");
+    const filesNoneBtn = document.getElementById("files-none");
+    const fileFilterCount = document.getElementById("file-filter-count");
+
+    if (!input || !list || !visibleCount) return;
+
+    const inputEl = input as HTMLInputElement;
+    const countEl = visibleCount as HTMLElement;
+
+    const items = Array.from(list.querySelectorAll(".style-token"));
+    const fileChecks = Array.from(
+      document.querySelectorAll("input[name='file-filter']")
+    ) as HTMLInputElement[];
+    const total = items.length;
+
+    function selectedFileSet(): Set<string> {
+      return new Set(fileChecks.filter((check) => check.checked).map((check) => check.value));
+    }
+
+    function updateFileFilterCount() {
+      if (!fileFilterCount) return;
+      const selected = fileChecks.filter((check) => check.checked).length;
+      fileFilterCount.textContent = `${selected} selected`;
+    }
+
+    function applyFilter() {
+      const query = String(inputEl.value || "").trim().toLowerCase();
+      const selectedFiles = selectedFileSet();
+      let visible = 0;
+
+      items.forEach((item) => {
+        const haystack = item.getAttribute("data-search") || "";
+        const fileKey = item.getAttribute("data-file") || "";
+        const textMatch = query.length === 0 || haystack.includes(query);
+        const fileMatch = selectedFiles.size === 0 ? false : selectedFiles.has(fileKey);
+        const match = textMatch && fileMatch;
+        (item as HTMLElement).style.display = match ? "block" : "none";
+        if (match) visible += 1;
+      });
+
+      countEl.textContent = `Showing ${visible} / ${total}`;
+      updateFileFilterCount();
+    }
+
+    inputEl.addEventListener("input", applyFilter);
+
+    fileChecks.forEach((check) => {
+      check.addEventListener("change", applyFilter);
+    });
+
+    filesAllBtn?.addEventListener("click", () => {
+      fileChecks.forEach((check) => {
+        check.checked = true;
+      });
+      applyFilter();
+    });
+
+    filesNoneBtn?.addEventListener("click", () => {
+      fileChecks.forEach((check) => {
+        check.checked = false;
+      });
+      applyFilter();
+    });
+
+    applyFilter();
+  })();
+</script>
+
+<style>
+  .file-filter-panel {
+    min-width: 220px;
+  }
+
+  .file-filter-panel > summary {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .file-filter-actions {
+    margin-top: 8px;
+  }
+
+  .file-filter-btn {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 12px;
+    background: var(--color-bg);
+  }
+
+  .file-filter-list {
+    margin-top: 8px;
+    max-height: 220px;
+    overflow-y: auto;
+    padding: 8px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--gray-50);
+  }
+
+  .file-filter-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 6px;
+    word-break: break-word;
+  }
+
+  #styles-list {
+    display: block;
+    width: 100%;
+  }
+
+  .style-token {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  .style-token-summary {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    cursor: pointer;
+    list-style: none;
+    min-width: 0;
+  }
+
+  .style-token-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .style-token-summary::before {
+    content: "▸";
+    font-size: 11px;
+    margin-right: 8px;
+  }
+
+  details[open] > .style-token-summary::before {
+    content: "▾";
+  }
+
+  .token-label {
+    display: inline-block;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .token-rule {
+    margin-top: 6px;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--gray-50);
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .night .token-rule {
+    background: var(--gray-900);
+    border-color: var(--gray-700);
+  }
+
+  .night .file-filter-list {
+    background: var(--gray-900);
+    border-color: var(--gray-700);
+  }
+
+  .night .file-filter-btn {
+    background: var(--gray-900);
+    border-color: var(--gray-700);
+    color: var(--gray-200);
+  }
+</style>

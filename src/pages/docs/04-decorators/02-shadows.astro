@@ -1,0 +1,94 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const title = "Shadows";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+    <i>@ID:<b> #04-02-XX</b></i>
+    <div class="separator-v-xl"></div>
+
+    <h3>Box Shadows</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-2 dgrid-cols-5 g-gap-s">
+      <div class="bg-white border-r-l shadow-s" style="padding: 16px">
+        <div class="font-weight-3">.shadow-s</div>
+        <div class="font-s ">Subtle</div>
+      </div>
+      <div class="bg-white border-r-l shadow" style="padding: 16px">
+        <div class="font-weight-3">.shadow</div>
+        <div class="font-s">Medium</div>
+      </div>
+      <div class="bg-white border-r-l shadow-l" style="padding: 16px">
+        <div class="font-weight-3">.shadow-l</div>
+        <div class="font-s color-text">Large</div>
+      </div>
+      <div class="bg-white border-r-l shadow-xl" style="padding: 16px">
+        <div class="font-weight-3">.shadow-xl</div>
+        <div class="font-s color-text">Extra Large</div>
+      </div>
+      <div
+        class="bg-white border-r-l shadow-inner"
+        style="padding: 16px; border: 1px solid var(--color-border)"
+      >
+        <div class="font-weight-3">.shadow-inner</div>
+        <div class="font-s color-text">Inset</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Shadow Colors</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-1 dgrid-cols-2 g-gap-s">
+      <div class="bg-white border-r-l shadow-color-primary" style="padding: 16px">
+        <div class="font-weight-3">.shadow-color-primary</div>
+        <div class="font-s color-text">Glow con color primario</div>
+      </div>
+      <div class="bg-white border-r-l shadow-color-black" style="padding: 16px">
+        <div class="font-weight-3">.shadow-color-black</div>
+        <div class="font-s color-text">Sombra profunda neutral</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Text Shadows</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="bg-ablack border-r-l" style="padding: 16px">
+      <div class="text-shadow-s font-fluid-s">.text-shadow-s</div>
+      <div class="text-shadow font-fluid">.text-shadow</div>
+      <div class="text-shadow-l font-fluid-l">.text-shadow-l</div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Responsive Variants (x / d)</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="col">
+      <div class="font-s">
+        Estas clases existen en el archivo como variantes responsive:
+        <code>.xshadow-*</code>, <code>.dshadow-*</code>,
+        <code>.xtext-shadow-*</code>, <code>.dtext-shadow-*</code>.
+      </div>
+      <div class="separator-v-s"></div>
+      <div class="bg-gray-50 border-r-l" style="padding: 16px">
+        <div class="row jc-sb ai-c min-h-10">
+          <div><code>.xshadow-l</code> / <code>.dshadow-l</code></div>
+          <div class="shadow-l bg-white border-r-l" style="width: 84px; height: 44px"></div>
+        </div>
+        <div class="row jc-sb ai-c min-h-10">
+          <div><code>.xshadow-xl</code> / <code>.dshadow-xl</code></div>
+          <div class="shadow-xl bg-white border-r-l" style="width: 84px; height: 44px"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+

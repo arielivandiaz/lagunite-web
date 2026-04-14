@@ -1,0 +1,100 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const title = "Transforms";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+    <i>@ID:<b> #04-05-XX</b></i>
+    <div class="separator-v-xl"></div>
+
+    <h3>Scale</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-3 dgrid-cols-6 g-gap-s">
+      <div class="bg-1 border-r-l scale-0" style="padding: 16px">
+        <div class="font-xs">.scale-0</div>
+      </div>
+      <div class="bg-1 border-r-l scale-50" style="padding: 16px">
+        <div class="font-xs">.scale-50</div>
+      </div>
+      <div class="bg-1 border-r-l scale-75" style="padding: 16px">
+        <div class="font-xs">.scale-75</div>
+      </div>
+      <div class="bg-1 border-r-l scale-100" style="padding: 16px">
+        <div class="font-xs">.scale-100</div>
+      </div>
+      <div class="bg-1 border-r-l scale-125" style="padding: 16px">
+        <div class="font-xs">.scale-125</div>
+      </div>
+      <div class="bg-1 border-r-l scale-150" style="padding: 16px">
+        <div class="font-xs">.scale-150</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Rotate</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="row g-gap-s ai-c">
+      <div class="bg-2 border-r-circle rotate-0" style="width: 60px; height: 60px"></div>
+      <div class="bg-2 border-r-circle rotate-45" style="width: 60px; height: 60px"></div>
+      <div class="bg-2 border-r-circle rotate-90" style="width: 60px; height: 60px"></div>
+      <div class="bg-2 border-r-circle rotate-180" style="width: 60px; height: 60px"></div>
+      <div class="bg-2 border-r-circle rotate-270" style="width: 60px; height: 60px"></div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Translate</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="bg-gray-50 border-r-l" style="padding: 16px; overflow: hidden">
+      <div
+        class="bg-3 border-r-l translate-x-0"
+        style="width: 120px; height: 48px; margin-bottom: 8px"
+      >
+        <span class="font-xs padd-xs">.translate-x-0</span>
+      </div>
+      <div
+        class="bg-3 border-r-l translate-x-full"
+        style="width: 120px; height: 48px"
+      >
+        <span class="font-xs padd-xs">.translate-x-full</span>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Transform Origin</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-3 dgrid-cols-3 g-gap-s">
+      <div class="bg-white border-r-l" style="padding: 16px">
+        <div class="font-xs marg-b-xs">.origin-center</div>
+        <div
+          class="bg-1 border-r-circle origin-center rotate-45"
+          style="width: 40px; height: 40px; margin: 0 auto"
+        ></div>
+      </div>
+      <div class="bg-white border-r-l" style="padding: 16px">
+        <div class="font-xs marg-b-xs">.origin-top</div>
+        <div
+          class="bg-1 border-r-circle origin-top rotate-45"
+          style="width: 40px; height: 40px; margin: 0 auto"
+        ></div>
+      </div>
+      <div class="bg-white border-r-l" style="padding: 16px">
+        <div class="font-xs marg-b-xs">.origin-bottom</div>
+        <div
+          class="bg-1 border-r-circle origin-bottom rotate-45"
+          style="width: 40px; height: 40px; margin: 0 auto"
+        ></div>
+      </div>
+    </div>
+  </section>
+</Layout>
+

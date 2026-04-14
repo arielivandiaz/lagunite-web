@@ -1,0 +1,155 @@
+---
+export interface FloatingNavbarItem {
+  label: string;
+  href: string;
+  active?: boolean;
+  icon?: string;
+}
+
+export interface Props {
+  title?: string;
+  items: FloatingNavbarItem[];
+  brandLabel?: string;
+  avatarSrc?: string;
+  avatarAlt?: string;
+  avatarName?: string;
+  profileHref?: string;
+}
+
+const {
+  title = "Dashboard quick menu",
+  brandLabel = "Dashboard",
+  items,
+  avatarSrc,
+  avatarAlt = "Profile photo",
+  avatarName = "User",
+  profileHref = "/dashboard-alt",
+} = Astro.props as Props;
+
+const avatarInitial = avatarName.trim().charAt(0).toUpperCase() || "?";
+const panelId = "dashboard-floating-nav-panel";
+const burgerId = "dashboard-floating-nav-burger";
+---
+
+<aside class="dashboard-floating-nav" aria-label={title} data-floating-nav>
+  <p class="dashboard-floating-nav__a11y-title sr-only">{title}</p>
+  <div class="dashboard-floating-nav__row">
+    <button
+      type="button"
+      class="dashboard-floating-nav__burger"
+      id={burgerId}
+      aria-expanded="false"
+      aria-controls={panelId}
+      aria-label="Open menu"
+    >
+      <span class="dashboard-floating-nav__burger-line" aria-hidden="true"></span>
+      <span class="dashboard-floating-nav__burger-line" aria-hidden="true"></span>
+      <span class="dashboard-floating-nav__burger-line" aria-hidden="true"></span>
+    </button>
+
+    <div class="dashboard-floating-nav__brand-slot">
+      <slot name="brand">
+        <p class="dashboard-floating-nav__brand">{brandLabel}</p>
+      </slot>
+    </div>
+
+    <nav class="dashboard-floating-nav__nav dashboard-floating-nav__nav--desktop" aria-label={title}>
+      {
+        items.map((item) => (
+          <a
+            class:list={["dashboard-floating-nav__link", item.active && "is-active"]}
+            href={item.href}
+            aria-current={item.active ? "page" : undefined}
+            aria-label={item.label}
+            title={item.label}
+          >
+            <span aria-hidden="true">{item.icon ?? "•"}</span>
+            <span class="sr-only">{item.label}</span>
+          </a>
+        ))
+      }
+    </nav>
+
+    <a class="dashboard-floating-nav__avatar" href={profileHref} aria-label={avatarAlt} title={avatarAlt}>
+      {
+        avatarSrc ? (
+          <img
+            class="dashboard-floating-nav__avatar-img"
+            src={avatarSrc}
+            alt={avatarAlt}
+            width="84"
+            height="84"
+            loading="lazy"
+            decoding="async"
+          />
+        ) : (
+          <span class="dashboard-floating-nav__avatar-fallback" aria-hidden="true">{avatarInitial}</span>
+        )
+      }
+    </a>
+  </div>
+
+  <div id={panelId} class="dashboard-floating-nav__panel" role="region" aria-label={title} hidden>
+    <nav class="dashboard-floating-nav__mobile-nav" aria-label={title}>
+      {
+        items.map((item) => (
+          <a
+            class:list={["dashboard-floating-nav__mobile-link", item.active && "is-active"]}
+            href={item.href}
+            aria-current={item.active ? "page" : undefined}
+            data-floating-nav-close
+          >
+            <span class="dashboard-floating-nav__mobile-link-icon" aria-hidden="true">{item.icon ?? "•"}</span>
+            <span class="dashboard-floating-nav__mobile-link-label">{item.label}</span>
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</aside>
+
+<script is:inline>
+  (function () {
+    const roots = document.querySelectorAll("[data-floating-nav]");
+    roots.forEach((root) => {
+      const btn = root.querySelector(".dashboard-floating-nav__burger");
+      const panel = root.querySelector(".dashboard-floating-nav__panel");
+      if (!btn || !panel || !(btn instanceof HTMLButtonElement)) return;
+
+      function openPanel() {
+        panel.removeAttribute("hidden");
+        btn.setAttribute("aria-expanded", "true");
+        btn.setAttribute("aria-label", "Close menu");
+      }
+
+      function closePanel() {
+        panel.setAttribute("hidden", "");
+        btn.setAttribute("aria-expanded", "false");
+        btn.setAttribute("aria-label", "Open menu");
+      }
+
+      btn.addEventListener("click", function () {
+        if (panel.hasAttribute("hidden")) openPanel();
+        else closePanel();
+      });
+
+      panel.querySelectorAll("[data-floating-nav-close]").forEach((el) => {
+        el.addEventListener("click", function () {
+          closePanel();
+        });
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !panel.hasAttribute("hidden")) {
+          closePanel();
+          btn.focus();
+        }
+      });
+
+      document.addEventListener("click", function (e) {
+        if (panel.hasAttribute("hidden")) return;
+        if (e.target instanceof Node && !root.contains(e.target)) closePanel();
+      });
+    });
+  })();
+</script>

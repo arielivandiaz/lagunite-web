@@ -1,0 +1,68 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const title = "Animations";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+    <i>@ID:<b> #04-07-XX</b></i>
+    <div class="separator-v-xl"></div>
+
+    <h3>Basic Animations</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="row g-gap-s ai-c">
+      <div class="bg-1 border-r-circle animate-spin" style="width: 48px; height: 48px"></div>
+      <button class="btn animate-pulse">.animate-pulse</button>
+      <button class="btn animate-bounce">.animate-bounce</button>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Fade &amp; Slide</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="row g-gap-s ai-c">
+      <div class="bg-2 border-r-l animate-fade-in" style="padding: 16px; min-width: 160px">
+        <div class="font-xs">.animate-fade-in</div>
+      </div>
+      <div class="bg-3 border-r-l animate-fade-out" style="padding: 16px; min-width: 160px">
+        <div class="font-xs">.animate-fade-out</div>
+      </div>
+      <div class="bg-4 border-r-l animate-slide-in" style="padding: 16px; min-width: 160px">
+        <div class="font-xs">.animate-slide-in</div>
+      </div>
+      <div class="bg-5 border-r-l animate-slide-out" style="padding: 16px; min-width: 160px">
+        <div class="font-xs">.animate-slide-out</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Durations &amp; Iterations</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="row g-gap-s ai-c">
+      <button class="btn animate-pulse animate-duration-1s">1s infinite</button>
+      <button class="btn animate-pulse animate-duration-2s">2s infinite</button>
+      <button class="btn animate-pulse animate-once">.animate-once</button>
+      <button class="btn animate-pulse animate-infinite">.animate-infinite</button>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Responsive Variants (x / d)</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="col">
+      <div class="font-s">
+        Las variantes responsive siguen el patrón:
+        <code>.xanimate-*</code> para mobile y <code>.danimate-*</code> para desktop, con
+        helpers como <code>.xanimate-duration-*</code>, <code>.danimate-infinite</code>, etc.
+      </div>
+    </div>
+  </section>
+</Layout>
+

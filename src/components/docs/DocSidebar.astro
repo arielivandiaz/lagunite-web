@@ -1,0 +1,151 @@
+---
+export interface Props {
+  current?: string;
+}
+
+const { current = "" } = Astro.props;
+
+const navItems = [
+  { href: "/docs/id-table", label: "ID Table" },
+  { href: "/docs/search-v2", label: "Search 2.0" },
+  { href: "/docs/nomenclature", label: "Nomenclature" },
+  {
+    label: "00 · Config",
+    children: [
+      { href: "/docs/00-config/01-pallete", label: "Palette" },
+      { href: "/docs/00-config/02-typography", label: "Typography" },
+      { href: "/docs/00-config/03-theme", label: "Theme" },
+      { href: "/docs/00-config/04-measures", label: "Measures" },
+    ],
+  },
+  {
+    label: "01 · Text",
+    children: [
+      { href: "/docs/01-text/01-fonts", label: "Fonts" },
+      { href: "/docs/01-text/02-typography", label: "Typography" },
+    ],
+  },
+  {
+    label: "02 · Colors",
+    children: [
+      { href: "/docs/02-colors/01-text", label: "Text" },
+      { href: "/docs/02-colors/02-background", label: "Background" },
+      { href: "/docs/02-colors/03-border", label: "Border" },
+    ],
+  },
+  {
+    label: "03 · Layout",
+    children: [
+      { href: "/docs/03-layout/10-sizes", label: "Sizes" },
+      { href: "/docs/03-layout/10-sizes-comparison", label: "Sizes comparison" },
+    ],
+  },
+  {
+    label: "04 · Decorators",
+    children: [
+      { href: "/docs/04-decorators/01-effects", label: "Effects" },
+      { href: "/docs/04-decorators/02-shadows", label: "Shadows" },
+      { href: "/docs/04-decorators/03-opacity", label: "Opacity" },
+      { href: "/docs/04-decorators/04-border", label: "Border" },
+      { href: "/docs/04-decorators/05-transforms", label: "Transforms" },
+      { href: "/docs/04-decorators/06-transitions", label: "Transitions" },
+      { href: "/docs/04-decorators/07-animations", label: "Animations" },
+      { href: "/docs/04-decorators/08-filters", label: "Filters" },
+    ],
+  },
+  {
+    label: "05 · Atoms",
+    children: [
+      { href: "/docs/05-atoms/01-buttons", label: "Buttons" },
+      { href: "/docs/05-atoms/02-inputs", label: "Inputs" },
+      { href: "/docs/05-atoms/03-tables", label: "Tables" },
+      { href: "/docs/05-atoms/04-lists", label: "Lists" },
+      { href: "/docs/05-atoms/05-figures", label: "Figures" },
+    ],
+  },
+];
+
+type NavChild = { href: string; label: string };
+type NavGroup = { label: string; children: NavChild[] };
+type NavFile  = { href: string; label: string };
+type NavItem  = NavFile | NavGroup;
+
+function isGroup(item: NavItem): item is NavGroup {
+  return "children" in item;
+}
+function isActive(href: string): boolean {
+  return current === href || current.startsWith(href + "/");
+}
+function groupHasActive(children: NavChild[]): boolean {
+  return children.some((c) => isActive(c.href));
+}
+---
+
+<!-- Logo area -->
+<div class="sidebar-header">
+  <a href="/" class="navbar-brand" aria-label="Lagunite home">
+    <img src="/img/lagunite.png" alt="Lagunite" />
+  </a>
+</div>
+
+<!-- Navigation -->
+<nav class="sidebar-nav scrollbar-thin" aria-label="Documentation navigation">
+  <ul class="sidebar-list">
+    {
+      navItems.map((item) =>
+        isGroup(item) ? (
+          <li class="sidebar-section">
+            <details open={groupHasActive((item as NavGroup).children)}>
+              <summary class="sidebar-section-title">{item.label}</summary>
+              <ul class="sidebar-sublist">
+                {(item as NavGroup).children.map((child) => (
+                  <li>
+                    <a
+                      href={child.href}
+                      class={`sidebar-link ${isActive(child.href) ? "active" : ""}`}
+                    >
+                      {child.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          </li>
+        ) : (
+          <li>
+            <a
+              href={(item as NavFile).href}
+              class={`sidebar-link font-weight-2 ${isActive((item as NavFile).href) ? "active" : ""}`}
+            >
+              {item.label}
+            </a>
+          </li>
+        )
+      )
+    }
+  </ul>
+</nav>
+
+<style>
+  /* Reset list styles */
+  .sidebar-list,
+  .sidebar-sublist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sidebar-sublist { padding: 0 var(--space-2) var(--space-1) var(--space-2); }
+
+  /* Remove native details marker; add custom arrow */
+  .sidebar-section-title { list-style: none; cursor: pointer; }
+  .sidebar-section-title::-webkit-details-marker { display: none; }
+
+  .sidebar-section-title::after {
+    content: "▸";
+    margin-left: auto;
+    font-size: 10px;
+    transition: transform 0.2s;
+  }
+  details[open] > .sidebar-section-title::after { transform: rotate(90deg); }
+</style>

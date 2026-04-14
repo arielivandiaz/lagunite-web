@@ -1,0 +1,22 @@
+---
+export type SidebarNavIconVariant = "rail" | "mobile";
+
+export interface Props {
+  variant: SidebarNavIconVariant;
+  symbol?: string;
+}
+
+const { variant, symbol = "•" } = Astro.props as Props;
+---
+
+{
+  variant === "rail" ? (
+    <span class="sidebar-nav-icon sidebar-nav-icon--rail" aria-hidden="true">
+      <span class="sidebar-nav-icon__inner">{symbol}</span>
+    </span>
+  ) : (
+    <span class="sidebar-nav-icon sidebar-nav-icon--mobile" aria-hidden="true">
+      {symbol}
+    </span>
+  )
+}

@@ -11,90 +11,965 @@ const title = "Sizes";
 
     <div class="col">
       <div>
-        <h3>Main Background Colors</h3>
-        <i>@ID:<b> #02-02-01</b></i>
+        <h3>Intrinsic Sizing</h3>
+        <i>@ID:<b>#03-10-01</b></i>
         <div class="separator-v-s"></div>
-        <RectangleDemo text=".bg" class="bg" height="60px" />
+        <div class="col g-gap-m marg-b-s">
+          <div class="row ai-c">
+            <code class="marg-rg">.w-auto</code>
+            <div class="w-auto bg-1 padd-xs">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+          </div>
+          <i>width depends on parent/flow (auto)</i>
+        </div>
+
+        <div class="col g-gap-m marg-b-s">
+          <div class="row ai-c">
+            <code class="marg-rg">.h-auto</code>
+            <div class="h-auto bg-1 padd-xs">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+          </div>
+          <i>height depends on parent/flow (auto)</i>
+        </div>
+
+        <div class="col g-gap-m marg-b-s">
+          <div class="row ai-c">
+            <code class="marg-rg">.wmin<br />.w-min</code>
+            <div class="w-min bg-1 padd-xs">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+          </div>
+          <i>width shrinks to minimum content size (min-content)</i>
+        </div>
+
+        <div class="col g-gap-m marg-b-s">
+          <div class="row ai-c">
+            <code class="marg-rg">.hmin<br />.h-min</code>
+            <div class="h-min bg-1 padd-xs">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+          </div>
+          <i>height shrinks to minimum content size (min-content)</i>
+        </div>
+
+        <div class="col g-gap-m marg-b-s">
+          <div class="row ai-c">
+            <code class="marg-rg">.wfc<br />.wfit<br />.w-fit</code>
+            <div class="w-fit bg-1 padd-xs">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+          </div>
+          <i>width fits content (fit-content)</i>
+        </div>
+
+        <div class="col g-gap-m marg-b-s">
+          <div class="row ai-c">
+            <code class="marg-rg">.hfc<br />.hfit<br />.h-fit</code>
+            <div class="h-fit bg-1 padd-xs">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+          </div>
+          <i>height fits content (fit-content)</i>
+        </div>
+
+        <div class="col g-gap-m marg-b-s">
+          <div class="row ai-c">
+            <code class="marg-rg">.wmax<br />.w-max</code>
+            <div class="w-max bg-1 padd-xs">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+          </div>
+          <i>width grows to maximum content size (max-content)</i>
+        </div>
+
+        <div class="col g-gap-m marg-b-s">
+          <div class="row ai-c">
+            <code class="marg-rg">.hmax<br />.h-max</code>
+            <div class="h-max bg-1 padd-xs">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+          </div>
+          <i>height grows to maximum content size (max-content)</i>
+        </div>
       </div>
 
       <div class="separator-v-l"></div>
       <div>
-        <h3>Intrinsic Sizing — Width</h3>
-        <i>@ID:<b> Intrinsic sizing examples</b></i>
+        <h3>Sizes relative to the screen</h3>
+        <i>@ID:<b>#03-10-03</b></i>
         <div class="separator-v-s"></div>
-        <div class="col g-gap-m">
-          <div class="bg-1 padd-s marg-s">
-            <div class="w-auto border padd-s">
-              .w-auto — width depends on parent/flow
-            </div>
-          </div>
+        <table class="table hover">
+          <thead>
+            <tr>
+              <th>class</th>
+              <th>style</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.w-full-screen</code></td>
+              <td
+                ><pre
+                  class="ta-lf wfc"><code>width: 100vw;<br />width: 100dvw;</code></pre></td
+              >
+            </tr>
+            <tr>
+              <td><code>.h-full-screen</code></td>
+              <td
+                ><pre
+                  class="ta-lf wfc"><code>height: 100vh;<br />height: 100dvh;</code></pre></td
+              >
+            </tr>
 
-          <div class="bg-1 padd-s marg-s">
-            <div class="w-min border padd-s">
-              .w-min — min-content (fits content)
-            </div>
-          </div>
+            <tr>
+              <td><code>.w-half-screen</code></td>
+              <td
+                ><pre
+                  class="ta-lf wfc"><code>width: 50vw;<br />width: 50dvw;</code></pre></td
+              >
+            </tr>
+            <tr>
+              <td><code>.h-half-screen</code></td>
+              <td
+                ><pre
+                  class="ta-lf wfc"><code>height: 50vh;<br />height: 50dvh;</code></pre></td
+              >
+            </tr>
 
-          <div class="bg-1 padd-s marg-s" style="width:220px">
-            <div class="w-max border padd-s">
-              .w-max — max-content (long word will expand)
-            </div>
-          </div>
-
-          <div class="bg-1 padd-s marg-s">
-            <div class="w-fit border padd-s">
-              .w-fit — fit-content (shrink to content)
-            </div>
-          </div>
-        </div>
-
-        <div class="separator-v-l"></div>
-        <h3>Intrinsic Sizing — Height</h3>
-        <div class="separator-v-s"></div>
-        <div class="row g-gap-m">
-          <div class="bg-1 padd-s">
-            <div class="h-auto border padd-s">
-              .h-auto — height auto (content driven)
-            </div>
-          </div>
-
-          <div class="bg-1 padd-s">
-            <div class="h-min border padd-s">.h-min — min-content height</div>
-          </div>
-
-          <div class="bg-1 padd-s" style="height:140px">
-            <div class="h-max border padd-s">
-              .h-max — max-content height (will fill if content larger)
-            </div>
-          </div>
-
-          <div class="bg-1 padd-s">
-            <div class="h-fit border padd-s">.h-fit — fit-content height</div>
-          </div>
-        </div>
+            <tr>
+              <td><code>.w-quarter-screen</code></td>
+              <td
+                ><pre
+                  class="ta-lf wfc"><code>width: 25vw;<br />width: 25dvw;</code></pre></td
+              >
+            </tr>
+            <tr>
+              <td><code>.h-quarter-screen</code></td>
+              <td
+                ><pre
+                  class="ta-lf wfc"><code>height: 25vh;<br />height: 25dvh;</code></pre></td
+              >
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="separator-v-l"></div>
-      <div>
-        <h3>Main Background Colors</h3>
-        <i>@ID:<b> #02-02-01</b></i>
-        <div class="separator-v-s"></div>
+    </div>
+    <div class="separator-v-l"></div>
+    <div>
+      <h3>Semantic Width Sizes (using design system variables)</h3>
+      <i>@ID:<b> #03-10-03</b></i>
+      <div class="separator-v-s"></div>
+      <div class="ta-lf maxvw90 overflow-x-scroll">
+        <div>
+          <code>.w1</code>: <i> width: var(--space-12); <b>&nbsp; 48px </b> </i>
+        </div>
+        <div class="bg-1 h1 w1 border marg-b-xs bordered"></div>
+        <div>
+          <code>.w2</code>: <i> width: var(--space-16); <b>&nbsp; 64px </b> </i>
+        </div>
+        <div class="bg-1 h1 w2 border marg-b-xs bordered"></div>
+        <div>
+          <code>.w3</code>: <i> width: var(--space-20); <b>&nbsp; 80px </b> </i>
+        </div>
+        <div class="bg-1 h1 w3 border marg-b-xs bordered"></div>
+        <div>
+          <code>.w4</code>: <i> width: var(--space-24); <b>&nbsp; 96px </b> </i>
+        </div>
+        <div class="bg-1 h1 w4 border marg-b-xs bordered"></div>
+        <div>
+          <code>.w5</code>: <i>
+            width: var(--space-32); <b>&nbsp; 128px </b>
+          </i>
+        </div>
+        <div class="bg-1 h1 w5 border marg-b-xs bordered"></div>
+        <div>
+          <code>.w6</code>: <i>
+            width: calc(var(--space-32) * 1.5); <b>&nbsp; 192px </b>
+          </i>
+        </div>
+        <div class="bg-1 h1 w6 border marg-b-xs bordered"></div>
+        <div>
+          <code>.w7</code>: <i>
+            width: calc(var(--space-32) * 2); <b>&nbsp; 256px </b>
+          </i>
+        </div>
+        <div class="bg-1 h1 w7 border marg-b-xs bordered"></div>
+        <div>
+          <code>.w8</code>: <i>
+            width: calc(var(--space-32) * 3.5); <b>&nbsp;448px </b>
+          </i>
+        </div>
+        <div class="bg-1 h1 w8 border marg-b-xs bordered"></div>
+        <div>
+          <code>.w9</code>: <i>
+            width: calc(var(--space-32) * 4); <b>&nbsp; 512px </b>
+          </i>
+        </div>
+        <div class="bg-1 h1 w9 border marg-b-xs bordered"></div>
+        <div>
+          <code>.w10</code>: <i>
+            width: calc(var(--space-32) * 5); <b>&nbsp; 640px </b>
+          </i>
+        </div>
+        <div class="bg-1 h1 w10 border marg-b-xs bordered"></div>
+        <div>
+          <code>.w11</code>: <i>
+            width: calc(var(--space-32) * 6); <b>&nbsp; 768px </b>
+          </i>
+        </div>
+        <div class="bg-1 h1 w11 border marg-b-xs bordered"></div>
+        <div>
+          <code>.w12</code>: <i>
+            width: calc(var(--space-32) * 8); <b>&nbsp; 1024px </b>
+          </i>
+        </div>
+        <div class="bg-1 h1 w12 border marg-b-xs bordered"></div>
+        <div>
+          <code>.w13</code>: <i>
+            width: calc(var(--space-32) * 10); <b>&nbsp; 1280px </b>
+          </i>
+        </div>
+        <div class="bg-1 h1 w13 border marg-b-xs bordered"></div>
+        <div>
+          <code>.w14</code>: <i>
+            width: calc(var(--space-32) * 12); <b>&nbsp; 1536px </b>
+          </i>
+        </div>
+        <div class="bg-1 h1 w14 border marg-b-xs bordered"></div>
+        <div>
+          <code>.w15</code>: <i>
+            width: calc(var(--space-32) * 15); <b>&nbsp; 1920px </b>
+          </i>
+        </div>
+        <div class="bg-1 h1 w15 border marg-b-xs bordered"></div>
+      </div>
+    </div>
+
+    <div class="separator-v-l"></div>
+    <div>
+      <h3>Semantic Height Sizes (using design system variables)</h3>
+      <i>@ID:<b> #03-10-04</b></i>
+      <div class="separator-v-s"></div>
+      <div class="col">
         <div class="ta-lf">
-          <div>.w1 : <i> width: var(--space-12) - 48px </i></div>
-          <div class="bg-1 h1 w1 border marg-b-xs bordered"></div>
-          <div class="bg-1 h1 w2 border marg-b-xs bordered"></div>
-          <div class="bg-1 h1 w3 border marg-b-xs bordered"></div>
-          <div class="bg-1 h1 w4 border marg-b-xs bordered"></div>
-          <div class="bg-1 h1 w5 border marg-b-xs bordered"></div>
-          <div class="bg-1 h1 w6 border marg-b-xs bordered"></div>
-          <div class="bg-1 h1 w7 border marg-b-xs bordered"></div>
-          <div class="bg-1 h1 w8 border marg-b-xs bordered"></div>
-          <div class="bg-1 h1 w9 border marg-b-xs bordered"></div>
-          <div class="bg-1 h1 w10 border marg-b-xs bordered"></div>
-          <div class="bg-1 h1 w11 border marg-b-xs bordered"></div>
-          <div class="bg-1 h1 w12 border marg-b-xs bordered"></div>
-          <div class="bg-1 h1 w13 border marg-b-xs bordered"></div>
-          <div class="bg-1 h1 w14 border marg-b-xs bordered"></div>
+          <div>
+            <code>.h1</code>: <i>
+              height: var(--space-5); <b>&nbsp; 20px </b>
+            </i>
+          </div>
+          <div>
+            <code>.h2</code>: <i>
+              height: var(--space-8); <b>&nbsp; 32px </b>
+            </i>
+          </div>
+          <div>
+            <code>.h3</code>: <i>
+              height: var(--space-10); <b>&nbsp; 40px </b>
+            </i>
+          </div>
+          <div>
+            <code>.h4</code>: <i>
+              height: var(--space-16); <b>&nbsp; 64px </b>
+            </i>
+          </div>
+          <div>
+            <code>.h5</code>: <i>
+              height: var(--space-20); <b>&nbsp; 80px </b>
+            </i>
+          </div>
+          <div>
+            <code>.h6</code>: <i>
+              height: var(--space-24); <b>&nbsp; 96px </b>
+            </i>
+          </div>
+          <div>
+            <code>.h7</code>: <i>
+              height: var(--space-32); <b>&nbsp; 128px </b>
+            </i>
+          </div>
+          <div>
+            <code>.h8</code>: <i>
+              height: calc(var(--space-32) * 1.5); <b>&nbsp; 192px </b>
+            </i>
+          </div>
+          <div>
+            <code>.h9</code>: <i>
+              height: calc(var(--space-32) * 2); <b>&nbsp; 256px </b>
+            </i>
+          </div>
+          <div>
+            <code>.h10</code>: <i>
+              height: calc(var(--space-32) * 2.5); <b>&nbsp; 320px </b>
+            </i>
+          </div>
+          <div>
+            <code>.h11</code>: <i>
+              height: calc(var(--space-32) * 3); <b>&nbsp; 384px </b>
+            </i>
+          </div>
+          <div>
+            <code>.h12</code>: <i>
+              height: calc(var(--space-32) * 3.5); <b>&nbsp; 448px </b>
+            </i>
+          </div>
+          <div>
+            <code>.h13</code>: <i>
+              height: calc(var(--space-32) * 4); <b>&nbsp; 512px </b>
+            </i>
+          </div>
+          <div>
+            <code>.h14</code>: <i>
+              height: calc(var(--space-32) * 5); <b>&nbsp; 640px </b>
+            </i>
+          </div>
+          <div>
+            <code>.h15</code>: <i>
+              height: calc(var(--space-32) * 6); <b>&nbsp; 768px </b>
+            </i>
+          </div>
+        </div>
+        <div class="separator-v"></div>
+        <div class="row ai-fs">
+          <div>
+            <i>.h1</i>
+            <div class="bg-1 h1 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.h2</i>
+            <div class="bg-1 h2 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.h3</i>
+            <div class="bg-1 h3 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.h4</i>
+            <div class="bg-1 h4 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.h5</i>
+            <div class="bg-1 h5 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.h6</i>
+            <div class="bg-1 h6 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.h7</i>
+            <div class="bg-1 h7 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.h8</i>
+            <div class="bg-1 h8 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.h9</i>
+            <div class="bg-1 h9 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.h10</i>
+            <div class="bg-1 h10 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.h11</i>
+            <div class="bg-1 h11 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.h12</i>
+            <div class="bg-1 h12 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.h13</i>
+            <div class="bg-1 h13 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.h14</i>
+            <div class="bg-1 h14 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.h15</i>
+            <div class="bg-1 h15 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="separator-v-l"></div>
+    <div class="col-row">
+      <div>
+        <h3>Min-width Semantic Sizes</h3>
+        <i>@ID:<b> #03-10-05</b></i>
+        <div class="separator-v-s"></div>
+        <div class="col">
+          <div class="ta-lf">
+            <div>
+              <code>.minw1</code>: <i>min-width: var(--space-12);</i>
+            </div>
+            <div>
+              <code>.minw2</code>: <i>min-width: var(--space-16);</i>
+            </div>
+            <div>
+              <code>.minw3</code>: <i>min-width: var(--space-20);</i>
+            </div>
+            <div>
+              <code>.minw4</code>: <i>min-width: var(--space-24);</i>
+            </div>
+            <div>
+              <code>.minw5</code>: <i>min-width: var(--space-32);</i>
+            </div>
+            <div>
+              <code>.minw6</code>: <i>min-width: calc(var(--space-32) * 1.5);</i
+              >
+            </div>
+            <div>
+              <code>.minw7</code>: <i>min-width: calc(var(--space-32) * 2);</i>
+            </div>
+            <div>
+              <code>.minw8</code>: <i>min-width: calc(var(--space-32) * 3.5);</i
+              >
+            </div>
+            <div>
+              <code>.minw9</code>: <i>min-width: calc(var(--space-32) * 4);</i>
+            </div>
+            <div>
+              <code>.minw10</code>: <i>min-width: calc(var(--space-32) * 5);</i>
+            </div>
+            <div>
+              <code>.minw11</code>: <i>min-width: calc(var(--space-32) * 6);</i>
+            </div>
+            <div>
+              <code>.minw12</code>: <i>min-width: calc(var(--space-32) * 8);</i>
+            </div>
+            <div>
+              <code>.minw13</code>: <i>min-width: calc(var(--space-32) * 10);</i
+              >
+            </div>
+            <div>
+              <code>.minw14</code>: <i>min-width: calc(var(--space-32) * 12);</i
+              >
+            </div>
+            <div>
+              <code>.minw15</code>: <i>min-width: calc(var(--space-32) * 15);</i
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dseparator-h-xl"></div>
+      <div>
+        <h3>Max-width Semantic Sizes</h3>
+        <i>@ID:<b> #03-10-06</b></i>
+        <div class="separator-v-s"></div>
+        <div class="col">
+          <div class="ta-lf">
+            <div>
+              <code>.maxw1</code>: <i>max-width: var(--space-12);</i>
+            </div>
+            <div>
+              <code>.maxw2</code>: <i>max-width: var(--space-16);</i>
+            </div>
+            <div>
+              <code>.maxw3</code>: <i>max-width: var(--space-20);</i>
+            </div>
+            <div>
+              <code>.maxw4</code>: <i>max-width: var(--space-24);</i>
+            </div>
+            <div>
+              <code>.maxw5</code>: <i>max-width: var(--space-32);</i>
+            </div>
+            <div>
+              <code>.maxw6</code>: <i>max-width: calc(var(--space-32) * 1.5);</i
+              >
+            </div>
+            <div>
+              <code>.maxw7</code>: <i>max-width: calc(var(--space-32) * 2);</i>
+            </div>
+            <div>
+              <code>.maxw8</code>: <i>max-width: calc(var(--space-32) * 3.5);</i
+              >
+            </div>
+            <div>
+              <code>.maxw9</code>: <i>max-width: calc(var(--space-32) * 4);</i>
+            </div>
+            <div>
+              <code>.maxw10</code>: <i>max-width: calc(var(--space-32) * 5);</i>
+            </div>
+            <div>
+              <code>.maxw11</code>: <i>max-width: calc(var(--space-32) * 6);</i>
+            </div>
+            <div>
+              <code>.maxw12</code>: <i>max-width: calc(var(--space-32) * 8);</i>
+            </div>
+            <div>
+              <code>.maxw13</code>: <i>max-width: calc(var(--space-32) * 10);</i
+              >
+            </div>
+            <div>
+              <code>.maxw14</code>: <i>max-width: calc(var(--space-32) * 12);</i
+              >
+            </div>
+            <div>
+              <code>.maxw15</code>: <i>max-width: calc(var(--space-32) * 15);</i
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="separator-v-l"></div>
+    <div class="col-row">
+      <div>
+        <h3>Min-height Semantic Sizes</h3>
+        <i>@ID:<b> #03-10-07</b></i>
+        <div class="separator-v-s"></div>
+        <div class="col">
+          <div class="ta-lf">
+            <div><code>.minh1</code>: <i>min-height: var(--space-5);</i></div>
+            <div><code>.minh2</code>: <i>min-height: var(--space-8);</i></div>
+            <div><code>.minh3</code>: <i>min-height: var(--space-10);</i></div>
+            <div><code>.minh4</code>: <i>min-height: var(--space-16);</i></div>
+            <div><code>.minh5</code>: <i>min-height: var(--space-20);</i></div>
+            <div><code>.minh6</code>: <i>min-height: var(--space-24);</i></div>
+            <div><code>.minh7</code>: <i>min-height: var(--space-32);</i></div>
+            <div>
+              <code>.minh8</code>: <i
+                >min-height: calc(var(--space-32) * 1.5);</i
+              >
+            </div>
+            <div>
+              <code>.minh9</code>: <i>min-height: calc(var(--space-32) * 2);</i>
+            </div>
+            <div>
+              <code>.minh10</code>: <i
+                >min-height: calc(var(--space-32) * 2.5);</i
+              >
+            </div>
+            <div>
+              <code>.minh11</code>: <i>min-height: calc(var(--space-32) * 3);</i
+              >
+            </div>
+            <div>
+              <code>.minh12</code>: <i
+                >min-height: calc(var(--space-32) * 3.5);</i
+              >
+            </div>
+            <div>
+              <code>.minh13</code>: <i>min-height: calc(var(--space-32) * 4);</i
+              >
+            </div>
+            <div>
+              <code>.minh14</code>: <i>min-height: calc(var(--space-32) * 5);</i
+              >
+            </div>
+            <div>
+              <code>.minh15</code>: <i>min-height: calc(var(--space-32) * 6);</i
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dseparator-h-xl"></div>
+      <div>
+        <h3>Max-height Semantic Sizes</h3>
+        <i>@ID:<b> #03-10-08</b></i>
+        <div class="separator-v-s"></div>
+        <div class="col">
+          <div class="ta-lf">
+            <div><code>.maxh1</code>: <i>max-height: var(--space-5);</i></div>
+            <div><code>.maxh2</code>: <i>max-height: var(--space-8);</i></div>
+            <div><code>.maxh3</code>: <i>max-height: var(--space-10);</i></div>
+            <div><code>.maxh4</code>: <i>max-height: var(--space-16);</i></div>
+            <div><code>.maxh5</code>: <i>max-height: var(--space-20);</i></div>
+            <div><code>.maxh6</code>: <i>max-height: var(--space-24);</i></div>
+            <div><code>.maxh7</code>: <i>max-height: var(--space-32);</i></div>
+            <div>
+              <code>.maxh8</code>: <i
+                >max-height: calc(var(--space-32) * 1.5);</i
+              >
+            </div>
+            <div>
+              <code>.maxh9</code>: <i>max-height: calc(var(--space-32) * 2);</i>
+            </div>
+            <div>
+              <code>.maxh10</code>: <i
+                >max-height: calc(var(--space-32) * 2.5);</i
+              >
+            </div>
+            <div>
+              <code>.maxh11</code>: <i>max-height: calc(var(--space-32) * 3);</i
+              >
+            </div>
+            <div>
+              <code>.maxh12</code>: <i
+                >max-height: calc(var(--space-32) * 3.5);</i
+              >
+            </div>
+            <div>
+              <code>.maxh13</code>: <i>max-height: calc(var(--space-32) * 4);</i
+              >
+            </div>
+            <div>
+              <code>.maxh14</code>: <i>max-height: calc(var(--space-32) * 5);</i
+              >
+            </div>
+            <div>
+              <code>.maxh15</code>: <i>max-height: calc(var(--space-32) * 6);</i
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="separator-v-l"></div>
+    <div>
+      <h3>Fluid/Responsive Width Sizes</h3>
+      <i>@ID:<b> #03-10-10</b></i>
+      <div class="separator-v-s"></div>
+
+      <div class="ta-lf maxvw90 overflow-x-auto">
+        <div>
+          <code>.wf1</code>: <i>
+            width: clamp(var(--space-8), 3dvw, var(--space-12)) <b
+              >&nbsp; max: 48px
+            </b>
+          </i>
+        </div>
+        <div class="separator-v-xs"></div>
+        <div class="bg-1 h1 wf1 border marg-b-xs bordered"></div>
+
+        <div>
+          <code>.wf2</code>: <i>
+            width:clamp(var(--space-10), 6dvw, var(--space-16)) <b
+              >&nbsp; max: 64px
+            </b>
+          </i>
+        </div>
+        <div class="separator-v-xs"></div>
+        <div class="bg-1 h1 wf2 border marg-b-xs bordered"></div>
+
+        <div>
+          <code>.wf3</code>: <i>
+            width: clamp(var(--space-12), 10dvw, var(--space-20)) <b
+              >&nbsp; max: 80px
+            </b>
+          </i>
+        </div>
+        <div class="separator-v-xs"></div>
+        <div class="bg-1 h1 wf3 border marg-b-xs bordered"></div>
+
+        <div>
+          <code>.wf4</code>: <i>
+            width: clamp(var(--space-16), 12dvw, var(--space-24)) <b
+              >&nbsp; max: 96px
+            </b>
+          </i>
+        </div>
+        <div class="separator-v-xs"></div>
+        <div class="bg-1 h1 wf4 border marg-b-xs bordered"></div>
+
+        <div>
+          <code>.wf5</code>: <i>
+            width: clamp(var(--space-20), 15dvw, var(--space-32)) <b
+              >&nbsp; max: 128px
+            </b>
+          </i>
+        </div>
+        <div class="separator-v-xs"></div>
+        <div class="bg-1 h1 wf5 border marg-b-xs bordered"></div>
+
+        <div>
+          <code>.wf6</code>: <i>
+            width: clamp(var(--space-24), 22dvw, calc(var(--space-32) * 1.5)) <b
+              >&nbsp; max: 192px
+            </b>
+          </i>
+        </div>
+        <div class="separator-v-xs"></div>
+        <div class="bg-1 h1 wf6 border marg-b-xs bordered"></div>
+
+        <div>
+          <code>.wf7</code>: <i>
+            width: clamp(var(--space-32), 26dvw, calc(var(--space-32) * 2)) <b
+              >&nbsp; max: 256px
+            </b>
+          </i>
+        </div>
+        <div class="separator-v-xs"></div>
+        <div class="bg-1 h1 wf7 border marg-b-xs bordered"></div>
+
+        <div>
+          <code>.wf8</code>: <i>
+            width: clamp(var(--space-12), 32dvw, calc(var(--space-32) * 3.5)) <b
+              >&nbsp; max: 448px
+            </b>
+          </i>
+        </div>
+        <div class="separator-v-xs"></div>
+        <div class="bg-1 h1 wf8 border marg-b-xs bordered"></div>
+
+        <div>
+          <code>.wf9</code>: <i>
+            width: clamp(var(--space-12), 42dvw, calc(var(--space-32) * 4)) <b
+              >&nbsp; max: 512px
+            </b>
+          </i>
+        </div>
+        <div class="separator-v-xs"></div>
+        <div class="bg-1 h1 wf9 border marg-b-xs bordered"></div>
+
+        <div>
+          <code>.wf10</code>: <i>
+            width: clamp(var(--space-12), 50dvw, calc(var(--space-32) * 5)) <b
+              >&nbsp; max: 640px
+            </b>
+          </i>
+        </div>
+        <div class="separator-v-xs"></div>
+        <div class="bg-1 h1 wf10 border marg-b-xs bordered"></div>
+
+        <div>
+          <code>.wf11</code>: <i>
+            width: clamp(var(--space-12), 75dvw, calc(var(--space-32) * 6)) <b
+              >&nbsp; max: 768px
+            </b>
+          </i>
+        </div>
+        <div class="separator-v-xs"></div>
+        <div class="bg-1 h1 wf11 border marg-b-xs bordered"></div>
+
+        <div>
+          <code>.wf12</code>: <i>
+            width: clamp(var(--space-12), 90dvw, calc(var(--space-32) * 8)) <b
+              >&nbsp; max: 1024px
+            </b>
+          </i>
+        </div>
+        <div class="separator-v-xs"></div>
+        <div class="bg-1 h1 wf12 border marg-b-xs bordered"></div>
+
+        <div>
+          <code>.wf13</code>: <i>
+            width: clamp(var(--space-12), 92dvw, calc(var(--space-32) * 10)) <b
+              >&nbsp; max: 1280px
+            </b>
+          </i>
+        </div>
+        <div class="separator-v-xs"></div>
+        <div class="bg-1 h1 wf13 border marg-b-xs bordered"></div>
+
+        <div>
+          <code>.wf14</code>: <i>
+            width: clamp(var(--space-12), 95dvw, calc(var(--space-32) * 12)) <b
+              >&nbsp; max: 1536px
+            </b>
+          </i>
+        </div>
+        <div class="separator-v-xs"></div>
+        <div class="bg-1 h1 wf14 border marg-b-xs bordered"></div>
+
+        <div>
+          <code>.wf15</code>: <i>
+            width: clamp(var(--space-12), 98vw, calc(var(--space-32) * 15)) <b
+              >&nbsp; max: 1920px
+            </b>
+          </i>
+        </div>
+        <div class="separator-v-xs"></div>
+        <div class="bg-1 h1 wf14 border marg-b-xs bordered"></div>
+      </div>
+    </div>
+
+    <div class="separator-v-l"></div>
+    <div>
+      <h3>Fluid/Responsive Height Sizes (clamp, hf*)</h3>
+      <i>@ID:<b> #03-10-11</b></i>
+      <div class="separator-v-s"></div>
+      <div class="col">
+        <div class="ta-lf">
+          <div>
+            <code>.hf1 </code>:
+            <i>
+              height: clamp(var(--space-2), 2dvh, var(--space-5));<b
+                >&nbsp; max: 20px</b
+              ></i
+            >
+          </div>
+          <div>
+            <code>.hf2 </code>:
+            <i>
+              height: clamp(var(--space-4), 3.5dvh, var(--space-8));<b
+                >&nbsp; max: 32px</b
+              ></i
+            >
+          </div>
+          <div>
+            <code>.hf3 </code>:
+            <i>
+              height: clamp(var(--space-5), 4.5dvh, var(--space-10));<b
+                >&nbsp; max: 40px
+              </b></i
+            >
+          </div>
+          <div>
+            <code>.hf4 </code>:
+            <i>
+              height: clamp(var(--space-8), 7dvh, var(--space-16));<b
+                >&nbsp; max: 64px</b
+              ></i
+            >
+          </div>
+          <div>
+            <code>.hf5 </code>:
+            <i>
+              height: clamp(var(--space-10), 9dvh, var(--space-20));<b
+                >&nbsp; max: 80px</b
+              ></i
+            >
+          </div>
+          <div>
+            <code>.hf6 </code>:
+            <i>
+              height: clamp(var(--space-12), 11dvh, var(--space-24));<b
+                >&nbsp; max: 96px
+              </b></i
+            >
+          </div>
+          <div>
+            <code>.hf7 </code>:
+            <i>
+              height: clamp(var(--space-16), 15dvh, var(--space-32));<b
+                >&nbsp; max: 128px
+              </b></i
+            >
+          </div>
+          <div>
+            <code>.hf8 </code>:
+            <i>
+              height: clamp(var(--space-20), 22dvh, calc(var(--space-32) *
+              1.5));<b>&nbsp; max: 192px </b></i
+            >
+          </div>
+          <div>
+            <code>.hf9 </code>:
+            <i>
+              height: clamp(var(--space-24), 28dvh, calc(var(--space-32) * 2));<b
+                >&nbsp; max: 256px
+              </b></i
+            >
+          </div>
+          <div>
+            <code>.hf10 </code>:
+            <i>
+              height: clamp(var(--space-32), 35dvh, calc(var(--space-32) *
+              2.5));<b>&nbsp; max: 320px </b></i
+            >
+          </div>
+          <div>
+            <code>.hf11 </code>:
+            <i>
+              height: clamp(var(--space-32), 42dvh, calc(var(--space-32) * 3));<b
+                >&nbsp; max: 384px
+              </b></i
+            >
+          </div>
+          <div>
+            <code>.hf12 </code>:
+            <i>
+              height: clamp(var(--space-32), 50dvh, calc(var(--space-32) *
+              3.5));<b>&nbsp; max: 448px </b></i
+            >
+          </div>
+          <div>
+            <code>.hf13 </code>:
+            <i>
+              height: clamp(var(--space-32), 60dvh, calc(var(--space-32) * 4));<b
+                >&nbsp; max: 512px
+              </b></i
+            >
+          </div>
+          <div>
+            <code>.hf14 </code>:
+            <i>
+              height: clamp(var(--space-32), 75dvh, calc(var(--space-32) * 5));<b
+                >&nbsp; max: 640px
+              </b></i
+            >
+          </div>
+          <div>
+            <code>.hf15 </code>:
+            <i>
+              height: clamp(var(--space-32), 90dvh, calc(var(--space-32) * 6));<b
+                >&nbsp; max: 768px
+              </b></i
+            >
+          </div>
+        </div>
+        <div class="separator-v"></div>
+        <div class="row ai-fs">
+          <div>
+            <i>.hf1</i>
+            <div class="bg-1 hf1 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.hf2</i>
+            <div class="bg-1 hf2 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.hf3</i>
+            <div class="bg-1 hf3 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.hf4</i>
+            <div class="bg-1 hf4 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.hf5</i>
+            <div class="bg-1 hf5 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.hf6</i>
+            <div class="bg-1 hf6 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.hf7</i>
+            <div class="bg-1 hf7 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.hf8</i>
+            <div class="bg-1 hf8 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.hf9</i>
+            <div class="bg-1 hf9 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.hf10</i>
+            <div class="bg-1 hf10 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.hf11</i>
+            <div class="bg-1 hf11 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.hf12</i>
+            <div class="bg-1 hf12 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.hf13</i>
+            <div class="bg-1 hf13 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.hf14</i>
+            <div class="bg-1 hf14 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
+          <div>
+            <i>.hf15</i>
+            <div class="bg-1 hf15 border marg-xs padd-h-s wfc bordered"></div>
+          </div>
         </div>
       </div>
     </div>

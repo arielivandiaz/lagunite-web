@@ -1,0 +1,305 @@
+---
+import "../../../dist/lagunite.css";
+import DocSidebar from "../components/docs/DocSidebar.astro";
+import DocNavbar from "../components/docs/DocNavbar.astro";
+
+export interface Props {
+  title?: string;
+}
+
+const { title = "Lagunite Docs" } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} — Lagunite</title>
+  </head>
+  <body>
+
+    <!-- ─── Navbar (sticky) ─────────────────────────────────────────────── -->
+    <DocNavbar />
+    
+    <!-- ─── Layout: sidebar + main ──────────────────────────────────────── -->
+    <div class="doc-layout">
+
+      <aside id="doc-sidebar" class="sidebar" aria-label="Documentation sidebar">
+        <DocSidebar current={currentPath} />
+      </aside>
+
+      <!-- Sidebar arrow toggle tab -->
+      <button
+        id="sidebar-toggle"
+        class="sidebar-arrow-tab"
+        aria-label="Toggle sidebar"
+        aria-expanded="true"
+        aria-controls="doc-sidebar"
+      >
+        <!-- Shown when sidebar is open: collapse → -->
+        <svg class="arrow-open" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <!-- Shown when sidebar is collapsed: expand → -->
+        <svg class="arrow-closed" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <!-- Overlay (mobile tap-to-close) -->
+      <div id="sidebar-overlay" class="doc-overlay" aria-hidden="true"></div>
+
+      <main class="flex-1 overflow-x-hidden" id="doc-main">
+        <slot />
+      </main>
+
+    </div>
+
+    <!-- ─── Footer ──────────────────────────────────────────────────────── -->
+    <footer class="footer footer-dark" role="contentinfo">
+      <div class="row jc-sb ai-c padd-h flex-wrap" style="gap: 8px;">
+        <span class="font-xs footer-link">© 2026 Lagunite · MIT License</span>
+        <nav class="row ai-c" style="gap: 4px;" aria-label="Footer navigation">
+          <a href="/" class="footer-link">Home</a>
+          <a href="/docs" class="footer-link">Docs</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        </nav>
+      </div>
+    </footer>
+
+  </body>
+</html>
+
+<!-- ─── Scripts ─────────────────────────────────────────────────────────── -->
+<script>
+  (function () {
+    const SIDEBAR_KEY = "doc-sidebar-state";
+    const THEME_KEY = "theme";
+
+    function getStored(key: string): string | null {
+      try { return localStorage.getItem(key); } catch { return null; }
+    }
+    function store(key: string, value: string) {
+      try { localStorage.setItem(key, value); } catch { /* ignore */ }
+    }
+
+    // ── Theme ──────────────────────────────────────────────────────────────
+    function applyTheme(night: boolean) {
+      document.body.classList.toggle("night", night);
+      const btn = document.getElementById("theme-toggle");
+      if (btn) btn.setAttribute("aria-pressed", String(night));
+    }
+
+    // Apply before first paint to avoid flash
+    applyTheme(getStored(THEME_KEY) === "night");
+
+    // ── Sidebar ────────────────────────────────────────────────────────────
+    function isMobile(): boolean { return window.innerWidth < 640; }
+
+    function setSidebar(collapsed: boolean) {
+      const sidebar = document.getElementById("doc-sidebar");
+      const overlay = document.getElementById("sidebar-overlay");
+      const btn = document.getElementById("sidebar-toggle");
+      sidebar?.classList.toggle("collapsed", collapsed);
+      overlay?.classList.toggle("visible", !collapsed && isMobile());
+      btn?.setAttribute("aria-expanded", String(!collapsed));
+    }
+
+    setSidebar(isMobile() ? true : getStored(SIDEBAR_KEY) === "collapsed");
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("theme-toggle")?.addEventListener("click", function () {
+        const isNight = document.body.classList.toggle("night");
+        store(THEME_KEY, isNight ? "night" : "day");
+      });
+
+      document.getElementById("sidebar-toggle")?.addEventListener("click", function () {
+        const collapsed = document.getElementById("doc-sidebar")?.classList.contains("collapsed") ?? false;
+        setSidebar(!collapsed);
+        if (!isMobile()) store(SIDEBAR_KEY, !collapsed ? "collapsed" : "open");
+      });
+
+      document.getElementById("sidebar-overlay")?.addEventListener("click", function () {
+        setSidebar(true);
+      });
+
+      let resizeTimer: ReturnType<typeof setTimeout>;
+      window.addEventListener("resize", function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+          setSidebar(isMobile() ? true : getStored(SIDEBAR_KEY) === "collapsed");
+        }, 100);
+      });
+    });
+  })();
+</script>
+
+<!-- ─── Minimal custom styles (only what Lagunite doesn't cover yet) ─────── -->
+<style is:global>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Layout variables */
+  :root {
+    --doc-header-h: 56px;
+    --doc-sidebar-w: 16rem; /* matches .sidebar width in lagunite */
+  }
+
+  /* Navbar overlay: cancel global header margins from lagunite base and keep zero height */
+  .doc-navbar-overlay {
+    margin: 0 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    z-index: 220;
+  }
+
+  .doc-navbar-overlay .row {
+    justify-content: flex-end !important;
+  }
+
+  .doc-navbar-overlay .doc-toggle-btn {
+    position: fixed;
+    top: 8px;
+    right: 10px;
+  }
+
+  /* Theme toggle button in the navbar */
+  .doc-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-s);
+    color: var(--gray-500);
+    opacity: 0.35;
+    transition: background 0.15s, opacity 0.15s;
+    flex-shrink: 0;
+  }
+  .doc-toggle-btn:hover {
+    opacity: 0.85;
+    background: rgba(0,0,0,0.05);
+  }
+
+  /* Sidebar arrow tab — fixed to bottom-right edge of sidebar */
+  .sidebar-arrow-tab {
+    position: fixed;
+    bottom: 96px;
+    left: var(--doc-sidebar-w);
+    z-index: 161;
+    width: 22px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg);
+    border: var(--border-width-s) solid var(--color-border);
+    border-left: none;
+    border-radius: 0 var(--radius-s) var(--radius-s) 0;
+    box-shadow: var(--shadow-s);
+    color: var(--color-text-base);
+    cursor: pointer;
+    transition: left 0.25s cubic-bezier(0.4,0,0.2,1), background 0.15s;
+  }
+  .sidebar-arrow-tab:hover { background: var(--color-bg-alt); color: var(--color-text-alt); }
+
+  /* Arrow direction: open = show left chevron, closed = show right chevron */
+  .sidebar-arrow-tab .arrow-open   { display: block; }
+  .sidebar-arrow-tab .arrow-closed { display: none; }
+  #doc-sidebar.collapsed ~ .sidebar-arrow-tab { left: 0; }
+  #doc-sidebar.collapsed ~ .sidebar-arrow-tab .arrow-open   { display: none; }
+  #doc-sidebar.collapsed ~ .sidebar-arrow-tab .arrow-closed { display: block; }
+
+  /* Night mode */
+  .night .sidebar-arrow-tab {
+    background: #1e2533;
+    border-color: #2d3748;
+    color: #9ca3af;
+  }
+  .night .sidebar-arrow-tab:hover { background: #2d3748; color: #e5e7eb; }
+
+  /* Hide tab on mobile (sidebar is overlay there) */
+  @media (max-width: 639px) { .sidebar-arrow-tab { display: none; } }
+
+  /* Sun / moon icon swap */
+  .icon-sun  { display: none; }
+  .icon-moon { display: block; }
+  .night .icon-sun  { display: block; }
+  .night .icon-moon { display: none; }
+
+  /* Doc layout shell */
+  .doc-layout {
+    display: flex;
+    align-items: flex-start;
+    min-height: calc(100vh - var(--doc-header-h));
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Prevent main from growing wider than available flex space */
+  .doc-layout > main {
+    min-width: 0;
+  }
+
+  /* Sidebar: sticky + scoped height + collapse animation */
+  .doc-layout .sidebar {
+    position: sticky;
+    top: var(--doc-header-h);
+    height: calc(100vh - var(--doc-header-h));
+    min-height: unset;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: width 0.25s cubic-bezier(0.4,0,0.2,1);
+  }
+  .doc-layout .sidebar.collapsed { width: 0; padding: 0; border: none; }
+
+  /* Mobile: sidebar floats over content */
+  @media (max-width: 639px) {
+    .doc-layout .sidebar {
+      position: fixed;
+      top: var(--doc-header-h);
+      left: 0;
+      z-index: 160;
+      box-shadow: var(--shadow-l);
+    }
+  }
+
+  /* Mobile overlay */
+  .doc-overlay {
+    display: none;
+    position: fixed;
+    inset: var(--doc-header-h) 0 0 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 150;
+  }
+  .doc-overlay.visible { display: block; }
+
+  /* Night mode: sidebar dark overrides */
+  .night .doc-layout .sidebar { background: #161b27; border-color: #2d3748; }
+  .night .sidebar-link { color: #9ca3af; }
+  .night .sidebar-link:hover { background: #1e2533; color: #e5e7eb; }
+  .night .sidebar-link.active { background: #1e3a5f; color: #60a5fa; }
+  .night .sidebar-section-title { color: #6b7280; }
+  .night body { background: #0f1117; color: #e5e7eb; }
+  .night .doc-toggle-btn {
+    color: #9ca3af;
+    background: rgba(255,255,255,0.04);
+  }
+  .night .doc-toggle-btn:hover {
+    color: #e5e7eb;
+    background: rgba(255,255,255,0.08);
+  }
+</style>

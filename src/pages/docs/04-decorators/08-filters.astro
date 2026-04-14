@@ -1,0 +1,126 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const title = "Filters";
+---
+
+<Layout title={title}>
+  <section class="w-max center padd">
+    <h2>{title}</h2>
+    <i>@ID:<b> #04-08-XX</b></i>
+    <div class="separator-v-xl"></div>
+
+    <h3>Blur</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="row g-gap-s ai-c">
+      <div class="bg-1 border-r-l blur-none" style="padding: 16px; min-width: 120px">
+        <div class="font-xs">.blur-none</div>
+      </div>
+      <div class="bg-1 border-r-l blur-s" style="padding: 16px; min-width: 120px">
+        <div class="font-xs">.blur-s</div>
+      </div>
+      <div class="bg-1 border-r-l blur" style="padding: 16px; min-width: 120px">
+        <div class="font-xs">.blur</div>
+      </div>
+      <div class="bg-1 border-r-l blur-l" style="padding: 16px; min-width: 120px">
+        <div class="font-xs">.blur-l</div>
+      </div>
+      <div class="bg-1 border-r-l blur-xl" style="padding: 16px; min-width: 120px">
+        <div class="font-xs">.blur-xl</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Brightness &amp; Contrast</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-2 dgrid-cols-4 g-gap-s">
+      <div class="bg-2 border-r-l brightness-0" style="padding: 16px">
+        <div class="font-xs">.brightness-0</div>
+      </div>
+      <div class="bg-2 border-r-l brightness-50" style="padding: 16px">
+        <div class="font-xs">.brightness-50</div>
+      </div>
+      <div class="bg-2 border-r-l brightness-100" style="padding: 16px">
+        <div class="font-xs">.brightness-100</div>
+      </div>
+      <div class="bg-2 border-r-l brightness-150" style="padding: 16px">
+        <div class="font-xs">.brightness-150</div>
+      </div>
+
+      <div class="bg-3 border-r-l contrast-0" style="padding: 16px">
+        <div class="font-xs">.contrast-0</div>
+      </div>
+      <div class="bg-3 border-r-l contrast-50" style="padding: 16px">
+        <div class="font-xs">.contrast-50</div>
+      </div>
+      <div class="bg-3 border-r-l contrast-100" style="padding: 16px">
+        <div class="font-xs">.contrast-100</div>
+      </div>
+      <div class="bg-3 border-r-l contrast-150" style="padding: 16px">
+        <div class="font-xs">.contrast-150</div>
+      </div>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Grayscale &amp; Saturate (sobre imagen)</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="grid grid-cols-2 dgrid-cols-4 g-gap-s">
+      <figure class="border-r-l bg-gray-100" style="overflow: hidden">
+        <img
+          class="grayscale-0"
+          src="https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
+          alt="Sample"
+          style="width: 100%; height: auto"
+        />
+        <figcaption class="font-xs padd-xs">.grayscale-0</figcaption>
+      </figure>
+      <figure class="border-r-l bg-gray-100" style="overflow: hidden">
+        <img
+          class="grayscale"
+          src="https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
+          alt="Sample"
+          style="width: 100%; height: auto"
+        />
+        <figcaption class="font-xs padd-xs">.grayscale</figcaption>
+      </figure>
+      <figure class="border-r-l bg-gray-100" style="overflow: hidden">
+        <img
+          class="saturate-0"
+          src="https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
+          alt="Sample"
+          style="width: 100%; height: auto"
+        />
+        <figcaption class="font-xs padd-xs">.saturate-0</figcaption>
+      </figure>
+      <figure class="border-r-l bg-gray-100" style="overflow: hidden">
+        <img
+          class="saturate-150"
+          src="https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
+          alt="Sample"
+          style="width: 100%; height: auto"
+        />
+        <figcaption class="font-xs padd-xs">.saturate-150</figcaption>
+      </figure>
+    </div>
+
+    <div class="separator-v-xl"></div>
+
+    <h3>Responsive Variants (x / d)</h3>
+    <div class="separator-v-s"></div>
+
+    <div class="col">
+      <div class="font-s">
+        Las variantes responsive siguen el patrón:
+        <code>.xblur-*</code>, <code>.xbrightness-*</code>, <code>.xcontrast-*</code>,
+        <code>.xgrayscale-*</code>, <code>.xsaturate-*</code> para mobile y equivalentes
+        <code>.d*</code> para desktop.
+      </div>
+    </div>
+  </section>
+</Layout>
+

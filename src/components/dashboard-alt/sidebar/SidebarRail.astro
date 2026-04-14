@@ -1,0 +1,12 @@
+---
+export interface Props {
+  title?: string;
+}
+
+const { title = "Navigation" } = Astro.props as Props;
+---
+
+<aside class="sidebar-rail" aria-label={title}>
+  <p class="sidebar-rail__a11y-title sr-only">{title}</p>
+  <slot />
+</aside>

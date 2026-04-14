@@ -1,0 +1,33 @@
+---
+export interface Props {
+  title?: string;
+}
+
+const { title = "Dashboard" } = Astro.props;
+---
+
+<header class="navbar dashboard-navbar" role="banner">
+  <div class="dashboard-navbar-inner">
+    <div class="dashboard-navbar-left">
+      <button
+        id="dashboard-menu-toggle"
+        class="dashboard-menu-toggle"
+        type="button"
+        aria-label="Toggle sidebar"
+        aria-controls="dashboard-sidebar"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="/" class="dashboard-brand">Lagunite</a>
+      <span class="dashboard-title">{title}</span>
+    </div>
+
+    <nav class="dashboard-top-nav" aria-label="Dashboard quick links">
+      <a href="/docs">Docs</a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+  </div>
+</header>

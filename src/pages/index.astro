@@ -3,125 +3,130 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Lagunite 2.0 - The CSS Framework for Enterprise Teams">
-  <!-- Hero Section -->
-  <header class="bg-blue-600 color-white padd-v-xl">
-    <div class="container max-w-6xl">
-      <div class="row jc-c ai-c marg-b-m">
-        <h1 class="font-3xl font-bold">Lagunite 2.0</h1>
+  <!-- Hero: ganchos y beneficios -->
+  <header class="bgg-4 color-text-alt padd-v-xl">
+    <div class="container container-xl padd-h">
+      <div class="row jc-c ai-c marg-b-l">
+        <h1 class="font-3xl font-weight-3">Lagunite 2.0</h1>
       </div>
       <div class="row jc-c ai-c g-gap-s marg-b-l">
-        <span class="badge bg-blue-800 color-white">v2.0</span>
-        <span class="badge bg-blue-800 color-white">MIT License</span>
+        <span class="badge badge-primary">v2.0</span>
+        <span class="badge badge-secondary">MIT License</span>
       </div>
-      <p class="font-xl text-center marg-b-m">
-        The CSS framework for enterprise teams who value readable code over brief code.
+      <p class="font-xl ta-c marg-b-s lh-l">
+        The CSS framework for enterprise teams who value <strong>readable code</strong> over brief code.
       </p>
-      <p class="font-l text-center font-weight-1">
+      <p class="font-l ta-c font-weight-1">
         Powerful, flexible, and crystal clear.
       </p>
+      <div class="separator-v-l"></div>
+      <!-- Ganchos rápidos -->
+      <div class="grid grid-cols-2 dgrid-cols-4 g-gap-s">
+        <div class="border-r-l padd-s bg-white opacity-75">
+          <div class="font-weight-3 font-s">📖 Readable</div>
+          <div class="font-xs color-gray-700">Class names that document themselves</div>
+        </div>
+        <div class="border-r-l padd-s bg-white opacity-75">
+          <div class="font-weight-3 font-s">📚 Documentation-first</div>
+          <div class="font-xs color-gray-700">.md, examples, prompt guides, AI-friendly</div>
+        </div>
+        <div class="border-r-l padd-s bg-white opacity-75">
+          <div class="font-weight-3 font-s">🎨 Design system</div>
+          <div class="font-xs color-gray-700">Tokens that fit enterprise</div>
+        </div>
+        <div class="border-r-l padd-s bg-white opacity-75">
+          <div class="font-weight-3 font-s">♿ Accessible</div>
+          <div class="font-xs color-gray-700">rem, contrast, WCAG-minded</div>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="container max-w-6xl padd-v-xl">
-    <!-- Introduction -->
+  <main class="container container-xl padd padd-v-xl">
+    <!-- Introducción (README) -->
     <section class="marg-b-xl">
-      <p class="font-m color-gray-700 marg-b-m">
-        Lagunite is a modern, utility-focused CSS framework specifically designed for Spanish-speaking teams
-        and enterprises that prioritize code clarity, maintainability, and seamless onboarding. Built from
-        the ground up with descriptive naming conventions and a robust design system, Lagunite empowers teams
-        to build beautiful interfaces faster—without sacrificing readability.
+      <h2 class="font-xxl font-weight-3 color-primary marg-b-l">Why Lagunite?</h2>
+      <p class="font-m color-gray-700 marg-b-l lh-l">
+        Lagunite is a modern, utility-focused CSS framework for teams and enterprises that prioritize code
+        clarity, maintainability, and seamless onboarding. It puts documentation first: Markdown docs, live
+        examples, prompt guides, and AI-friendly resources (.toon, PROMPT_GUIDE) so both developers and AI
+        assistants can use it effectively. Built with descriptive naming and a robust design system, Lagunite
+        empowers teams to build beautiful interfaces faster—without sacrificing readability.
       </p>
     </section>
 
-    <!-- Why Lagunite -->
+    <!-- For Enterprise Teams + comparación de código -->
     <section class="marg-b-xl">
-      <h2 class="font-xxl font-bold color-blue-600 marg-b-l">🎯 Why Lagunite?</h2>
-
-      <div class="bg-white border-r-l padd-l marg-b-l">
-        <h3 class="font-xl font-semibold marg-b-m">For Enterprise Teams</h3>
-        <p class="font-m color-gray-700 marg-b-m">
-          Lagunite was built with large teams in mind. Unlike cryptic utility frameworks, our descriptive
-          class names make code reviews easier, onboarding faster, and collaboration smoother.
-        </p>
-
-        <div class="row g-gap-l">
-          <div class="col w-1/2">
-            <h4 class="font-m font-semibold color-green-600 marg-b-s">
-              Lagunite: Clear and self-documenting
-            </h4>
-            <div class="code-block">
-&lt;div class="marg-h-s padd-v-m border-color-primary border-r-l"&gt;
-  &lt;h2 class="font-l font-bold color-text-primary"&gt;Welcome&lt;/h2&gt;
-&lt;/div&gt;
-            </div>
-          </div>
-          <div class="col w-1/2">
-            <h4 class="font-m font-semibold color-gray-600 marg-b-s">
-              Other frameworks: Brief but cryptic
-            </h4>
-            <div class="code-block">
-&lt;div class="mx-2 py-4 border-primary rounded-lg"&gt;
+      <h3 class="font-xl font-weight-3 color-primary marg-b-l">For Enterprise Teams</h3>
+      <p class="font-m color-gray-700 marg-b-l">
+        Lagunite was built with large teams in mind. Unlike cryptic utility frameworks, our descriptive
+        class names make code reviews easier, onboarding faster, and collaboration smoother.
+      </p>
+      <div class="grid grid-cols-1 dgrid-cols-2 g-gap-l">
+        <div class="border-r-l border-color-success padd-l bg-gray-50">
+          <h4 class="font-m font-weight-3 color-success marg-b-s">Lagunite: clear and self-documenting</h4>
+          <pre class="page-code"><code>&lt;div class="marg-h-s padd-v-m border-color-primary border-r-l"&gt;
+  &lt;h2 class="font-l font-weight-3 color-primary"&gt;Welcome&lt;/h2&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="border-r-l border-color-gray-400 padd-l bg-gray-50">
+          <h4 class="font-m font-weight-3 color-gray-600 marg-b-s">Other frameworks: brief but cryptic</h4>
+          <pre class="page-code"><code>&lt;div class="mx-2 py-4 border-primary rounded-lg"&gt;
   &lt;h2 class="text-lg font-bold text-primary"&gt;Welcome&lt;/h2&gt;
-&lt;/div&gt;
-            </div>
-          </div>
+&lt;/div&gt;</code></pre>
         </div>
       </div>
+    </section>
 
-      <!-- Key Advantages -->
-      <h3 class="font-xl font-semibold marg-b-m">Key Advantages</h3>
-      <div class="grid g-cols-2 g-gap-m">
-        <div class="bg-white border-r-l padd-m">
-          <h4 class="font-l font-semibold marg-b-s">📖 Readable & Self-Documenting</h4>
+    <!-- Key Advantages -->
+    <section class="marg-b-xl">
+      <h3 class="font-xl font-weight-3 color-primary marg-b-l">Key Advantages</h3>
+      <div class="grid grid-cols-1 dgrid-cols-2 g-gap-m">
+        <div class="bg-white border border-r-l border-color-gray-200 padd-m">
+          <h4 class="font-l font-weight-3 marg-b-xs">📖 Readable &amp; self-documenting</h4>
           <p class="font-s color-gray-700">
-            Class names like <code>.marg-h-s</code>, <code>.padd-v-m</code>, <code
-              >.border-color-primary</code
-            >
-            are immediately understandable, even for junior developers.
+            Class names like <code class="bg-gray-100 padd-xs border-r-s">.marg-h-s</code>, <code class="bg-gray-100 padd-xs border-r-s">.padd-v-m</code>, <code class="bg-gray-100 padd-xs border-r-s">.border-color-primary</code> are immediately understandable, even for junior developers.
           </p>
         </div>
-        <div class="bg-white border-r-l padd-m">
-          <h4 class="font-l font-semibold marg-b-s">🌍 Spanish-First Documentation</h4>
+        <div class="bg-white border border-r-l border-color-gray-200 padd-m">
+          <h4 class="font-l font-weight-3 marg-b-xs">📚 Documentation-first</h4>
           <p class="font-s color-gray-700">
-            Comprehensive documentation in Spanish with English translations. Perfect for Latin American and
-            Spanish teams.
+            Documentation is first-class: Markdown docs, live examples, prompt guides and AI-friendly resources (.toon, PROMPT_GUIDE, cheatsheets) so both humans and AI assistants can use Lagunite effectively.
           </p>
         </div>
-        <div class="bg-white border-r-l padd-m">
-          <h4 class="font-l font-semibold marg-b-s">🎨 Enterprise-Grade Design System</h4>
+        <div class="bg-white border border-r-l border-color-gray-200 padd-m">
+          <h4 class="font-l font-weight-3 marg-b-xs">🎨 Enterprise-grade design system</h4>
           <p class="font-s color-gray-700">
-            Built on semantic design tokens that integrate seamlessly with corporate design systems.
+            Built on semantic design tokens (--color-*, --space-*, --radius-*) that integrate seamlessly with corporate design systems.
           </p>
         </div>
-        <div class="bg-white border-r-l padd-m">
-          <h4 class="font-l font-semibold marg-b-s">🔧 Better Media Query Organization</h4>
+        <div class="bg-white border border-r-l border-color-gray-200 padd-m">
+          <h4 class="font-l font-weight-3 marg-b-xs">🔧 Better media query organization</h4>
           <p class="font-s color-gray-700">
             Responsive variants are grouped with their base styles, making maintenance and debugging easier.
           </p>
         </div>
-        <div class="bg-white border-r-l padd-m">
-          <h4 class="font-l font-semibold marg-b-s">⚡ Modern & Performant</h4>
+        <div class="bg-white border border-r-l border-color-gray-200 padd-m">
+          <h4 class="font-l font-weight-3 marg-b-xs">⚡ Modern &amp; performant</h4>
           <p class="font-s color-gray-700">
-            Powered by Vite and PostCSS. Clean, optimized CSS with atomic utilities for maximum
-            flexibility.
+            Powered by Vite and PostCSS. Clean, optimized CSS with atomic utilities for maximum flexibility.
           </p>
         </div>
-        <div class="bg-white border-r-l padd-m">
-          <h4 class="font-l font-semibold marg-b-s">♿ Accessibility First</h4>
+        <div class="bg-white border border-r-l border-color-gray-200 padd-m">
+          <h4 class="font-l font-weight-3 marg-b-xs">♿ Accessibility first</h4>
           <p class="font-s color-gray-700">
-            Built with <code>rem</code> units throughout, respecting user preferences and ensuring WCAG compliance.
+            Built with <code class="bg-gray-100 padd-xs border-r-s">rem</code> units throughout, respecting user preferences and ensuring WCAG compliance.
           </p>
         </div>
       </div>
     </section>
 
     <!-- Perfect For -->
-    <section class="bg-blue-50 border-r-l padd-l marg-b-xl">
-      <h2 class="font-xxl font-bold color-blue-600 marg-b-m">🚀 Perfect For</h2>
-      <ul class="font-m color-gray-700">
+    <section class="bg-1 color-text-alt border-r-l padd-l marg-b-xl">
+      <h2 class="font-xxl font-weight-3 marg-b-l">Perfect for</h2>
+      <ul class="font-m lh-l">
         <li class="marg-b-s">✅ Enterprise development teams</li>
-        <li class="marg-b-s">✅ Spanish-speaking organizations</li>
+        <li class="marg-b-s">✅ Projects that want documentation-first (docs, examples, prompt guides, AI-friendly resources)</li>
         <li class="marg-b-s">✅ Projects requiring clear, maintainable code</li>
         <li class="marg-b-s">✅ Teams with junior developers</li>
         <li class="marg-b-s">✅ Companies building design systems</li>
@@ -129,100 +134,134 @@ import Layout from "../layouts/Layout.astro";
       </ul>
     </section>
 
-    <!-- Comparison -->
+    <!-- Lagunite vs Other Frameworks -->
     <section class="marg-b-xl">
-      <h2 class="font-xxl font-bold color-blue-600 marg-b-l">🆚 Lagunite vs Other Frameworks</h2>
-
-      <div class="bg-white border-r-l padd-l">
-        <h3 class="font-xl font-semibold marg-b-m">What Makes Lagunite Different</h3>
-        <table class="comparison-table">
+      <h2 class="font-xxl font-weight-3 color-primary marg-b-l">Lagunite vs other frameworks</h2>
+      <p class="font-m color-gray-700 marg-b-l">
+        While there are many excellent CSS frameworks available, Lagunite offers unique advantages for specific use cases:
+      </p>
+      <div class="border border-r-l border-color-gray-200 overflow-auto">
+        <table class="page-table">
           <thead>
             <tr>
-              <th class="font-semibold">Feature</th>
-              <th class="font-semibold">Lagunite Advantage</th>
+              <th class="font-weight-3 padd-s border-b border-color-gray-200">Feature</th>
+              <th class="font-weight-3 padd-s border-b border-color-gray-200">Lagunite advantage</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="font-semibold">Class Naming</td>
-              <td>Descriptive and self-documenting makes code immediately understandable</td>
+              <td class="font-weight-2 padd-s border-b border-color-gray-200">Class naming</td>
+              <td class="padd-s border-b border-color-gray-200">Descriptive and self-documenting (e.g. .marg-h-s, .padd-v-m), ideal for teams and code reviews</td>
             </tr>
             <tr>
-              <td class="font-semibold">Documentation Language</td>
-              <td>Native Spanish documentation with English support</td>
+              <td class="font-weight-2 padd-s border-b border-color-gray-200">Documentation</td>
+              <td class="padd-s border-b border-color-gray-200">Documentation-first: .md docs, examples, prompt guides, and AI-oriented resources (.toon, PROMPT_GUIDE) for humans and AI assistants alike</td>
             </tr>
             <tr>
-              <td class="font-semibold">Media Query Organization</td>
-              <td>Responsive variants grouped with base styles for easier maintenance</td>
+              <td class="font-weight-2 padd-s border-b border-color-gray-200">Media query organization</td>
+              <td class="padd-s border-b border-color-gray-200">Responsive variants grouped with base styles for easier maintenance and debugging</td>
             </tr>
             <tr>
-              <td class="font-semibold">Design Token System</td>
-              <td>Clear separation between raw palette and semantic tokens</td>
+              <td class="font-weight-2 padd-s border-b border-color-gray-200">Design token system</td>
+              <td class="padd-s border-b border-color-gray-200">Clear separation between raw palette and semantic tokens, seamless corporate design system integration</td>
             </tr>
             <tr>
-              <td class="font-semibold">Learning Curve</td>
-              <td>Junior developers understand classes without memorizing abbreviations</td>
+              <td class="font-weight-2 padd-s border-b border-color-gray-200">Learning curve</td>
+              <td class="padd-s border-b border-color-gray-200">Junior developers can read and understand classes without memorizing cryptic abbreviations</td>
             </tr>
             <tr>
-              <td class="font-semibold">Enterprise Focus</td>
-              <td>Designed from the ground up for large teams and corporate environments</td>
+              <td class="font-weight-2 padd-s border-b border-color-gray-200">Enterprise focus</td>
+              <td class="padd-s border-b border-color-gray-200">Designed from the ground up for large teams and corporate environments</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- Getting Started -->
+    <!-- Philosophy -->
     <section class="marg-b-xl">
-      <h2 class="font-xxl font-bold color-blue-600 marg-b-l">🏁 Getting Started</h2>
+      <h2 class="font-xxl font-weight-3 color-primary marg-b-l">Lagunite's philosophy</h2>
+      <p class="font-m color-gray-700 marg-b-l lh-l">
+        We believe that <strong>code is read more often than it is written</strong>. In enterprise environments where
+        multiple developers collaborate on the same codebase, code reviews are frequent, junior developers need to
+        understand existing code quickly, and projects have long lifespans—clarity becomes more valuable than brevity.
+      </p>
+    </section>
 
-      <div class="bg-yellow-50 border-l-w-4 border-color-warning padd-m marg-b-m">
-        <p class="font-m font-semibold">
-          <strong>Note:</strong> Lagunite 2.0 is currently in active development. The library will be available
-          on npm soon.
+    <!-- Design philosophy -->
+    <section class="marg-b-xl">
+      <h2 class="font-xxl font-weight-3 color-primary marg-b-l">Design philosophy</h2>
+      <p class="font-m color-gray-700 marg-b-s">Atomic utilities + descriptive naming:</p>
+      <pre class="page-code marg-b-l"><code>/* Atomic utilities */
+.border-w-2          /* border-width */
+.border-solid        /* border-style */
+.border-color-primary /* border-color */
+
+/* Shortcuts */
+.border              /* all-in-one */
+.bordered            /* border + border-radius */</code></pre>
+      <p class="font-m color-gray-700 marg-b-s">Responsive design: media queries are grouped with their base styles (e.g. .container, .xcontainer, .dcontainer), not scattered at the end of files.</p>
+    </section>
+
+    <!-- What's included -->
+    <section class="marg-b-xl">
+      <h2 class="font-xxl font-weight-3 color-primary marg-b-l">What's included</h2>
+      <ul class="font-m color-gray-700 lh-l">
+        <li class="marg-b-s">✅ Typography &amp; text utilities</li>
+        <li class="marg-b-s">✅ Responsive breakpoints</li>
+        <li class="marg-b-s">✅ Complete utility system (layout, colors, decorators, atoms)</li>
+      </ul>
+    </section>
+
+    <!-- Getting started -->
+    <section class="marg-b-xl">
+      <h2 class="font-xxl font-weight-3 color-primary marg-b-l">Getting started</h2>
+      <div class="border-lf border-lf-w-4 border-color-warning bg-warning padd-m marg-b-l">
+        <p class="font-m font-weight-2">
+          <strong>Note:</strong> Lagunite 2.0 is currently in active development. The library will be available on npm soon.
         </p>
       </div>
-
-      <h3 class="font-xl font-semibold marg-b-m">Installation (Coming Soon)</h3>
-      <div class="code-block marg-b-l">npm install lagunite@next</div>
-
-      <h3 class="font-xl font-semibold marg-b-m">Quick Example</h3>
-      <div class="code-block">
-&lt;div class="container-m padd-v-l"&gt;
-  &lt;h1 class="font-xl font-bold color-text-primary marg-b-m"&gt;
-    Welcome to Lagunite
-  &lt;/h1&gt;
-  
-  &lt;div class="grid g-cols-3 g-gap-m"&gt;
-    &lt;div class="border-r-l padd-m bg-primary-light"&gt;
-      &lt;h3 class="font-m font-semibold"&gt;Readable&lt;/h3&gt;
-      &lt;p class="font-s color-text-secondary"&gt;
-        Class names you can understand
-      &lt;/p&gt;
+      <h3 class="font-l font-weight-3 marg-b-s">Installation (coming soon)</h3>
+      <pre class="page-code marg-b-l"><code>npm install lagunite@next</code></pre>
+      <h3 class="font-l font-weight-3 marg-b-s">Import in your project</h3>
+      <pre class="page-code marg-b-l"><code>import 'lagunite/dist/lagunite.css';</code></pre>
+      <h3 class="font-l font-weight-3 marg-b-s">Quick example</h3>
+      <pre class="page-code"><code>&lt;div class="container-m padd-v-l"&gt;
+  &lt;h1 class="font-xl font-weight-3 color-primary marg-b-l"&gt;Welcome to Lagunite&lt;/h1&gt;
+  &lt;div class="grid grid-cols-3 g-gap-m"&gt;
+    &lt;div class="border-r-l padd-m bg-2"&gt;
+      &lt;h3 class="font-m font-weight-2"&gt;Readable&lt;/h3&gt;
+      &lt;p class="font-s color-gray-700"&gt;Class names you can understand&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="border-r-l padd-m bg-success"&gt;
+      &lt;h3 class="font-m font-weight-2"&gt;Flexible&lt;/h3&gt;
+      &lt;p class="font-s color-gray-700"&gt;Atomic utilities for control&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="border-r-l padd-m bg-warning"&gt;
+      &lt;h3 class="font-m font-weight-2"&gt;Enterprise&lt;/h3&gt;
+      &lt;p class="font-s color-gray-700"&gt;Built for teams&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-      </div>
+&lt;/div&gt;</code></pre>
     </section>
 
     <!-- Roadmap -->
     <section class="marg-b-xl">
-      <h2 class="font-xxl font-bold color-blue-600 marg-b-l">🗺️ Roadmap</h2>
-
-      <div class="grid g-cols-3 g-gap-m">
-        <div class="bg-white border-r-l padd-m">
-          <h3 class="font-l font-semibold color-blue-600 marg-b-s">Phase 1: Core Consolidation</h3>
-          <p class="font-xs color-gray-600 marg-b-m">(Current)</p>
+      <h2 class="font-xxl font-weight-3 color-primary marg-b-l">Roadmap</h2>
+      <div class="grid grid-cols-1 dgrid-cols-3 g-gap-m">
+        <div class="bg-white border border-r-l border-color-gray-200 padd-m">
+          <h3 class="font-l font-weight-3 color-primary marg-b-xs">Phase 1: Core consolidation</h3>
+          <p class="font-xs color-gray-600 marg-b-s">(Current)</p>
           <ul class="font-s color-gray-700">
             <li class="marg-b-xs">✅ Complete utility system</li>
             <li class="marg-b-xs">✅ Design token system</li>
-            <li class="marg-b-xs">⏳ Essential components</li>
-            <li class="marg-b-xs">⏳ Documentation site</li>
+            <li class="marg-b-xs">⏳ Essential components (buttons, cards, forms)</li>
+            <li class="marg-b-xs">⏳ Comprehensive documentation site</li>
           </ul>
         </div>
-        <div class="bg-white border-r-l padd-m">
-          <h3 class="font-l font-semibold color-green-600 marg-b-s">Phase 2: Tooling & Distribution</h3>
-          <p class="font-xs color-gray-600 marg-b-m">(Q1 2026)</p>
+        <div class="bg-white border border-r-l border-color-gray-200 padd-m">
+          <h3 class="font-l font-weight-3 color-success marg-b-xs">Phase 2: Tooling &amp; distribution</h3>
+          <p class="font-xs color-gray-600 marg-b-s">(Q1 2026)</p>
           <ul class="font-s color-gray-700">
             <li class="marg-b-xs">Build CLI</li>
             <li class="marg-b-xs">NPM package publication</li>
@@ -230,9 +269,9 @@ import Layout from "../layouts/Layout.astro";
             <li class="marg-b-xs">CSS purging tool</li>
           </ul>
         </div>
-        <div class="bg-white border-r-l padd-m">
-          <h3 class="font-l font-semibold color-yellow-600 marg-b-s">Phase 3: Ecosystem Growth</h3>
-          <p class="font-xs color-gray-600 marg-b-m">(Q2 2026)</p>
+        <div class="bg-white border border-r-l border-color-gray-200 padd-m">
+          <h3 class="font-l font-weight-3 color-warning marg-b-xs">Phase 3: Ecosystem growth</h3>
+          <p class="font-xs color-gray-600 marg-b-s">(Q2 2026)</p>
           <ul class="font-s color-gray-700">
             <li class="marg-b-xs">React/Vue/Svelte wrappers</li>
             <li class="marg-b-xs">Component library expansion</li>
@@ -242,57 +281,65 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </section>
+
+    <!-- Contributing & License -->
+    <section class="marg-b-xl">
+      <h2 class="font-xxl font-weight-3 color-primary marg-b-l">Contributing</h2>
+      <p class="font-m color-gray-700 marg-b-l">
+        Lagunite is in active development and we welcome contributions! Whether you're fixing bugs, improving
+        documentation (especially Spanish translations), or proposing new features—we'd love to have you.
+      </p>
+      <h2 class="font-xxl font-weight-3 color-primary marg-b-l">License</h2>
+      <p class="font-m color-gray-700">MIT License — feel free to use Lagunite in your projects, commercial or otherwise.</p>
+    </section>
+
+    <!-- CTA final -->
+    <section class="bg-4 color-text-alt padd-v-l border-r-l">
+      <div class="container container-xl padd-h ta-c">
+        <h2 class="font-xl font-weight-3 marg-b-l">Built for teams, by teams</h2>
+        <p class="font-m marg-b-l lh-l">
+          Lagunite was created by developers who understand the challenges of working in large, multilingual
+          teams. We believe that code clarity is not a luxury—it's a necessity for sustainable software development.
+        </p>
+        <p class="font-l font-weight-2 marg-b-l">
+          Join us in building a better CSS framework for the enterprise world.
+        </p>
+        <div class="separator-v-m"></div>
+        <p class="font-s opacity-75">
+          <a href="/docs/id-table" class="color-text-alt">Documentation</a>
+          &nbsp;·&nbsp;
+          <a href="https://github.com/arielivandiaz/lagunite" class="color-text-alt" target="_blank" rel="noopener">GitHub</a>
+        </p>
+        <p class="font-s opacity-75 marg-t-s">MIT License © 2025 Lagunite</p>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer CTA -->
-  <section class="bg-gray-800 color-white padd-v-l">
-    <div class="container max-w-6xl text-center">
-      <h2 class="font-xl font-bold marg-b-m">🌟 Built for Teams, By Teams</h2>
-      <p class="font-m marg-b-l">
-        Lagunite was created by developers who understand the challenges of working in large, multilingual
-        teams. We believe that code clarity is not a luxury—it's a necessity for sustainable software
-        development.
-      </p>
-      <p class="font-l font-semibold">
-        Join us in building a better CSS framework for the enterprise world.
-      </p>
-      <div class="separator-v-m"></div>
-      <p class="font-s color-gray-400">MIT License © 2025 Lagunite</p>
-    </div>
-  </section>
+  <style>
+    /* Solo tokens y patrones de Lagunite para bloques que no tienen utilidad directa */
+    .page-code {
+      background: var(--color-almost-black);
+      color: var(--gray-100);
+      padding: var(--space-4);
+      border-radius: var(--radius-m);
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: var(--font-size-s);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .page-code code {
+      background: none;
+      padding: 0;
+    }
+    .page-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: inherit;
+    }
+    .page-table th,
+    .page-table td {
+      text-align: left;
+    }
+  </style>
 </Layout>
-
-<style>
-  .badge {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    border-radius: 999px;
-    font-size: 0.875rem;
-    font-weight: 600;
-  }
-  .code-block {
-    background: var(--gray-900);
-    color: var(--gray-50);
-    padding: var(--space-4);
-    border-radius: var(--radius-md);
-    overflow-x: auto;
-    font-family: monospace;
-    font-size: 0.875rem;
-    line-height: 1.5;
-  }
-  .comparison-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: var(--space-6) 0;
-  }
-  .comparison-table th,
-  .comparison-table td {
-    padding: var(--space-3);
-    text-align: left;
-    border-bottom: 1px solid var(--gray-300);
-  }
-  .comparison-table th {
-    background: var(--gray-100);
-    font-weight: 600;
-  }
-</style>
